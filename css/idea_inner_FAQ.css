@@ -160,8 +160,9 @@ a:hover {
         line-height: 22px;
     }
     .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
-        width: 280px;
+        width: 228px;
         height: auto;
+        font-size: 16px;
     }
     .idea_inner_cont.faq_page .cont_right .panel-group .panel a .arrow_icon {
         right: 0;

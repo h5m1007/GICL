@@ -1324,11 +1324,11 @@ a:hover {
     background-size: 100%;
 }
 
-@media screen and (min-width: 1300px){
-    .idea_inner_cont.about_page{
+@media screen and (min-width: 1300px) {
+    .idea_inner_cont.about_page {
         max-height: 100%;
     }
-    .idea_inner_cont.about_page .cont_right{
+    .idea_inner_cont.about_page .cont_right {
         /*height: 953px;*/
     }
 }
@@ -1389,6 +1389,19 @@ a:hover {
         min-width: 100%;
         top: 25%;
     }
+    .mainContentContainer .main_content .movie .movie_top #video3 {
+        width: 140px;
+        height: 105px;
+        background: url('../images/mobile_video3.png') no-repeat;
+        margin-right: 10px;
+        background-size: 100%;
+    }
+    .mainContentContainer .main_content .movie .movie_top #video4 {
+        width: 140px;
+        height: 105px;
+        background: url('../images/mobile_video4.png') no-repeat;
+        background-size: 100%;
+    }
     .mainContentContainer .main_content .section {
         margin: 0 15px 0;
         height: auto;
@@ -1417,11 +1430,11 @@ a:hover {
     .mainContentContainer .main_content .loan .loan_content .loan_amount {
         margin: 0;
         float: left;
-        width: 75%;
+        width: 40%;
     }
     .mainContentContainer .main_content .loan .loan_content .loan_amount .irs_bg_left {
         width: 45px;
-        top: 15px;
+        top: 35px;
         left: 0;
     }
     .mainContentContainer .main_content .loan .loan_content .loan_amount .irs_bg_right {
@@ -1431,23 +1444,30 @@ a:hover {
         margin-left: 23px;
         border: none;
     }
+    .mainContentContainer .main_content .loan .loan_content .loan_amount .irs .irs-line {
+        margin-right: 0;
+    }
     .mainContentContainer .main_content .loan .loan_content .loan_tenor {
-        width: 25%;
+        width: 31%;
         height: 36px;
+        margin-top: -13px;
     }
     .dd-select,
     .dd-options {
         width: 90px !important;
     }
+    #tenor .dd-select .dd-selected {
+        padding: 5px;
+    }
     #tenor .dd-select a {
         font-size: 20px;
         font-weight: 100;
     }
-    .mainContentContainer .main_content .loan .loan_content .loan_tenor #tenor .dd-option label{
+    .mainContentContainer .main_content .loan .loan_content .loan_tenor #tenor .dd-option label {
         font-size: 20px;
         font-weight: 100;
     }
-    .mainContentContainer .main_content .information .information_content ul li .apply{
+    .mainContentContainer .main_content .information .information_content ul li .apply {
         font-size: 20px;
         padding: 5px;
         margin-top: 10px;
@@ -1629,7 +1649,7 @@ a:hover {
     .idea_inner_cont.about_page .cont_title {
         margin-top: 5px;
     }
-    .about_page .content p{
+    .about_page .content p {
         height: 100%;
         overflow: hidden;
     }
@@ -1841,41 +1861,33 @@ a:hover {
         transform: rotate(180deg) !important;
     }
 }
+
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */
-    .mainContentContainer .main_content{
+    .mainContentContainer .main_content {
         top: 20%;
     }
-    .mainContentContainer .main_content .loan .loan_content .loan_amount{
-        width: 67%;
-    }
-    .mainContentContainer .main_content p.msg1{
+    .mainContentContainer .main_content p.msg1 {
         font-size: 35px;
-    }
-    .mainContentContainer .main_content .loan .loan_content .loan_tenor{
-        width: 33%;
     }
 }
 
 @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 */
-    .mobile_navbar .nav_bar li .message_drop_down{
+    .mobile_navbar .nav_bar li .message_drop_down {
         width: 340px;
     }
     .mobile_navbar .navbar-header .header_logo {
         margin: 18px 0;
     }
-    .mainContentContainer .main_content .loan .loan_content .loan_amount{
-        width: 70%;
-    }
-    .mainContentContainer .main_content .loan .loan_content .loan_tenor{
-        width: 30%;
-    }
 }
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 Plus*/
-    .mobile_navbar .nav_bar li .message_drop_down{
+    .mainContentContainer {
+        height: 495px;
+    }
+    .mobile_navbar .nav_bar li .message_drop_down {
         width: 380px;
     }
     .mobile_navbar .navbar-header .header_logo {

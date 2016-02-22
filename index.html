@@ -27,16 +27,6 @@
     }
 
     $(function() {
-
-        var myVideo = document.getElementById("video1");
-
-        function playPause() {
-            if (myVideo.paused) {
-                myVideo.play();
-            } else {
-                myVideo.pause();
-            }
-        }
         resize();
         $(window).resize(function() {
             resize();
@@ -47,8 +37,6 @@
             $(".sectionContainer").bind('scroll', function() {
                 var contentHeight = $('.sectionContainer .main_content').position().top;
                 var section2Pos = $('.sectionContainer .section2').position().top;
-
-                //console.log('contentHeight : '+contentHeight);
 
                 if (contentHeight < -200) {
                     $('.section2 .boxContainer').addClass('animate');
@@ -83,8 +71,9 @@
                             <div class="loan">
                                 <div class="loan_mask"></div>
                                 <div class="loan_content clearfix">
-                                    <span class="">I want to borrow</span>
+                                    <span class="visible-lg">I want to borrow</span>
                                     <div class="loan_amount">
+                                        <span class="hidden-lg">I want to borrow</span>
                                         <span class="irs_bg_left"></span>
                                         <input type="text" id="loan_amount" name="loan_amount" />
                                         <span class="irs_bg_right"></span>
@@ -109,7 +98,7 @@
                             </div>
                         </form>
                         <div class="movie">
-                            <div class="movie_top clearfix">
+                            <div class="movie_top clearfix visible-lg">
                                 <div class="play_movie left" onclick="playPause()">
                                     <span class="movie_text">PLAY MOVIE</span>
                                 </div>
@@ -123,6 +112,18 @@
                                     <video id="video2" height="34">
                                         <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/ogg">
                                         <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="movie_top clearfix hidden-lg">
+                                <div class="video3 left">
+                                    <video id="video3" height="34" loop="loop">
+                                        
+                                    </video>
+                                </div>
+                                <div class="video4 left">
+                                    <video id="video4" height="34">
+                                        
                                     </video>
                                 </div>
                             </div>
@@ -183,8 +184,10 @@
                     <div class="section section3">
                         <div class="titleContainer">
                             <div class="title1">APPLICATION</div>
-                            <div class="title2">A QUICK &amp;
-                                <br/>TRANSPARENT PROCESS</div>
+                            <div class="title2">
+                                A QUICK &amp;
+                                <br/> TRANSPARENT PROCESS
+                            </div>
                         </div>
                         <div class="boxContainer">
                             <div class="box box1">
@@ -207,70 +210,99 @@
                             </div>
                             <div class="box box4">
                                 <span class="triangle"></span>
-                                <div class="title1 hidden-lg">FUND AS SOON AS TODAY
-                                    <</div>
-                                        <div class="title1 visible-lg">Funds</div>
-                                        <div class="title2 visible-lg">AS SOON AS TODAY</div>
-                                        <div class="desc">Faced with the pressures of interest payments from mortags loans with other financial institutions.</div>
-                                </div>
+                                <div class="title1 hidden-lg">FUND AS SOON AS TODAY</div>
+                                <div class="title1 visible-lg">Funds</div>
+                                <div class="title2 visible-lg">AS SOON AS TODAY</div>
+                                <div class="desc">Faced with the pressures of interest payments from mortags loans with other financial institutions.</div>
                             </div>
                         </div>
-                        <div class="section section4">
-                            <div class="boxContainer">
-                                <div class="box box1">
-                                    <div class="title1">Service Videos</div>
-                                    <div class="title2">2015 GICL 環球信貸 x 醒目樓按篇</div>
-                                    <div class="desc_video">
-                                        <ul class="clearfix">
-                                            <li class="current">
-                                                <div>01</div>
-                                            </li>
-                                            <li>
-                                                <div>02</div>
-                                            </li>
-                                            <li>
-                                                <div>03</div>
-                                            </li>
-                                            <li>
-                                                <div>04</div>
-                                            </li>
-                                        </ul>
-                                        <div class="video_content">
-                                            <div class="video_icon"></div>
-                                            <div class="video_container"></div>
-                                        </div>
+                    </div>
+                    <div class="section section4">
+                        <div class="boxContainer">
+                            <div class="box box1">
+                                <div class="title1">Service Videos</div>
+                                <div class="title2">2015 GICL 環球信貸 x 醒目樓按篇</div>
+                                <div class="desc_video">
+                                    <ul class="clearfix">
+                                        <li class="current">
+                                            <div>01</div>
+                                        </li>
+                                        <li>
+                                            <div>02</div>
+                                        </li>
+                                        <li>
+                                            <div>03</div>
+                                        </li>
+                                        <li>
+                                            <div>04</div>
+                                        </li>
+                                    </ul>
+                                    <div class="video_content">
+                                        <div class="video_icon"></div>
+                                        <div class="video_container"></div>
                                     </div>
                                 </div>
-                                <div class="box box2 visible-lg">
-                                    <div class="title1">Benefits to
-                                        <br/>meet your needs</div>
-                                    <div class="desc_content clearfix">
-                                        <div class="desc desc_1 left">
-                                            <h4>Credit Building</h4>
-                                            <p>On-time payments are reported to major credit bureaus to help you build or improve your credit score</p>
-                                        </div>
-                                        <div class="desc desc_2 left">
-                                            <h4>Apply Safety</h4>
-                                            <p>What you see is what you get with our unsecured loans. we don't charge you a fee to borrow money.</p>
-                                        </div>
-                                        <div class="desc desc_3">
-                                            <h4>Real Customer</h4>
-                                            <p>Have a question? We're here 7 days a week to give you answers</p>
-                                        </div>
+                            </div>
+                            <div class="box box2 visible-lg">
+                                <div class="title1">Benefits to
+                                    <br/>meet your needs</div>
+                                <div class="desc_content clearfix">
+                                    <div class="desc desc_1 left">
+                                        <h4>Credit Building</h4>
+                                        <p>On-time payments are reported to major credit bureaus to help you build or improve your credit score</p>
+                                    </div>
+                                    <div class="desc desc_2 left">
+                                        <h4>Apply Safety</h4>
+                                        <p>What you see is what you get with our unsecured loans. we don't charge you a fee to borrow money.</p>
+                                    </div>
+                                    <div class="desc desc_3">
+                                        <h4>Real Customer</h4>
+                                        <p>Have a question? We're here 7 days a week to give you answers</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="scroll visible-lg">
-                    <img src="images/scroll_arrows_white.png">
-                    <p>SCROLL</p>
-                </div>
             </div>
-            <!--footer start-->
-            <div id="footer"></div>
+            <div class="scroll visible-lg">
+                <img src="images/scroll_arrows_white.png">
+                <p>SCROLL</p>
+            </div>
         </div>
+        <!--footer start-->
+        <div id="footer"></div>
+    </div>
+    <script>
+    var myVideo = document.getElementById("video1");
+
+    function playPause() {
+        if (myVideo.paused) {
+            myVideo.play();
+        } else {
+            myVideo.pause();
+        }
+    }
+
+    // $.each($('video'), function() {
+    //     $(this).click(function() {
+    //         if ($(this).paused) {
+    //             $(this).play();
+    //         } else {
+    //             $(this).pause();
+    //         }
+    //     });
+    // });
+
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+        var myVideo3 = document.getElementById("video3");
+        if(myVideo3.paused){
+            myVideo3.play();
+        }else{
+            myVideo3.pause();
+        }
+    }
+    </script>
 </body>
 
 </html>
