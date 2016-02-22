@@ -1146,7 +1146,7 @@
         overflow: hidden;
     }
     #idea_form .content_right .top ul li {
-        padding-left: 5px;
+        padding-left: 7px;
     }
     #idea_form .content_right .top ul li:last-child .step {
         margin-right: 0;
@@ -1155,16 +1155,16 @@
         margin-right: 0;
     }
     #idea_form .content_right .top ul li .step .p1 {
-        font-size: 15px;
+        font-size: 12px;
     }
     #idea_form .content_right .top ul li .step .p2 {
-        width: 80px;
-        font-size: 15px;
+        width: 60px;
+        font-size: 12px;
     }
     #idea_form .content_right .top ul li .sequence {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
     }
     #idea_form .content_right .top ul li .arrows {
         height: 70px;
@@ -1234,23 +1234,21 @@
         background-size: 100%;
     }
     #idea_form .cont_bottom {
-        height: 240px;
+        height: 193px;
         background: url('../images/mobile_formA_bottom.png') no-repeat;
         background-size: 100%;
     }
     #idea_form .content_right_1 .bottom .loan .loan_amount {
         margin: 0;
     }
-    #idea_form .content_right_1 .bottom .loan form .form-group{
+    #idea_form .content_right_1 .bottom .loan form .form-group {
         padding: 0;
     }
     #idea_form .content_right_1 .bottom .loan ul li {
         width: 100%;
     }
-    #idea_form .content_right_1 .bottom .loan_type .tips{
-
-    }
-    #idea_form .content_right_1 .bottom ul li:hover .tips{
+    #idea_form .content_right_1 .bottom .loan_type .tips {}
+    #idea_form .content_right_1 .bottom ul li:hover .tips {
         width: 155px;
         height: auto;
     }
@@ -1260,23 +1258,23 @@
     #idea_form .content_right_1 .bottom .button {
         margin-bottom: 30px;
     }
-    #idea_form .content_right .bottom .btn_group{
+    #idea_form .content_right .bottom .btn_group {
         width: 100%;
         padding: 10px;
         margin: 0;
     }
-    #idea_form .content_right .bottom .btn-group .previou{
+    #idea_form .content_right .bottom .btn-group .previou {
         width: 100%;
         margin-right: 0;
     }
-    #idea_form .content_right .bottom .btn-group .next{
+    #idea_form .content_right .bottom .btn-group .next {
         width: 100%;
         margin-bottom: 5px;
     }
     #idea_form .cont_bottom .help {
         border: 1px solid #fff;
-        padding: 15px;
-        margin: 22px 50px;
+        padding: 5px;
+        margin: 5px 10px;
         cursor: pointer;
         color: white;
     }
@@ -1328,25 +1326,24 @@
     #idea_form .content_right_3 .bottom .button {
         margin: 20px 0;
     }
-    #idea_form .content_right_4 .bottom_content{
+    #idea_form .content_right_4 .bottom_content {
         height: auto;
         overflow: hidden;
     }
-    #idea_form .content_right_4 .bottom .title{
+    #idea_form .content_right_4 .bottom .title {
         font-size: 16px;
     }
-    #idea_form .content_right_4 .edit{
+    #idea_form .content_right_4 .edit {
         width: 65px;
         height: auto;
         line-height: 1.3;
         font-size: 16px;
     }
-    #idea_form .content_right_4 .perferred_language_content_1 .btn-group{
+    #idea_form .content_right_4 .perferred_language_content_1 .btn-group {
         width: 100%;
         margin: 0;
         padding: 0 15px;
     }
-    
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1360,17 +1357,8 @@
     #idea_form .wrap .idea_form_content .cont_top {
         height: 175px;
     }
-    #idea_form .content_right .top ul li .sequence {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
-    #idea_form .content_right .top ul li .step .p1 {
-        font-size: 12px;
-    }
-    #idea_form .content_right .top ul li .step .p2 {
-        width: 58px;
-        font-size: 12px;
+    #idea_form .content_right .top ul li {
+        padding-left: 5px;
     }
     #idea_form .content_right .bottom .loan_type ul li {
         width: 29%;
@@ -1398,5 +1386,20 @@
     }
     #idea_form .cont_bottom .help {
         margin: 10px 30px;
+    }
+}
+
+@media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* 兼容iphone6 Plus*/
+    #idea_form .content_right .top ul li .sequence {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    #idea_form .content_right .top ul li .step .p1{
+        font-size: 15px;
+    }
+    #idea_form .content_right .top ul li .step .p2 {
+        width: 80px;
     }
 }
