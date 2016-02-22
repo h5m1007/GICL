@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*import font*/
+@font-face {
+  font-family: 'Bliss2';
+  src: url('fonts/Bliss2R.otf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Bliss2';
+  src: url('fonts/Bliss2B.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('fonts/Calibri.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Calibri';
+  src: url('fonts/Calibri Bold.ttf');
+  font-weight: bold;
+}

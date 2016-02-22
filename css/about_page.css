@@ -1,0 +1,10 @@
+.about_page .content{
+	overflow-x: hidden;
+	margin-left: -20px;
+}
+.about_page .content p{
+	width: 100%;
+	height: 420px;
+	margin-left: 20px;
+	overflow-y: auto;
+}

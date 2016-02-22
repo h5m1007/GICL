@@ -1,0 +1,226 @@
+/*-------idea_loginregister css------*/
+
+
+/*-------idea_loginregister css for pc style------*/
+
+.idea_inner_cont.log_reg_page {
+    min-width: 100%;
+    max-height: 637px;
+    margin: 168px auto 0;
+}
+
+.idea_inner_cont.log_reg_page .cont_left {
+    height: 637px;
+    background: url('../images/log_reg_banner.png') no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.log_reg_page .log_reg_cont .cont_title {
+    padding: 70px 0 20px;
+}
+
+.log_reg_page .log_reg_cont .cont_nav ul li a {
+    font-size: 24px;
+    color: #000;
+    padding: 5px 50px;
+}
+
+.log_reg_cont .cont_nav ul li a:hover,
+.log_reg_cont .cont_nav ul li a:focus {
+    color: #85b428;
+}
+
+.log_reg_cont .cont_nav ul li.active a {
+    color: #85b428;
+    border-bottom-color: #F2F7F8;
+    background-color: transparent;
+}
+
+.log_reg_cont .cont_form #log label {
+    padding: 20px 0 10px 0;
+}
+
+.log_reg_cont .cont_form .btn_group {
+    margin-top: 15px;
+}
+
+.log_reg_cont .cont_form .btn {
+    width: 200px;
+    color: #fff;
+    background: #85b428;
+}
+
+.log_reg_cont .cont_form .btn.btn_back {
+    background: #838383;
+}
+
+.log_reg_cont .cont_form #log .find_psw {
+    color: #85b428;
+    padding: 5px 0 0;
+    display: block;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.help-block {
+    font-size: 16px;
+}
+
+.log_reg_cont .cont_form label {
+    padding: 15px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+.log_reg_cont .cont_form #reg{
+    margin-bottom: 0;
+}
+
+.log_reg_cont .cont_form #reg label.agree {
+    color: #838383;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.log_reg_page .cont_form .reg_success p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.log_reg_page .cont_form .reg_success p:nth-child(2) {
+    font-size: 30px;
+    font-weight: normal;
+    color: #025062;
+}
+
+.log_reg_page .cont_form .btn,
+.forget_pw .btn {
+    width: 244px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+@media screen and (min-width: 1300px) {
+    .idea_inner_cont.log_reg_page .cont_left {
+        height: 670px;
+    }
+}
+
+
+/*  forget password  */
+
+.forget_pw {
+    display: none;
+    margin-top: 110px;
+}
+
+.forget_pw .title1 {
+    font-family: 'Bliss2';
+    font-size: 50px;
+    font-weight: bold;
+    color: #2995b1;
+    letter-spacing: 2px;
+}
+
+.forget_pw .title2 {
+    font-family: 'Bliss2';
+    font-size: 32px;
+    color: #065062;
+    margin: 35px 0 25px;
+}
+
+.forget_pw .title3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.forget_pw input[type=text] {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid #ccc;
+}
+
+.forget_pw .btn_group {
+    margin-top: 40px;
+}
+
+.forget_pw .btn_group .btn_send {
+    background-color: #85b428;
+}
+
+.forget_pw .btn_group .btn_back {
+    background-color: #838383;
+}
+
+
+/*-------idea_loginregister css for mobile style------*/
+
+@media screen and (min-width: 320px) and (max-width: 1130px) {
+    .idea_inner_cont.log_reg_page {
+        max-height: 100%;
+        margin-top: 85px;
+    }
+    .idea_inner_cont.log_reg_page .cont_left {
+        height: 170px;
+        background: url('../images/mobile_login_page_banner.png') no-repeat;
+        background-size: 100%;
+    }
+    .log_reg_page .log_reg_cont .cont_title {
+        font-size: 25px;
+        letter-spacing: 0;
+        padding-top: 0;
+    }
+    .log_reg_page .cont_form .reg_success p {
+        font-weight: normal;
+    }
+    .log_reg_page .cont_form .reg_success p:nth-child(2) {
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 12px;
+    }
+    .log_reg_page .cont_form .btn,
+    .forget_pw .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .log_reg_page .log_reg_cont .cont_nav ul li {
+        width: 50%;
+    }
+    .log_reg_page .log_reg_cont .cont_nav ul li a {
+        text-align: center;
+        padding: 10px 15px;
+        margin-right: 1px;
+    }
+    .log_reg_cont .cont_nav ul li.active a {
+        border: none;
+        border-bottom: 4px solid #84b614;
+    }
+    .forget_pw {
+        margin-top: 5px;
+    }
+    .forget_pw .title1 {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+    .forget_pw .title2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .forget_pw .title4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}

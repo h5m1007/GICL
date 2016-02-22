@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>GICL</title>
+    <link href="css/bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="css/font.css" rel="Stylesheet" type="text/css" />
+    <link href="css/common.css" rel="Stylesheet" type="text/css" />
+    <link href="css/idea_inner_FAQ.css" rel="Stylesheet" type="text/css" />
+    <script src="scripts/jquery-1.11.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.ddslick.min.js"></script>
+    <script src="scripts/jquery.popupoverlay.js"></script>
+    <script src="scripts/common.js"></script>
+</head>
+
+<body>
+    <!--header start-->
+    <div id="header"></div>
+    <!--content start-->
+    <div class="idea_inner_cont faq_page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="cont_left col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                </div>
+                <div class="cont_right col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                    <div class="panel-group" id="accordion">
+                        <div class="cont_title col-sm-12">FAQS</div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a data-target="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q1</p>
+                                    <p>
+                                        What are the basic requirements for personal loan application?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    The basic application criteria for GICL personal loan are that the applicant must be a Hong Kong permanent resident aged 18 or above and have regular employment.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" style="margin-bottom: 20px;">
+                                <h4 class="panel_title">
+                                <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q2</p>
+                                    <p>
+                                        Upon loan application, will GICL check on the applicant's personal credit records with a credit reference agency?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q3</p>
+                                    <p>
+                                        What is ‘declining balance method’?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a href="#collapse4" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q4</p>
+                                    <p>
+                                        Will GICL charge any handling fee?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a href="#collapse5" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q5</p>
+                                    <p>
+                                        Will my loan application be disclosed to my family or friends?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a href="#collapse6" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q6</p>
+                                    <p>
+                                        How can I apply for GICL personal loan?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse6" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel_title">
+                                <a href="#collapse7" data-toggle="collapse" data-parent="#accordion">
+                                    <p>Q7</p>
+                                    <p>
+                                        What documents are required for a loan application?
+                                    </p>
+                                    <span class="arrow_icon"></span>
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapse7" class="panel-collapse collapse">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll visible-lg">
+                        <img src="images/scroll_arrows_green.png">
+                        <p>SCROLL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer start-->
+    <div id="footer"></div>
+    <script>
+    $('.in').prev().find('p').css('color', '#2995b1').next().addClass('active');
+    for (var i = 1; i < 8; i++) {
+        $("#collapse" + i).on('show.bs.collapse', function() {
+            $(this).prev().find('p').css('color', '#2995b1').next().addClass('active');
+        }).on('hide.bs.collapse', function() {
+            $(this).prev().find('p').css('color', '#838383').next().removeClass('active');
+        });
+    }
+    </script>
+</body>
+
+</html>
