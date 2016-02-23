@@ -26,8 +26,11 @@
     #idea_form .content_left {
         position: relative;
         z-index: 2;
-        padding: 30px 0 0 185px;
+        padding: 30px 20px 9px 185px;
         opacity: 0;
+        background: url("../images/banner_imng_g.jpg") no-repeat;
+        -webkit-background-size: 100%;
+        background-size: 100%;
     }
     #idea_form .idea_form_content .content_left.animate {
         transform-origin: 100% 50%;
@@ -44,6 +47,23 @@
         -webkit-animation: box2Ani .3s ease-in-out .3s 1;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
+    }
+    #idea_form .idea_form_content .content_left.start_animate,
+    #idea_form .wrap .img img {
+        /*transform-origin: 100% 50%;
+        -webkit-transform-origin: 100% 50%;*/
+        animation: box5Ani .5s ease-in-out .3s;
+        -webkit-animation: box5Ani .5s ease-in-out .3s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+    #idea_form .idea_form_content .content_right.start_animate {
+        transform-origin: 0% 50%;
+        -webkit-transform-origin: 0% 50%;
+        animation: box6Ani .5s ease-in-out .3s;
+        -webkit-animation: box6Ani .5s ease-in-out .3s;
+        /*animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;*/
     }
     #idea_form .content_left .spacing {
         margin-bottom: 20px;
@@ -70,6 +90,7 @@
         padding: 20px;
         cursor: pointer;
         color: white;
+        margin-bottom: 0;
     }
     #idea_form .content_left .for_help {
         font-size: 26px;
@@ -83,15 +104,11 @@
     #idea_form .content_right {
         margin-top: 30px;
         padding-right: 0;
-        margin-right: -15px;
-        margin-left: 15px;
-        height: 620px;
-        overflow-y: auto;
+        height: 605px;
     }
     #idea_form .content_right .top ul li {
         float: left;
         text-align: center;
-        /*width: 25%;*/
     }
     #idea_form .content_right .top ul li:last-child .step {
         float: right;
@@ -212,6 +229,7 @@
         text-align: center;
         background-color: #85b518;
         border-radius: 2px;
+        margin-right: 20px;
         cursor: pointer;
         color: white;
         font-size: 18px;
@@ -221,7 +239,6 @@
         text-align: center;
         background-color: #C0C0C0;
         border-radius: 2px;
-        margin-right: 20px;
         cursor: pointer;
         color: white;
         font-size: 18px;
@@ -259,7 +276,7 @@
         -o-transform: translate(-50%, 0);
         z-index: 2;
         background-color: #85b518;
-        width: 265px;
+        width: 235px;
         height: 130px;
         padding: 10px;
         color: white;
@@ -892,8 +909,8 @@
         padding-left: 15px;
     }
     #idea_form .content_right_4 .bottom_content {
-        height: 655px;
-        overflow-y: auto;
+        /*height: 655px;
+        overflow-y: auto;*/
     }
     #idea_form .content_right_4 .bottom_content_2 {
         display: none;
@@ -1096,12 +1113,12 @@
     }
     #idea_form .content_left {
         width: 33%;
-        padding: 45px 15px 0 330px;
+        padding: 45px 15px 108px 330px;
     }
     #idea_form .content_right {
         width: 40%;
-        height: 757px;
-        overflow-y: auto;
+        height: 740px;
+        /*overflow-y: auto;*/
     }
 }
 
@@ -1396,7 +1413,7 @@
         height: 60px;
         line-height: 60px;
     }
-    #idea_form .content_right .top ul li .step .p1{
+    #idea_form .content_right .top ul li .step .p1 {
         font-size: 15px;
     }
     #idea_form .content_right .top ul li .step .p2 {

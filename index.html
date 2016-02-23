@@ -17,6 +17,7 @@
     <script src="scripts/jquery.popupoverlay.js"></script>
     <script src="scripts/common.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/jquery.jplayer.min.js"></script>
     <script type="text/javascript">
     function resize() {
         setTimeout(function() {
@@ -116,16 +117,8 @@
                                 </div>
                             </div>
                             <div class="movie_top clearfix hidden-lg">
-                                <div class="video3 left">
-                                    <video id="video3" height="34" loop="loop">
-                                        
-                                    </video>
-                                </div>
-                                <div class="video4 left">
-                                    <video id="video4" height="34">
-                                        
-                                    </video>
-                                </div>
+                                <div id="video3" class="video3 left"></div>
+                                <div id="video4" class="video4 left"></div>
                             </div>
                         </div>
                     </div>
@@ -274,34 +267,34 @@
         <div id="footer"></div>
     </div>
     <script>
-    var myVideo = document.getElementById("video1");
+    // var myVideo = document.getElementById("video1");
 
-    function playPause() {
-        if (myVideo.paused) {
-            myVideo.play();
-        } else {
-            myVideo.pause();
-        }
-    }
+    // function playPause() {
+    //     if (myVideo.paused) {
+    //         myVideo.play();
+    //     } else {
+    //         myVideo.pause();
+    //     }
+    // }
 
-    // $.each($('video'), function() {
-    //     $(this).click(function() {
-    //         if ($(this).paused) {
-    //             $(this).play();
-    //         } else {
-    //             $(this).pause();
-    //         }
-    //     });
-    // });
+    // // $.each($('video'), function() {
+    // //     $(this).click(function() {
+    // //         if ($(this).paused) {
+    // //             $(this).play();
+    // //         } else {
+    // //             $(this).pause();
+    // //         }
+    // //     });
+    // // });
 
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
-        var myVideo3 = document.getElementById("video3");
-        if(myVideo3.paused){
-            myVideo3.play();
-        }else{
-            myVideo3.pause();
-        }
-    }
+    // if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+    //     var myVideo3 = document.getElementById("video3");
+    //     if(myVideo3.paused){
+    //         myVideo3.play();
+    //     }else{
+    //         myVideo3.pause();
+    //     }
+    // }
     </script>
 </body>
 

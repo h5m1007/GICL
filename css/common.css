@@ -150,9 +150,6 @@ a:hover {
     }
     .log_on.right {
         background: url('../images/Nav_bar/nav_bar_login-on.png') 10px 50% no-repeat;
-        /*cursor: pointer;*/
-        /*width: 16px;
-    height: 20px;*/
     }
     .log_on.right a {
         color: white;
@@ -177,7 +174,6 @@ a:hover {
     }
     .nav_bar li .nav_menu {
         color: #004A5F;
-        /*vertical-align: middle;*/
         background: url(../images/Nav_bar/nav_bar_icon_setting.png) left center no-repeat;
         padding-left: 30px;
         cursor: pointer;
@@ -249,9 +245,6 @@ a:hover {
     .nav_bar li .message_drop_down .message_content li.year {
         background: url(../images/icon_form_1.png) 10px center no-repeat;
     }
-    /*.nav_bar li .message_drop_down .message_content li:hover{
-        background-color: white;
-    }*/
     .headerContent .nav_bar .nav_bar_language_bg {
         background: url(../images/Nav_bar/nav_bar_btn_select_language.png) center no-repeat;
         display: inline-block;
@@ -298,7 +291,6 @@ a:hover {
     .header_bottom .main_nav_bar {
         width: 66.667%;
         margin: 0 auto;
-        /*overflow: hidden;*/
         margin-top: 15px;
     }
     .header_bottom .main_nav_bar li {
@@ -1187,6 +1179,28 @@ a:hover {
     }
 }
 
+@keyframes box3Ani {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    100% {
+        opacity: 1.0;
+        transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes box3Ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
 @keyframes box4Ani {
     0% {
         opacity: 0;
@@ -1209,25 +1223,47 @@ a:hover {
     }
 }
 
-@keyframes box3Ani {
+@keyframes box5Ani {
     0% {
         opacity: 0;
-        transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+        transform: translateY(-100%);
     }
     100% {
         opacity: 1.0;
-        transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform: translateY(0);
     }
 }
 
-@-webkit-keyframes box3Ani {
+@-webkit-keyframes box5Ani {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+        -webkit-transform: translateY(-100%);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes box6Ani {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1.0;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes box6Ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
     }
 }
 
@@ -1390,17 +1426,7 @@ a:hover {
         top: 25%;
     }
     .mainContentContainer .main_content .movie .movie_top #video3 {
-        width: 140px;
-        height: 105px;
-        background: url('../images/mobile_video3.png') no-repeat;
         margin-right: 10px;
-        background-size: 100%;
-    }
-    .mainContentContainer .main_content .movie .movie_top #video4 {
-        width: 140px;
-        height: 105px;
-        background: url('../images/mobile_video4.png') no-repeat;
-        background-size: 100%;
     }
     .mainContentContainer .main_content .section {
         margin: 0 15px 0;
@@ -1863,7 +1889,7 @@ a:hover {
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* 兼容iphone5 */
+    /* iphone5 */
     .mainContentContainer .main_content {
         top: 20%;
     }
@@ -1873,7 +1899,7 @@ a:hover {
 }
 
 @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* 兼容iphone6 */
+    /* iphone6 */
     .mobile_navbar .nav_bar li .message_drop_down {
         width: 340px;
     }
@@ -1883,7 +1909,7 @@ a:hover {
 }
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* 兼容iphone6 Plus*/
+    /* iphone6 Plus */
     .mainContentContainer {
         height: 495px;
     }
@@ -1899,7 +1925,7 @@ a:hover {
 }
 
 @media (device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* 兼容iPad */
+    /* iPad */
     .mobile_navbar .navbar-header {
         width: 100%;
     }
@@ -1917,7 +1943,7 @@ a:hover {
 }
 
 @media screen and (min-width: 568px) and (orientation: landscape) {
-    /* 兼容iphone5 横屏 */
+    /* iphone5 landscape */
     .mobile_navbar .navbar-header .header_logo {
         width: 39%;
         margin: 24px 125px;
@@ -1925,7 +1951,7 @@ a:hover {
 }
 
 @media screen and (min-width: 667px) and (orientation: landscape) {
-    /* 兼容iphone6 横屏 */
+    /* iphone6 landscape */
     .mobile_navbar .navbar-toggle {
         margin: 30px 0 30px 10px;
     }
@@ -1936,7 +1962,7 @@ a:hover {
 }
 
 @media screen and (min-width: 736px) and (orientation: landscape) {
-    /* 兼容iphone6 Plus 横屏 */
+    /* iphone6 Plus landscape */
     .mobile_navbar .navbar-toggle {
         margin: 30px 0 30px 10px;
     }
@@ -1947,7 +1973,7 @@ a:hover {
 }
 
 @media (device-height: 768px) and (orientation: landscape) {
-    /* 兼容ipad 横屏 */
+    /* ipad landscape */
     .mobile_navbar .navbar-header {
         width: 100%;
     }
