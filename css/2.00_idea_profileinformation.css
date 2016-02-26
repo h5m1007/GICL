@@ -1,909 +1,739 @@
 /*-------2.00_idea_profileinformation css------*/
 
-.idea_profileinformation {
-    background-color: #F4F4F4;
-    position: relative;
-    margin-top: 167px;
-}
-
-.idea_profileinformation .wrap {
-    min-height: 952px;
-}
-
-.idea_profileinformation .wrap .img {
-    width: 33.636364%;
-    position: relative;
-    float: left;
-}
-
-.idea_profileinformation .wrap .img img {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.idea_profileinformation .main_content {
-    margin-left: 37.5%;
-    padding-top: 80px;
-    overflow: hidden;
-}
-
-.idea_profileinformation .main_content .padding {
-    padding-left: 20px;
-}
-
-.idea_profileinformation .main_content .welcome {
-    color: #2095b3;
-    font-size: 40px;
-    letter-spacing: 3px;
-}
-
-.idea_profileinformation .main_content .user {
-    color: #065062;
-    font-size: 30px;
-    font-family: 'Calibri';
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.nav_tabs .nav-tabs li a {
-    font-size: 20px;
-    font-family: 'Calibri';
-}
-
-.nav_tabs .nav-tabs li a {
-    color: #010101;
-}
-
-.nav_tabs .nav-tabs li.active a {
-    color: #85b429;
-}
-
-.nav_tabs .nav-tabs > li > a {
-    margin-right: 46px;
-}
-
-.nav_tabs .tab-content .first {
-    margin-top: 30px;
-    color: #85b429;
-    height: 42px;
-    line-height: 42px;
-}
-
-.nav_tabs .tab-content .about_frofile {
-    font-size: 30px;
-}
-
-.nav_tabs .tab-content .edit {
-    background: #2995b1;
-    color: #fff;
-    width: 70px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    vertical-align: middle;
-}
-
-#information .title {
-    font-size: 20px;
-    font-family: 'Calibri';
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-#information .email {
-    padding: 20px;
-}
-
-#information .edit_content .pw {
-    background-color: #E6E6E6;
-    padding: 10px 20px;
-}
-
-#information .edit_content .last {
-    padding-top: 20px;
-}
-
-#information .edit_content .phone {
-    background-color: #E6E6E6;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-
-#information p {
-    font-size: 20px;
-    color: #010101;
-    font-family: 'Calibri';
-}
-
-.nav-tabs {
-    position: relative;
-}
-
-
-/*.nav-tabs:before{
-    left: -20px;
-    bottom: -0.5px;
-    width: 20px;
-    height: 1px;
-    background: #ddd;
-    position: absolute;
-}*/
-
-#information .edit_content2 {
-    padding-left: 20px;
-    display: none;
-}
-
-#information .edit_content2 .email {
-    padding: 20px 0;
-}
-
-#information .edit_conten2t form {
-    margin-top: 10px;
-}
-
-#information .edit_content2 input {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    padding-left: 10px;
-}
-
-#information .edit_content2 .input_pw input {
-    /*width: 49%;*/
-}
-
-#information .edit_content2 form > input {
-    width: 50%;
-}
-
-#information .edit_content2 .residential_address {
-    margin-top: 10px;
-}
-
-#information .edit_content2 .residential_address input {
-    margin-bottom: 10px;
-}
-
-#information .edit_content2 .residential_address select.choose_country {
-    height: 40px;
-    width: 100%;
-    -webkit-appearance: none;
-    background:  #fff url("../images/arrows_blue_down.png") right 11px no-repeat;
-}
-
-#information .edit_content2 .proof_address {
-    position: relative;
-}
-
-#information .edit_content2 .proof_address::after {
-    content: ' ';
-    width: 30px;
-    height: 26px;
-    background: url(../images/icon_form_1.png) left center no-repeat;
-    position: absolute;
-    top: 40px;
-    right: 5px;
-    cursor: pointer;
-}
-
-#information .edit_content2 .phone {
-    margin-top: 10px;
-}
-
-#information .edit_content2 .button {
-    display: inline-block;
-    width: 35%;
-    height: 40px;
-    text-align: center;
-    margin-top: 30px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    color: white;
-    font-size: 16px;
-}
-
-#information .edit_content2 .up_date {
-    background: #85b428;
-}
-
-#information .edit_content2 .cancel {
-    background: #838383
-}
-
-#status {
-    min-height: 644px;
-    margin-top: 40px;
-    margin-right: 10px;
-    position: relative;
-}
-
-#status .status_contentContainer {
-    overflow-x: hidden;
-    margin-left: -17px;
-}
-
-#status .status_contentContainer .container {
-    width: 100%;
-    height: 560px;
-    overflow-y: auto;
-    margin-left: 17px;
-}
-
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {
-    border: none;
-    background-color: #F4F4F4;
-}
-
-#status .application {
-    margin-bottom: 5px;
-}
-
-#status .application_record {
-    background: #85b428;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-}
-
-#status .application_record span {
-    cursor: pointer;
-}
-
-#status .status_content {
-    padding: 10px 20px;
-    background: #ECECEC;
-}
-
-#status .status_content > li:first-child {
-    width: 60%;
-    margin-right: 100px;
-}
-
-#status .status_content li.application_edit {
-    height: 45px;
-    line-height: 45px;
-}
-
-#status .status_content .description {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-#status .status_content ul li {
-    float: left;
-    width: 33.333333%;
-}
-
-#status .status_content .submit_document {
-    background: url(../images/icon_form_1.png) left center no-repeat;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 30px;
-    color: #2995b1;
-    cursor: pointer;
-}
-
-#status .status_content .submit_document:hover {
-    background: url(../images/icon_form.png) left center no-repeat;
-    color: #85b428;
-}
-
-#status .status_content .sign_contract {
-    background: url(../images/icon_note_1.png) left center no-repeat;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 30px;
-    color: #2995b1;
-    cursor: pointer;
-}
-
-#status .status_content .sign_contract:hover {
-    background: url(../images/icon_note.png) left center no-repeat;
-    color: #85b428;
-}
-
-#status .status_content .download_contract {
-    background: url(../images/icon_download_1.png) left center no-repeat;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 30px;
-    color: #2995b1;
-    cursor: pointer;
-}
-
-#status .status_content .download_contract:hover {
-    background: url(../images/icon_download.png) left center no-repeat;
-    color: #85b428;
-}
-
-#status .application_third .application_record,
-#status .application_fourth .application_record {
-    background: #AEAEAE;
-}
-
-#status .scroll {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 15px;
-    color: #838383;
-    cursor: pointer;
-    text-align: center;
-}
-
-#payment {
-    min-height: 644px;
-    margin-top: 40px;
-    margin-right: 10px;
-    position: relative;
-}
-
-#payment .payment {
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-#payment .payment_record {
-    background: #85b428;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-}
-
-#payment .payment_record span {
-    cursor: pointer;
-}
-
-#payment .status_content {
-    padding: 10px 20px;
-    background: #ECECEC;
-}
-
-#payment .status_content li.payment_edit {
-    height: 45px;
-    line-height: 45px;
-}
-
-#payment .status_content .description {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-#payment .status_content ul li {
-    float: left;
-    width: 33.333333%;
-}
-
-#payment .status_content .submit_document {
-    background: url(../images/icon_form_1.png) left center no-repeat;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 30px;
-    color: #2995b1;
-    cursor: pointer;
-}
-
-#payment .status_content .submit_document:hover {
-    background: url(../images/icon_form.png) left center no-repeat;
-    color: #85b428;
-}
-
-#payment .status_content .sign_contract {
-    background: url(../images/icon_note_1.png) left center no-repeat;
-    display: inline-block;
-    height: 26px;
-    line-height: 26px;
-    padding-left: 30px;
-    color: #2995b1;
-    cursor: pointer;
-}
-
-#payment .status_content .sign_contract:hover {
-    background: url(../images/icon_note.png) left center no-repeat;
-    color: #85b428;
-}
-
-#payment .payment_show .payment_record {
-    background: #9F9F9F;
-}
-
-#payment .payment_show .payment_first > p {
-    color: #85b428;
-    font-size: 24px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-}
-
-#payment .payment_first_efficient {
-    display: none;
-}
-
-#payment .status_content ul li {
-    float: left;
-    width: 20%;
-}
-
-
-/*submit_update_a*/
-
-#submit_update_a {
-    display: none;
-    margin-left: 20px;
-    /*margin-bottom: 50px;*/
-    min-height: 780px;
-}
-
-#submit_update_a .document {
-    color: #2995b1;
-    font-size: 28px;
-    font-weight: 500;
-}
-
-#submit_update_a .no {
-    color: #065062;
-    font-size: 24px;
-}
-
-#submit_update_a .title1 {
-    font-size: 16px;
-}
-
-#submit_update_a .submit_update_a_content {
-    margin-top: 20px;
-}
-
-#submit_update_a .submit_update_a_content h3 {
-    background-color: #85b429;
-    color: white;
-    padding-left: 20px;
-    height: 45px;
-    line-height: 45px;
-    text-align: left;
-}
-
-#submit_update_a .submit_update_a_content .file_content {
-    height: 140px;
-    /*line-height: 80px;*/
-    text-align: center;
-    background-color: #ECECEC;
-    font-size: 18px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-
-/*#submit_update_a input[type=file]{
-    display: initial;
-    position: absolute;
-    right: 29%;
-    top: 30px;
-    opacity: 0;
-    height: 20px;
-    width: 130px;
-    cursor: pointer;
-}*/
-
-#submit_update_a .button .submit,
-#submit_update_a .button .cancel {
-    float: left;
-    width: 244px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    margin: 20px 20px 0 0;
-    cursor: pointer;
-}
-
-#submit_update_a .button .submit {
-    background-color: #85b429;
-}
-
-#submit_update_a .button .submit.inactive {
-    background-color: #C6DA9E;
-}
-
-#submit_update_a .button .cancel {
-    background-color: #838383;
-}
-
-
-/*sign_contract*/
-
-#sign_contract .section1 {
-    display: none;
-}
-
-#sign_contract .tutorial .title1 {
-    color: #85b428;
-    font-size: 24px;
-}
-
-#sign_contract .tutorial .tutorial_content {
-    height: 350px;
-    border: 1px solid #838383;
-    background-color: white;
-    margin: 20px 0 30px;
-    padding: 10px 10px 0 10px;
-}
-
-#sign_contract .tutorial_content .agreement {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#sign_contract .tutorial_content .notes {
-    font-size: 18px;
-    color: #000;
-    margin: 10px 0;
-}
-
-#sign_contract .button .to_back {
-    width: 244px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    cursor: pointer;
-    margin-top: 30px;
-    background-color: #838383;
-}
-
-#sign_contract .button .start_now {
-    width: 244px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    cursor: pointer;
-    margin-top: 30px;
-    background-color: #C6DA9E;
-}
-
-#sign_contract {
-    display: none;
-    margin-left: 20px;
-}
-
-#sign_contract .sign_contract {
-    color: #2995b1;
-    font-size: 30px;
-    letter-spacing: 1px;
-    font-family: 'Bliss2';
-}
-
-#sign_contract .no {
-    color: #065062;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-#sign_contract .sign_contract_step ul {
-    width: 80%;
-    margin: 20px auto 0;
-}
-
-#sign_contract .sign_contract_step ul li {
-    float: left;
-    text-align: center;
-}
-
-#sign_contract .sign_contract_step ul li .sequence {
-    width: 66px;
-    margin: 0 auto;
-    height: 66px;
-    text-align: center;
-    line-height: 66px;
-    color: white;
-    font-size: 18px;
-    border-radius: 50%;
-    background-color: #838383;
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-
-#sign_contract .sign_contract_step ul li.active .sequence {
-    background-color: #85b429;
-}
-
-#sign_contract .sign_contract_step ul li .p1.current {
-    color: #85b429;
-}
-
-#sign_contract .sign_contract_step ul li .arrows {
-    width: 20px;
-    height: 96px;
-    line-height: 96px;
-    background: url(../images/arrows_gray.png) left center no-repeat;
-    vertical-align: middle;
-    margin: 0 50px;
-}
-
-#sign_contract .sign_contract_step ul li .arrows.current {
-    background: url(../images/arrows_green.png) left center no-repeat;
-}
-
-#sign_contract .divider {
-    height: 1px;
-    background: #838383;
-    margin: 20px 0;
-}
-
-#sign_contract .conditions {
-    color: #85b429;
-    font-size: 24px;
-}
-
-#sign_contract .download {
-    color: #2995b1;
-    background: url(../images/icon_download.png) no-repeat;
-    padding-left: 28px;
-    height: 26px;
-    line-height: 26px;
-    margin-top: 4px;
-    cursor: pointer;
-}
-
-#sign_contract .sign_contract_content {
-    border: 1px solid #838383;
-    height: 200px;
-    background-color: white;
-    margin: 20px 0 30px;
-    padding: 10px 0 0 10px;
-}
-
-#sign_contract .sign_contract_content .agreement {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#sign_contract .sign_contract_content .notes {
-    font-size: 18px;
-    color: #000;
-    margin: 10px 0;
-}
-
-#sign_contract .schedule {
-    height: 44px;
-    line-height: 44px;
-    background-color: #2995b1;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    margin-bottom: 20px;
-}
-
-#sign_contract .verification {
-    width: 45%;
-    height: 44px;
-    line-height: 44px;
-    background-color: rgb(198, 218, 158);
-    color: white;
-    text-align: center;
-    border-radius: 2px;
-    cursor: pointer;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-}
-
-#sign_contract .protocol {
-    margin-bottom: 20px;
-    height: 30px;
-    line-height: 30px;
-}
-
-#sign_contract .protocol input[type=checkbox] {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #000;
-    background-color: white;
-    border-radius: 0;
-    margin: 6px 5px 0 0;
-}
-
-#sign_contract .send_code {
-    display: none;
-}
-
-#sign_contract .pwContainer {
-    text-align: center;
-    background-color: #e7e7e7;
-    padding: 15px;
-}
-
-#sign_contract .pwContainer .input {
-    position: relative;
-}
-
-#sign_contract .pwContainer .input input[type=button] {
-    position: absolute;
-    right: 10px;
-    top: 20px;
-    background-color: transparent;
-    border: none;
-    color: #2995b1;
-}
-
-#sign_contract .pwContainer input[type=text] {
-    display: inline-block;
-    width: 100%;
-    height: 44px;
-    border: 2px solid #ccc;
-    margin-top: 8px;
-    padding-left: 10px;
-}
-
-#sign_contract .button .btn_back,
-#sign_contract .button .btn_next {
-    width: 244px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    cursor: pointer;
-    margin-top: 30px;
-}
-
-#sign_contract .button .btn_back {
-    background-color: #838383;
-}
-
-#sign_contract .button .btn_next {
-    background-color: #C6DA9E;
-}
-
-#sign_contract .section2 {
-    display: none;
-}
-
-
-/*section3*/
-
-#sign_contract .section3 {
-    display: none;
-}
-
-#sign_contract .section3 .succeed1 {
-    color: #2995b1;
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Bliss2';
-}
-
-#sign_contract .section3 .succeed2 {
-    color: #2995b1;
-    font-size: 30px;
-    text-align: center;
-}
-
-#sign_contract .section3 .desc1,
-#sign_contract .section3 .desc2 {
-    text-align: center;
-    margin: 20px 0;
-    padding: 0 20px;
-}
-
-#sign_contract .section3 .to_main {
-    width: 244px;
-    height: 44px;
-    line-height: 44px;
-    margin: 0 auto;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    background-color: #838383;
-    cursor: pointer;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-}
-
-#uploader {
-    position: relative;
-    min-height: 125px;
-}
-
-#uploader .placeholder {
-    max-height: 80px;
-    min-height: 80px;
-    line-height: 80px;
-    padding-top: 0;
-    background: none;
-}
-
-#uploader .queueList {
-    margin: 0;
-}
-
-#uploader .filelist li {
-    width: 70px;
-    height: 70px;
-    margin: 5px 5px 5px 0;
-}
-
-#uploader .filelist li:first-child {
-    margin-left: 5px;
-}
-
-#uploader .filelist li p.imgWrap {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #aaa;
-}
-
-#uploader .statusBar .info {
-    display: none;
-}
-
-#uploader .placeholder {
-    border: 0;
-}
-
-#uploader .placeholder .webuploader-pick {
-    line-height: 80px;
-    margin: 0 auto;
-}
-
-#uploader .placeholder .webuploader-pick {
-    background: transparent;
-    box-shadow: none;
-    color: #333;
-}
-
-#uploader .placeholder #filePicker label {
-    margin-bottom: 0;
-}
-
-#uploader .placeholder .webuploader-pick span {
-    color: #2995b1;
-}
-
-#uploader .filelist .progress {
-    display: none;
-}
-
-#uploader .filelist li p.title {
-    display: none;
-}
-
-#uploader .statusBar {
-    border-top: none;
+@media screen and (min-width: 320px) {
+    .idea_profileinformation {
+        background-color: #F4F4F4;
+        position: relative;
+        margin-top: 167px;
+    }
+    .idea_profileinformation .wrap {
+        min-height: 952px;
+    }
+    .idea_profileinformation .wrap .img {
+        width: 33.636364%;
+        position: relative;
+        float: left;
+    }
+    .idea_profileinformation .wrap .img img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .idea_profileinformation .main_content {
+        margin-left: 37.5%;
+        padding-top: 80px;
+        /*overflow: hidden;*/
+    }
+    .idea_profileinformation .main_content .padding {
+        padding-left: 20px;
+    }
+    .idea_profileinformation .main_content .welcome {
+        color: #2095b3;
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .idea_profileinformation .main_content .user {
+        color: #065062;
+        font-size: 30px;
+        font-family: 'Calibri';
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    .nav_tabs .nav-tabs li a {
+        font-size: 20px;
+        font-family: 'Calibri';
+    }
+    .nav_tabs .nav-tabs li a {
+        color: #010101;
+    }
+    .nav_tabs .nav-tabs li.active a {
+        color: #85b429;
+    }
+    .nav_tabs .nav-tabs > li > a {
+        margin-right: 46px;
+    }
+    .nav_tabs .tab-content .first {
+        margin-top: 30px;
+        color: #85b429;
+        height: 42px;
+        line-height: 42px;
+    }
+    .nav_tabs .tab-content .about_frofile {
+        font-size: 30px;
+    }
+    .nav_tabs .tab-content .edit {
+        background: #2995b1;
+        color: #fff;
+        width: 70px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+    #information .title {
+        font-size: 20px;
+        font-family: 'Calibri';
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    #information .email {
+        padding: 20px;
+    }
+    #information .edit_content .pw {
+        background-color: #E6E6E6;
+        padding: 10px 20px;
+    }
+    #information .edit_content .last {
+        padding-top: 20px;
+    }
+    #information .edit_content .phone {
+        background-color: #E6E6E6;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    #information p {
+        font-size: 20px;
+        color: #010101;
+        font-family: 'Calibri';
+    }
+    .nav-tabs {
+        position: relative;
+    }
+    #information .edit_content2 {
+        padding-left: 20px;
+        display: none;
+    }
+    #information .edit_content2 .email {
+        padding: 20px 0;
+    }
+    #information .edit_conten2t form {
+        margin-top: 10px;
+    }
+    #information .edit_content2 input {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+    }
+    #information .edit_content2 form > input {
+        width: 50%;
+    }
+    #information .edit_content2 .residential_address {
+        margin-top: 10px;
+    }
+    #information .edit_content2 .residential_address input {
+        margin-bottom: 10px;
+    }
+    #information .edit_content2 .residential_address select.choose_country {
+        height: 40px;
+        width: 100%;
+        -webkit-appearance: none;
+        background: #fff url("../images/arrows_blue_down.png") right 11px no-repeat;
+    }
+    #information .edit_content2 .proof_address {
+        position: relative;
+    }
+    #information .edit_content2 .proof_address::after {
+        content: ' ';
+        width: 30px;
+        height: 26px;
+        background: url(../images/icon_form_1.png) left center no-repeat;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        cursor: pointer;
+    }
+    #information .edit_content2 .phone {
+        margin-top: 10px;
+    }
+    #information .edit_content2 .button {
+        display: inline-block;
+        width: 35%;
+        height: 40px;
+        text-align: center;
+        margin-top: 30px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -o-border-radius: 2px;
+        color: white;
+        font-size: 16px;
+    }
+    #information .edit_content2 .up_date {
+        background: #85b428;
+    }
+    #information .edit_content2 .cancel {
+        background: #838383
+    }
+    #status {
+        min-height: 644px;
+        margin-top: 40px;
+        margin-right: 10px;
+        position: relative;
+    }
+    #status .status_contentContainer {
+        overflow-x: hidden;
+        margin-left: -17px;
+    }
+    #status .status_contentContainer .container {
+        width: 100%;
+        height: 560px;
+        overflow-y: auto;
+        margin-left: 17px;
+    }
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        border: none;
+        background-color: #F4F4F4;
+    }
+    #status .application {
+        margin-bottom: 5px;
+    }
+    #status .application_record {
+        background: #85b428;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+    }
+    #status .application_record span {
+        cursor: pointer;
+    }
+    #status .status_content {
+        padding: 10px 20px;
+        background: #ECECEC;
+    }
+    #status .status_content > li:first-child {
+        width: 60%;
+        margin-right: 100px;
+    }
+    #status .status_content li.application_edit {
+        height: 45px;
+        line-height: 45px;
+    }
+    #status .status_content .description {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    #status .status_content ul li {
+        float: left;
+        width: 33.333333%;
+    }
+    #status .status_content .submit_document {
+        background: url(../images/icon_form_1.png) left center no-repeat;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        color: #2995b1;
+        cursor: pointer;
+    }
+    #status .status_content .submit_document:hover {
+        background: url(../images/icon_form.png) left center no-repeat;
+        color: #85b428;
+    }
+    #status .status_content .sign_contract {
+        background: url(../images/icon_note_1.png) left center no-repeat;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        color: #2995b1;
+        cursor: pointer;
+    }
+    #status .status_content .sign_contract:hover {
+        background: url(../images/icon_note.png) left center no-repeat;
+        color: #85b428;
+    }
+    #status .status_content .download_contract {
+        background: url(../images/icon_download_1.png) left center no-repeat;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        color: #2995b1;
+        cursor: pointer;
+    }
+    #status .status_content .download_contract:hover {
+        background: url(../images/icon_download.png) left center no-repeat;
+        color: #85b428;
+    }
+    #status .application_third .application_record,
+    #status .application_fourth .application_record {
+        background: #AEAEAE;
+    }
+    #status .scroll {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 15px;
+        color: #838383;
+        cursor: pointer;
+        text-align: center;
+    }
+    #payment {
+        min-height: 644px;
+        margin-top: 40px;
+        margin-right: 10px;
+        position: relative;
+    }
+    #payment .payment {
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    #payment .payment_record {
+        background: #85b428;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+    }
+    #payment .payment_record span {
+        cursor: pointer;
+    }
+    #payment .status_content {
+        padding: 10px 20px;
+        background: #ECECEC;
+    }
+    #payment .status_content li.payment_edit {
+        height: 45px;
+        line-height: 45px;
+    }
+    #payment .status_content .description {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    #payment .status_content ul li {
+        float: left;
+        width: 33.333333%;
+    }
+    #payment .status_content .submit_document {
+        background: url(../images/icon_form_1.png) left center no-repeat;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        color: #2995b1;
+        cursor: pointer;
+    }
+    #payment .status_content .submit_document:hover {
+        background: url(../images/icon_form.png) left center no-repeat;
+        color: #85b428;
+    }
+    #payment .status_content .sign_contract {
+        background: url(../images/icon_note_1.png) left center no-repeat;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 30px;
+        color: #2995b1;
+        cursor: pointer;
+    }
+    #payment .status_content .sign_contract:hover {
+        background: url(../images/icon_note.png) left center no-repeat;
+        color: #85b428;
+    }
+    #payment .payment_show .payment_record {
+        background: #9F9F9F;
+    }
+    #payment .payment_show .payment_first > p {
+        color: #85b428;
+        font-size: 24px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+    #payment .payment_first_efficient {
+        display: none;
+    }
+    #payment .status_content ul li {
+        float: left;
+        width: 20%;
+    }
+    /*submit_update_a*/
+    #submit_update_a {
+        display: none;
+        margin-left: 20px;
+        min-height: 780px;
+    }
+    #submit_update_a .document {
+        color: #2995b1;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    #submit_update_a .no {
+        color: #065062;
+        font-size: 24px;
+    }
+    #submit_update_a .title1 {
+        font-size: 16px;
+    }
+    #submit_update_a .submit_update_a_content {
+        margin-top: 20px;
+    }
+    #submit_update_a .submit_update_a_content h3 {
+        background-color: #85b429;
+        color: white;
+        padding-left: 20px;
+        height: 45px;
+        line-height: 45px;
+        text-align: left;
+    }
+    #submit_update_a .submit_update_a_content .file_content {
+        height: 140px;
+        text-align: center;
+        background-color: #ECECEC;
+        font-size: 18px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    #submit_update_a .button .submit,
+    #submit_update_a .button .cancel {
+        float: left;
+        width: 244px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -o-border-radius: 2px;
+        margin: 20px 20px 0 0;
+        cursor: pointer;
+    }
+    #submit_update_a .button .submit {
+        background-color: #85b429;
+    }
+    #submit_update_a .button .submit.inactive {
+        background-color: #C6DA9E;
+    }
+    #submit_update_a .button .cancel {
+        background-color: #838383;
+    }
+    /*sign_contract*/
+    #sign_contract .section1 {
+        display: none;
+    }
+    #sign_contract .tutorial .title1 {
+        color: #85b428;
+        font-size: 24px;
+    }
+    #sign_contract .tutorial .tutorial_content {
+        height: 350px;
+        border: 1px solid #838383;
+        background-color: white;
+        margin: 20px 0 30px;
+        padding: 10px 10px 0 10px;
+    }
+    #sign_contract .tutorial_content .agreement {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    #sign_contract .tutorial_content .notes {
+        font-size: 18px;
+        color: #000;
+        margin: 10px 0;
+    }
+    #sign_contract .button .to_back {
+        width: 244px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -o-border-radius: 2px;
+        cursor: pointer;
+        margin-top: 30px;
+        background-color: #838383;
+    }
+    #sign_contract .button .start_now {
+        width: 244px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -o-border-radius: 2px;
+        cursor: pointer;
+        margin-top: 30px;
+        background-color: #C6DA9E;
+    }
+    #sign_contract {
+        display: none;
+        margin-left: 20px;
+    }
+    #sign_contract .sign_contract {
+        color: #2995b1;
+        font-size: 30px;
+        letter-spacing: 1px;
+        font-family: 'Bliss2';
+    }
+    #sign_contract .no {
+        color: #065062;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    #sign_contract .sign_contract_step ul {
+        width: 80%;
+        margin: 20px auto 0;
+    }
+    #sign_contract .sign_contract_step ul li {
+        float: left;
+        text-align: center;
+    }
+    #sign_contract .sign_contract_step ul li .sequence {
+        width: 66px;
+        margin: 0 auto;
+        height: 66px;
+        text-align: center;
+        line-height: 66px;
+        color: white;
+        font-size: 18px;
+        border-radius: 50%;
+        background-color: #838383;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    #sign_contract .sign_contract_step ul li.active .sequence {
+        background-color: #85b429;
+    }
+    #sign_contract .sign_contract_step ul li .p1.current {
+        color: #85b429;
+    }
+    #sign_contract .sign_contract_step ul li .arrows {
+        width: 20px;
+        height: 96px;
+        line-height: 96px;
+        background: url(../images/arrows_gray.png) left center no-repeat;
+        vertical-align: middle;
+        margin: 0 50px;
+    }
+    #sign_contract .sign_contract_step ul li .arrows.current {
+        background: url(../images/arrows_green.png) left center no-repeat;
+    }
+    #sign_contract .divider {
+        height: 1px;
+        background: #838383;
+        margin: 20px 0;
+    }
+    #sign_contract .conditions {
+        color: #85b429;
+        font-size: 24px;
+    }
+    #sign_contract .download {
+        color: #2995b1;
+        background: url(../images/icon_download.png) no-repeat;
+        padding-left: 28px;
+        height: 26px;
+        line-height: 26px;
+        margin-top: 4px;
+        cursor: pointer;
+    }
+    #sign_contract .sign_contract_content {
+        border: 1px solid #838383;
+        height: 200px;
+        background-color: white;
+        margin: 20px 0 30px;
+        padding: 10px 0 0 10px;
+    }
+    #sign_contract .sign_contract_content .agreement {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    #sign_contract .sign_contract_content .notes {
+        font-size: 18px;
+        color: #000;
+        margin: 10px 0;
+    }
+    #sign_contract .schedule {
+        height: 44px;
+        line-height: 44px;
+        background-color: #2995b1;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        margin-bottom: 20px;
+    }
+    #sign_contract .verification {
+        width: 45%;
+        height: 44px;
+        line-height: 44px;
+        background-color: rgb(198, 218, 158);
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        cursor: pointer;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+    }
+    #sign_contract .protocol {
+        margin-bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+    #sign_contract .protocol input[type=checkbox] {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #000;
+        background-color: white;
+        border-radius: 0;
+        margin: 6px 5px 0 0;
+    }
+    #sign_contract .send_code {
+        display: none;
+    }
+    #sign_contract .pwContainer {
+        text-align: center;
+        background-color: #e7e7e7;
+        padding: 15px;
+    }
+    #sign_contract .pwContainer .input {
+        position: relative;
+    }
+    #sign_contract .pwContainer .input input[type=button] {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        background-color: transparent;
+        border: none;
+        color: #2995b1;
+    }
+    #sign_contract .pwContainer input[type=text] {
+        display: inline-block;
+        width: 100%;
+        height: 44px;
+        border: 2px solid #ccc;
+        margin-top: 8px;
+        padding-left: 10px;
+    }
+    #sign_contract .button .btn_back,
+    #sign_contract .button .btn_next {
+        width: 244px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -o-border-radius: 2px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    #sign_contract .button .btn_back {
+        background-color: #838383;
+    }
+    #sign_contract .button .btn_next {
+        background-color: #C6DA9E;
+    }
+    #sign_contract .section2 {
+        display: none;
+    }
+    /*section3*/
+    #sign_contract .section3 {
+        display: none;
+    }
+    #sign_contract .section3 .succeed1 {
+        color: #2995b1;
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Bliss2';
+    }
+    #sign_contract .section3 .succeed2 {
+        color: #2995b1;
+        font-size: 30px;
+        text-align: center;
+    }
+    #sign_contract .section3 .desc1,
+    #sign_contract .section3 .desc2 {
+        text-align: center;
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    #sign_contract .section3 .to_main {
+        width: 244px;
+        height: 44px;
+        line-height: 44px;
+        margin: 0 auto;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        background-color: #838383;
+        cursor: pointer;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+    }
+    #uploader {
+        position: relative;
+        min-height: 125px;
+    }
+    #uploader .placeholder {
+        max-height: 80px;
+        min-height: 80px;
+        line-height: 80px;
+        padding-top: 0;
+        background: none;
+    }
+    #uploader .queueList {
+        margin: 0;
+    }
+    #uploader .filelist li {
+        width: 70px;
+        height: 70px;
+        margin: 5px 5px 5px 0;
+    }
+    #uploader .filelist li:first-child {
+        margin-left: 5px;
+    }
+    #uploader .filelist li p.imgWrap {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #aaa;
+    }
+    #uploader .statusBar .info {
+        display: none;
+    }
+    #uploader .placeholder {
+        border: 0;
+    }
+    #uploader .placeholder .webuploader-pick {
+        line-height: 80px;
+        margin: 0 auto;
+    }
+    #uploader .placeholder .webuploader-pick {
+        background: transparent;
+        box-shadow: none;
+        color: #333;
+    }
+    #uploader .placeholder #filePicker label {
+        margin-bottom: 0;
+    }
+    #uploader .placeholder .webuploader-pick span {
+        color: #2995b1;
+    }
+    #uploader .filelist .progress {
+        display: none;
+    }
+    #uploader .filelist li p.title {
+        display: none;
+    }
+    #uploader .statusBar {
+        border-top: none;
+    }
 }
 
 
@@ -929,7 +759,7 @@
         margin-top: 20px;
         display: inline-block;
     }
-    .idea_profileinformation .main_content .user{
+    .idea_profileinformation .main_content .user {
         font-size: 20px;
         margin-top: 0;
         margin-bottom: 20px;

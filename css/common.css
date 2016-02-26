@@ -1752,8 +1752,10 @@ a:hover {
     }
     .mobile_navbar .navbar-header .header_logo {
         display: inline-block;
-        width: 75%;
-        margin: 22px 0;
+        /*width: 40%;
+        margin: 22px 10%;*/
+        width: 220px;
+        margin: 23px 30px;
     }
     .mobile_navbar .navbar-toggle .icon-bar {
         transition: all 500ms ease-in-out;
@@ -1888,6 +1890,45 @@ a:hover {
     }
 }
 
+@media screen and (min-width: 550px) and (max-width: 1130px) {
+    .navbar-header{
+        float: none;
+    }
+    .mobile_navbar .navbar-toggle{
+        margin-right: 20%;
+        display: block;
+    }
+    .mobile_navbar .navbar-header .header_logo{
+        width: 275px;
+        margin: 20px 30px;
+    }
+    .mobile_navbar .nav_bar{
+        float: right;
+        margin: 20px;
+    }
+    .headerContent_left{
+        width: 40%;
+    }
+    .headerContent_left .nav_bar{
+        margin-top: 30px;
+    }
+    .header_top .right{
+        width: 40%;
+        float: left;
+    }
+    .headerContent_middle{
+        width: 100%;
+        line-height: 0;
+    }
+}
+
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .mobile_navbar .navbar-header .header_logo {
+        /*width: 68%;
+        margin: 23px 0;*/
+    }
+}
+
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iphone5 */
     .mainContentContainer .main_content {
@@ -1895,6 +1936,10 @@ a:hover {
     }
     .mainContentContainer .main_content p.msg1 {
         font-size: 35px;
+    }
+    .mobile_navbar .navbar-header .header_logo {
+        width: 70%;
+        margin: 23px 0;
     }
 }
 
@@ -1904,7 +1949,8 @@ a:hover {
         width: 340px;
     }
     .mobile_navbar .navbar-header .header_logo {
-        margin: 18px 0;
+        width: 60%;
+        margin: 23px;
     }
 }
 
@@ -1917,7 +1963,8 @@ a:hover {
         width: 380px;
     }
     .mobile_navbar .navbar-header .header_logo {
-        margin: 17px 0;
+        width: 65%;
+        margin: 20px;
     }
     .mobile_navbar .nav_bar li.message {
         left: 12px;
