@@ -22,7 +22,7 @@
     .idea_profileinformation .main_content {
         margin-left: 37.5%;
         padding-top: 80px;
-        /*overflow: hidden;*/
+        height: 952px;
     }
     .idea_profileinformation .main_content .padding {
         padding-left: 20px;
@@ -354,7 +354,7 @@
     }
     /*submit_update_a*/
     #submit_update_a {
-        display: none;
+        /*display: none;*/
         margin-left: 20px;
         min-height: 780px;
     }
@@ -690,6 +690,8 @@
     }
     #uploader .queueList {
         margin: 0;
+        display: inline-block;
+        float: left;
     }
     #uploader .filelist li {
         width: 70px;
@@ -709,6 +711,8 @@
     }
     #uploader .placeholder {
         border: 0;
+        width: 277px;
+        margin: 0px 195px;
     }
     #uploader .placeholder .webuploader-pick {
         line-height: 80px;
@@ -733,6 +737,13 @@
     }
     #uploader .statusBar {
         border-top: none;
+        display: inline-block;
+        float: left;
+        margin: 5px 5px 5px 0;
+    }
+    .uploader4 .statusBar+div{
+        width: 130px !important;
+        left: 340px !important;
     }
 }
 

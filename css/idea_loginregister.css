@@ -3,6 +3,11 @@
 
 /*-------idea_loginregister css for pc style------*/
 
+.idea_inner_cont .cont_right {
+    overflow: auto;
+    height: 637px;
+}
+
 .idea_inner_cont.log_reg_page {
     min-width: 100%;
     max-height: 637px;
@@ -73,7 +78,8 @@
     font-weight: 500;
     color: #000;
 }
-.log_reg_cont .cont_form #reg{
+
+.log_reg_cont .cont_form #reg {
     margin-bottom: 0;
 }
 

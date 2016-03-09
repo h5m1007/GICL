@@ -11,8 +11,9 @@
     <link href="css/idea_loginregister.css" rel="Stylesheet" type="text/css" />
     <script src="scripts/jquery-1.11.0.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery.ddslick.min.js"></script>
     <script src="scripts/common.js"></script>
+    <script src="scripts/jquery.ddslick.min.js"></script>
+    <script src="scripts/jquery.nicescroll.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                             <form class="tab-content" role="form">
                                 <div id="log" class="form-group tab-pane fade in active">
                                     <label for="log_email">Email Address</label>
-                                    <input type="text" class="form-control" id="log_email" value="" >
+                                    <input type="text" class="form-control" id="log_email" value="">
                                     <label for="log_psw">Password</label>
                                     <input type="password" class="form-control" id="log_psw" value="">
                                     <a href="##" class="find_psw">Forget Password</a>
@@ -56,15 +57,18 @@
                                     </div>
                                 </div>
                                 <div id="reg" class="form-group tab-pane fade">
+                                    <label for="log_name">Name</label>
+                                    <input type="text" class="form-control" id="log_name" value="">
                                     <label for="reg_email">Email Address</label>
-                                    <input type="text" class="form-control" id="reg_email" value="" >
+                                    <input type="text" class="form-control" id="reg_email" value="">
                                     <label for="reg_psw">Password</label>
                                     <span class="help-block">Please enter the first 6 digits,including the character.i.e.</span>
                                     <input type="password" class="form-control" id="reg_psw" value="">
                                     <label for="reg_re_psw">Re-type Password</label>
                                     <input type="password" class="form-control" id="reg_re_psw" value="">
                                     <label class="agree"> I agree to receive news and updates from GICL. By clicking “Apply” you confirm that you have read and accepted our Important Notice and PersonalData Privacy Notice. </label>
-                                    <label class="agree" style="padding-top: 0;"><input type="checkbox"> I do not want to receive news and updates from GICL. </label>
+                                    <label class="agree" style="padding-top: 0;">
+                                        <input type="checkbox"> I do not want to receive news and updates from GICL. </label>
                                     <div class="btn_group">
                                         <button class="btn btn_next btn-default">REGISTER</button>
                                         <button class="btn btn_back btn-default">CANCEL</button>
@@ -81,12 +85,12 @@
                         </div>
                     </div>
                     <div class="forget_pw">
-                    	<p class="title1">FORGET PASSWORD</p>
-                    	<p class="title2">Can't log in? Forget your password?</p>
-                    	<p class="title3">Enter your email address beloaw and we'll send you password reset instructions</p>
-                    	<p class="title3 title4">Email address</p>
-                    	<input type="text" />
-                    	<div class="btn_group">
+                        <p class="title1">FORGET PASSWORD</p>
+                        <p class="title2">Can't log in? Forget your password?</p>
+                        <p class="title3">Enter your email address beloaw and we'll send you password reset instructions</p>
+                        <p class="title3 title4">Email address</p>
+                        <input type="text" />
+                        <div class="btn_group">
                             <button class="btn btn_send">SEND</button>
                             <button class="btn btn_back">BACK</button>
                         </div>
@@ -104,15 +108,21 @@
             $(".cont_nav").hide();
             $(".cont_title").text("THANK YOU FOR YOUR REGISTRATION");
         });
-        $('.find_psw').click(function(){
-        	$('.log_reg_cont').fadeOut(function() {
-        		$('.forget_pw').fadeIn();
-        	});
+        $('.find_psw').click(function() {
+            $('.log_reg_cont').fadeOut(function() {
+                $('.forget_pw').fadeIn();
+            });
         });
-        $('.forget_pw .btn_back').click(function(){
-        	$('.forget_pw').fadeOut(function() {
-        		$('.log_reg_cont').fadeIn();
-        	});
+        $('.forget_pw .btn_back').click(function() {
+            $('.forget_pw').fadeOut(function() {
+                $('.log_reg_cont').fadeIn();
+            });
+        });
+        $('.cont_right').niceScroll({
+            cursorcolor: 'transparent',
+            background: 'transparent',
+            cursorwidth: '8px',
+            cursorborder: '0'
         });
     })
     </script>

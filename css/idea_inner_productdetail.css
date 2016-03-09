@@ -301,7 +301,7 @@
     }
     #idea_inner_productdetail .main_content .mobile_banner {
         height: 150px;
-        background: url('../images/mobile_idea_service.png') no-repeat;
+        background: url('../images/mobile_idea_product.jpg') no-repeat;
         background-size: 100%;
     }
     .productdetail_left {
@@ -354,5 +354,8 @@
     .dd-select,
     .dd-options {
         width: 80px !important;
+    }
+    .productdetail_left .scroll {
+        display: none;
     }
 }

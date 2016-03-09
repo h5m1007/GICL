@@ -1,0 +1,114 @@
+<div id="submit_update_a">
+    <div class="clearfix">
+        <p class="document left visible-lg">SUBMIT DOCUMENT</p>
+        <p class="no right visible-lg">Application No.543210</p>
+    </div>
+    <p class="title1">please submit the following documents is order to support you application.</p>
+    <p class="title1">If there is any enquiry,please contact:2111 0998.</p>
+    <div class="submit_update_a_content">
+        <div class="file_content">
+            <div id="wrapper">
+                <div id="container">
+                    <div id="uploader" class="uploader1" ref="HKIDCardCopy">
+                        <div class="upload_title">
+                            <h3>Hong Kong Identity Card Copy</h3>
+                            <span class="upload_icon"></span>
+                        </div>
+                        <div class="queueList">
+                            <div id="dndArea" class="placeholder">
+                                <div id="filePicker"></div>
+                            </div>
+                        </div>
+                        <div class="statusBar" style="display:none;">
+                            <div class="btns">
+                                <div id="filePicker2">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="file_content">
+            <div id="wrapper">
+                <div id="container">
+                    <div id="uploader" class="uploader2" ref="proofOfAddress">
+                        <div class="upload_title">
+                            <h3>Proof Of Address</h3>
+                            <span class="upload_icon"></span>
+                        </div>
+                        <div class="queueList">
+                            <div id="dndArea" class="placeholder">
+                                <div id="filePicker"></div>
+                            </div>
+                        </div>
+                        <div class="statusBar" style="display:none;">
+                            <div class="btns">
+                                <div id="filePicker2">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="file_content">
+            <div id="wrapper">
+                <div id="container">
+                    <div id="uploader" class="uploader3" ref="proofOfAccount">
+                        <div class="upload_title">
+                            <h3>Proof Of Bank Account</h3>
+                            <span class="upload_icon"></span>
+                        </div>
+                        <div class="queueList">
+                            <div id="dndArea" class="placeholder">
+                                <div id="filePicker"></div>
+                            </div>
+                        </div>
+                        <div class="statusBar" style="display:none;">
+                            <div class="btns">
+                                <div id="filePicker2">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="file_content">
+            <div id="wrapper">
+                <div id="container">
+                    <div id="uploader" class="uploader4" ref="proofOfIncome">
+                        <div class="upload_title">
+                            <h3>Proof Of Income Issued During The Past Months</h3>
+                            <span class="upload_icon"></span>
+                        </div>
+                        <div class="queueList">
+                            <div id="dndArea" class="placeholder">
+                                <div id="filePicker"></div>
+                            </div>
+                        </div>
+                        <div class="statusBar" style="display:none;">
+                            <div class="btns">
+                                <div id="filePicker2">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <div class="btns submit inactive" disabled>
+                <div class="uploadBtn">Start Upload</div>
+            </div>
+            <div class="cancel">CANCEL</div>
+        </div>
+    </div>
+    <script src="scripts/webuploader.min.js"></script>
+    <script src="scripts/upload.js"></script>
+    <script>
+    $(function() {
+        startDragNDrop('uploader1', 'HKIDCardCopy');
+        startDragNDrop('uploader2', 'proofOfAddress');
+        startDragNDrop('uploader3', 'proofOfAccount');
+        startDragNDrop('uploader4', 'proofOfIncome');
+    })
+    </script>
+</div>

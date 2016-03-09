@@ -13,6 +13,21 @@ $(document).ready(function() {
             text: "Global Club",
             value: 4,
         }];
+
+        var log_reg_info = [{
+            text: "Profile Information",
+            value: 1,
+        },{
+            text: "Approval Status",
+            value: 2,
+        }, {
+            text: "Payment Schedule",
+            value: 3,
+        }, {
+            text: "Logout",
+            value: 4,
+        }];
+
         $('#global_club').ddslick({
             data: ddBasic,
             background: "#84B616",
@@ -23,6 +38,21 @@ $(document).ready(function() {
                 console.log(data);
             }
         });
+
+        $('#log_reg').ddslick({
+            data: log_reg_info,
+            background: "#84B616",
+            color: '#fff',
+            width: 176,
+            selectText: "Mr Chan",
+            onSelected: function(data) {
+                if(data.selectedData.value == 4){
+                    $('#log_reg').hide();
+                    $('.log_on').show();
+                }
+            }
+        });
+        $('.log_on').hide();
 
         var dddrop_down = [{
             text: "Service",

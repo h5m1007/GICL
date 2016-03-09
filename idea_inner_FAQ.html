@@ -144,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="scroll visible-lg">
+                    <div class="scroll">
                         <img src="images/scroll_arrows_green.png">
                         <p>SCROLL</p>
                     </div>
@@ -155,20 +155,35 @@
     <!--footer start-->
     <div id="footer"></div>
     <script>
-    $('.in').prev().find('p').css('color', '#2995b1').next().addClass('active');
-    for (var i = 1; i < 8; i++) {
-        $("#collapse" + i).on('show.bs.collapse', function() {
-            $(this).prev().find('p').css('color', '#2995b1').next().addClass('active');
-        }).on('hide.bs.collapse', function() {
-            $(this).prev().find('p').css('color', '#838383').next().removeClass('active');
+        $('.in').prev().find('p')
+            .css('color', '#2995b1').next()
+            .addClass('active');
+
+        for (var i = 1; i < 8; i++) {
+            $("#collapse" + i).on('show.bs.collapse', function() {
+                $(this).prev().find('p').css('color', '#2995b1').next().addClass('active');
+            }).on('hide.bs.collapse', function() {
+                $(this).prev().find('p').css('color', '#838383').next().removeClass('active');
+            });
+        }
+
+        $('.panel-group').niceScroll({
+            cursorcolor: 'transparent',
+            background: 'transparent',
+            cursorwidth: '8px',
+            cursorborder: '0'
         });
-    }
-    $('.panel-group').niceScroll({
-        cursorcolor: 'transparent',
-        background: 'transparent',
-        cursorwidth: '8px',
-        cursorborder: '0'
-    });
+
+        $(".cont_right").find(".panel-group").scroll(function() {
+            var viewH = $(this).height(), //可见高度  
+                contentH = $(this).get(0).scrollHeight, //内容高度  
+                scrollTop = $(this).scrollTop(); //滚动高度  
+            if (contentH - viewH - scrollTop <= 0) {
+                $('.scroll').hide();
+            } else {
+                $('.scroll').show();
+            }
+        });
     </script>
 </body>
 

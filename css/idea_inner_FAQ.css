@@ -169,6 +169,9 @@ a:hover {
         width: 100%;
         padding-left: 30px;
     }
+    .cont_right .scroll {
+        display: none;
+    }
 }
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */

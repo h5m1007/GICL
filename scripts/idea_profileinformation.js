@@ -28,16 +28,6 @@ $(function() {
         }
     });
 
-    $('.submit_document').click(function() {
-        $('.nav_tabs').css('display', 'none');
-        $('#submit_update_a').css('display', 'block');
-
-        startDragNDrop('uploader1', 'HKIDCardCopy');
-        startDragNDrop('uploader2', 'proofOfAddress');
-        startDragNDrop('uploader3', 'proofOfAccount');
-        startDragNDrop('uploader4', 'proofOfIncome');
-    });
-
     $('.sign_contract').click(function() {
         $('.contentContaier').css('display', 'none');
         $('#sign_contract').css('display', 'block');
@@ -57,8 +47,6 @@ $(function() {
         cursorwidth: '8px',
         cursorborder: '0'
     });
-
-
 
     $('.tutorial_content').scroll(function() {
         if ($('.tutorial_content').scrollTop() > 150) {
@@ -161,7 +149,7 @@ $(function() {
             $(this).parents('.section').fadeOut(function() {
                 $(this).next('.section').fadeIn();
             });
-        } else {}
+        }
     });
 
 
@@ -194,6 +182,13 @@ $(function() {
         } else {
             $('.scroll').show();
         }
+    });
+
+    $('.main_content').niceScroll({
+        cursorcolor: 'transparent',
+        background: 'transparent',
+        cursorwidth: '8px',
+        cursorborder: '0'
     });
 
 });

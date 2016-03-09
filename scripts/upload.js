@@ -1,8 +1,8 @@
-function startDragNDrop(className,ref) {
-    var $wrap = $('.'+className+'[ref="'+ref+'"]'),
+function startDragNDrop(className, ref) {
+    var $wrap = $('.' + className + '[ref="' + ref + '"]'),
 
         // 图片容器
-        $queue = $('<ul class="filelist" ref="'+ref+'"></ul>')
+        $queue = $('<ul class="filelist" ref="' + ref + '"></ul>')
         .appendTo($wrap.find('.queueList')),
 
         // 状态栏，包括进度和控制按钮
@@ -139,25 +139,18 @@ function startDragNDrop(className,ref) {
     // 实例化
     uploader = WebUploader.create({
         pick: {
-            id: '.'+className+'[ref="'+ref+'"] #filePicker',
+            id: '.' + className + '[ref="' + ref + '"] #filePicker',
             label: 'Drag your files here <span>or click to browse</span>'
         },
         formData: {
             uid: 123
         },
-        dnd: '.'+className+'[ref="'+ref+'"] #dndArea',
-        paste: '.'+className+'[ref="'+ref+'"]',
+        dnd: '.' + className + '[ref="' + ref + '"] #dndArea',
+        paste: '.' + className + '[ref="' + ref + '"]',
         swf: '../../dist/Uploader.swf',
         chunked: false,
         chunkSize: 512 * 1024,
         server: 'http://devsvr6.mtel.ws/test_upload/upload.php',
-        // runtimeOrder: 'flash',
-
-        // accept: {
-        //     title: 'Images',
-        //     extensions: 'gif,jpg,jpeg,bmp,png',
-        //     mimeTypes: 'image/*'
-        // },
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
         disableGlobalDnd: true,
@@ -189,19 +182,9 @@ function startDragNDrop(className,ref) {
         console.log('here');
     });
 
-    // uploader.on('filesQueued', function() {
-    //     uploader.sort(function( a, b ) {
-    //         if ( a.name < b.name )
-    //           return -1;
-    //         if ( a.name > b.name )
-    //           return 1;
-    //         return 0;
-    //     });
-    // });
-
     // 添加“添加文件”的按钮，
     uploader.addButton({
-        id: '.'+className+'[ref="'+ref+'"] #filePicker2',
+        id: '.' + className + '[ref="' + ref + '"] #filePicker2',
         label: '+'
     });
     uploader.addButton({
@@ -222,8 +205,6 @@ function startDragNDrop(className,ref) {
 
             $btns = $('<div class="file-panel">' +
                 '<span class="cancel">Cancel</span>' +
-                // '<span class="rotateRight">Rotate Right</span>' +
-                // '<span class="rotateLeft">Rotate Left</span>'+
                 '</div>').appendTo($li),
             $prgress = $li.find('p.progress span'),
             $wrap = $li.find('p.imgWrap'),
@@ -266,9 +247,9 @@ function startDragNDrop(className,ref) {
                 var imgNum3 = $('.uploader3 .filelist .imgWrap').length;
                 var imgNum4 = $('.uploader4 .filelist .imgWrap').length;
 
-                if(imgNum1 >0 && imgNum2 >0 && imgNum3 >0 && imgNum4 >0 ){
+                if (imgNum1 > 0 && imgNum2 > 0 && imgNum3 > 0 && imgNum4 > 0) {
                     $('#submit_update_a .button .submit.inactive').removeClass('inactive');
-                }else{
+                } else {
                     $('#submit_update_a .button .submit').addClass('inactive');
                 }
 
@@ -276,12 +257,12 @@ function startDragNDrop(className,ref) {
                     img = $('<img src="' + src + '">');
                     $wrap.empty().append(img);
 
-                    var imgNum = $('.'+className+'[ref="'+ref+'"] .filelist .imgWrap').length;
-                    
-                    $('.'+className+'[ref="'+ref+'"] #filePicker2 .webuploader-pick').css({
-                        'margin-left':(75*(imgNum-1))+'px'
+                    var imgNum = $('.' + className + '[ref="' + ref + '"] .filelist .imgWrap').length;
+
+                    $('.' + className + '[ref="' + ref + '"] #filePicker2 .webuploader-pick').css({
+                        'margin-left': (5 * (imgNum - 1)) + 'px'
                     });
-                    
+
                 } else {
                     $.ajax('../../server/preview.php', {
                         method: 'POST',
@@ -326,9 +307,7 @@ function startDragNDrop(className,ref) {
                 $prgress.css('display', 'block');
             } else if (cur === 'complete') {
                 $prgress.hide().width(0);
-                $li.append('<span class="success"></span>');
             }
-
             $li.removeClass('state-' + prev).addClass('state-' + cur);
         });
 
@@ -356,22 +335,23 @@ function startDragNDrop(className,ref) {
                     var imgNum3 = $('.uploader3 .filelist .imgWrap').length;
                     var imgNum4 = $('.uploader4 .filelist .imgWrap').length;
 
-                    if(imgNum1 >0 && imgNum2 >0 && imgNum3 >0 && imgNum4 >0 ){
+                    if (imgNum1 > 0 && imgNum2 > 0 && imgNum3 > 0 && imgNum4 > 0) {
                         $('#submit_update_a .button .submit.inactive').removeClass('inactive');
-                    }else{
+                    } else {
                         $('#submit_update_a .button .submit').addClass('inactive');
                     }
 
-                    var imgNum = $('.'+className+'[ref="'+ref+'"] .filelist .imgWrap').length;
-                    
-                    $('.'+className+'[ref="'+ref+'"] #filePicker2 .webuploader-pick').css({
-                        'margin-left':(75*(imgNum-1))+'px'
-                    });
+                    var imgNum = $('.' + className + '[ref="' + ref + '"] .filelist .imgWrap').length;
 
+                    $('.' + className + '[ref="' + ref + '"] #filePicker2 .webuploader-pick').css({
+                        'margin-left': ((imgNum - 1)) + 'px'
+                    });
                     return;
+
                 case 1:
                     file.rotation += 90;
                     break;
+
                 case 2:
                     file.rotation -= 90;
                     break;
@@ -387,25 +367,7 @@ function startDragNDrop(className,ref) {
                 });
             } else {
                 $wrap.css('filter', 'progid:DXImageTransform.Microsoft.BasicImage(rotation=' + (~~((file.rotation / 90) % 4 + 4) % 4) + ')');
-                // use jquery animate to rotation
-                // $({
-                //     rotation: rotation
-                // }).animate({
-                //     rotation: file.rotation
-                // }, {
-                //     easing: 'linear',
-                //     step: function( now ) {
-                //         now = now * Math.PI / 180;
-
-                //         var cos = Math.cos( now ),
-                //             sin = Math.sin( now );
-
-                //         $wrap.css( 'filter', "progid:DXImageTransform.Microsoft.Matrix(M11=" + cos + ",M12=" + (-sin) + ",M21=" + sin + ",M22=" + cos + ",SizingMethod='auto expand')");
-                //     }
-                // });
             }
-
-
         });
 
         $li.appendTo($queue);
@@ -488,18 +450,12 @@ function startDragNDrop(className,ref) {
 
             case 'ready':
                 $placeHolder.addClass('element-invisible');
-                $('.'+className+'[ref="'+ref+'"] #filePicker2').removeClass('element-invisible');
+                $('.' + className + '[ref="' + ref + '"] #filePicker2').removeClass('element-invisible');
                 $queue.show();
                 $statusBar.removeClass('element-invisible');
                 uploader.refresh();
                 break;
-/*
-            case 'uploading':
-                $('.'+className+'[ref="'+ref+'"] #filePicker2').addClass('element-invisible');
-                $progress.show();
-                $upload.text('暂停上传');
-                break;
-*/
+
             case 'paused':
                 $progress.show();
                 $upload.text('继续上传');
@@ -507,7 +463,7 @@ function startDragNDrop(className,ref) {
 
             case 'confirm':
                 $progress.hide();
-                $('.'+className+'[ref="'+ref+'"] #filePicker2').removeClass('element-invisible');
+                $('.' + className + '[ref="' + ref + '"] #filePicker2').removeClass('element-invisible');
                 $upload.text('Start Upload');
 
                 stats = uploader.getStats();
@@ -516,9 +472,11 @@ function startDragNDrop(className,ref) {
                     return;
                 }
                 break;
+
             case 'finish':
                 stats = uploader.getStats();
                 if (stats.successNum) {
+                    $(".imgWrap").after('<span class="success"></span>');
                     console.log('File upload success');
                 } else {
                     // 没有成功的图片，重设
@@ -550,7 +508,13 @@ function startDragNDrop(className,ref) {
         }
 
         addFile(file);
-        setState('ready');
+        var imgNum1 = $('.uploader1 .filelist .imgWrap').length;
+        var imgNum2 = $('.uploader2 .filelist .imgWrap').length;
+        var imgNum3 = $('.uploader3 .filelist .imgWrap').length;
+        var imgNum4 = $('.uploader4 .filelist .imgWrap').length;
+        if (imgNum1 > 0 && imgNum2 > 0 && imgNum3 > 0 && imgNum4 > 0) {
+            setState('ready');
+        }
         updateTotalProgress();
     };
 
@@ -581,19 +545,16 @@ function startDragNDrop(className,ref) {
             case 'stopUpload':
                 setState('paused');
                 break;
-
         }
     });
 
     uploader.onError = function(code) {
         //alert( 'Error: ' + code );
     };
-
     $upload.on('click', function() {
         if ($(this).hasClass('disabled')) {
             return false;
         }
-
         if (state === 'ready') {
             uploader.upload();
         } else if (state === 'paused') {
@@ -603,13 +564,13 @@ function startDragNDrop(className,ref) {
         }
     });
 
-    $info.on('click', '.retry', function() {
-        uploader.retry();
-    });
+    // $info.on('click', '.retry', function() {
+    //     uploader.retry();
+    // });
 
-    $info.on('click', '.ignore', function() {
+    // $info.on('click', '.ignore', function() {
 
-    });
+    // });
 
     $upload.addClass('state-' + state);
     updateTotalProgress();

@@ -10,19 +10,20 @@
     <link href="css/ion.rangeSlider.skinFlat.css" rel="Stylesheet" type="text/css" />
     <link href="css/font.css" rel="Stylesheet" type="text/css" />
     <link href="css/common.css" rel="Stylesheet" type="text/css" />
+    <link href="fancyBox/jquery.fancybox.css" rel="stylesheet" />
     <script src="scripts/jquery-1.11.0.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery.ddslick.min.js"></script>
     <script src="scripts/ion.rangeSlider.min.js"></script>
-    <script src="scripts/jquery.popupoverlay.js"></script>
     <script src="scripts/common.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/jquery.jplayer.min.js"></script>
+    <script src="fancyBox/jquery.fancybox.js"></script>
+    <script src="fancyBox/helpers/jquery.fancybox-media.js"></script>
     <script type="text/javascript">
     function resize() {
         setTimeout(function() {
             $('.mainContentContainer .sectionContainer').css({
-                'height': ($('.mainBanner').height() + 85) + 'px',
+                'height': ($('.mainBanner').height() + 100) + 'px',
             });
         }, 100);
     }
@@ -52,6 +53,16 @@
                 }
             });
         }
+
+        $('.video_box').fancybox({
+            padding: 0,
+            closeBtn: false,
+            openEffect: 'none',
+            closeEffect: 'none',
+            helpers: {
+                media: {}
+            }
+        });
     });
     </script>
 </head>
@@ -99,26 +110,24 @@
                             </div>
                         </form>
                         <div class="movie">
-                            <div class="movie_top clearfix visible-lg">
-                                <div class="play_movie left" onclick="playPause()">
-                                    <span class="movie_text">PLAY MOVIE</span>
+                            <div class="movie_top clearfix">
+                                <div class="play_movie left">
+                                    <a class="video_box" href="https://www.youtube.com/watch?v=q1xVIUTC9ns"><span class="movie_text">PLAY MOVIE</span></a>
                                 </div>
                                 <div class="video1 left">
-                                    <video id="video1" height="34">
-                                        <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/ogg">
-                                        <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/mp4">
-                                    </video>
+                                    <div id="video1" height="34">
+                                        <a class="video_box" href="https://www.youtube.com/watch?v=q1xVIUTC9ns">
+                                            <img width="45px" height="34px" src="http://img.youtube.com/vi/q1xVIUTC9ns/default.jpg" />
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="video2 left">
-                                    <video id="video2" height="34">
-                                        <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/ogg">
-                                        <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/mp4">
-                                    </video>
+                                    <div id="video2" height="34">
+                                        <a class="video_box" href="https://www.youtube.com/watch?v=HBSwDtiFIRo">
+                                            <img width="45px" height="34px" src="http://img.youtube.com/vi/HBSwDtiFIRo/default.jpg" />
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="movie_top clearfix hidden-lg">
-                                <div id="video3" class="video3 left"></div>
-                                <div id="video4" class="video4 left"></div>
                             </div>
                         </div>
                     </div>
@@ -231,8 +240,9 @@
                                         </li>
                                     </ul>
                                     <div class="video_content">
-                                        <div class="video_icon"></div>
-                                        <div class="video_container"></div>
+                                        <div id="video_container" class="video_container">
+                                            <iframe width="100%" height="270" src="https://www.youtube.com/embed/HBSwDtiFIRo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <div class="scroll visible-lg">
+            <div class="scroll">
                 <img src="images/scroll_arrows_white.png">
                 <p>SCROLL</p>
             </div>
@@ -266,36 +276,6 @@
         <!--footer start-->
         <div id="footer"></div>
     </div>
-    <script>
-    // var myVideo = document.getElementById("video1");
-
-    // function playPause() {
-    //     if (myVideo.paused) {
-    //         myVideo.play();
-    //     } else {
-    //         myVideo.pause();
-    //     }
-    // }
-
-    // // $.each($('video'), function() {
-    // //     $(this).click(function() {
-    // //         if ($(this).paused) {
-    // //             $(this).play();
-    // //         } else {
-    // //             $(this).pause();
-    // //         }
-    // //     });
-    // // });
-
-    // if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
-    //     var myVideo3 = document.getElementById("video3");
-    //     if(myVideo3.paused){
-    //         myVideo3.play();
-    //     }else{
-    //         myVideo3.pause();
-    //     }
-    // }
-    </script>
 </body>
 
 </html>

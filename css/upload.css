@@ -36,7 +36,6 @@
     background: #00b7ee;
     border-radius: 3px;
     line-height: 44px;
-    padding: 0 30px;
     color: #fff;
     display: inline-block;
     margin: 20px auto;
@@ -297,7 +296,7 @@
 }
 
 #filePicker2 {
-    margin-top: -75px;
+    /*margin-top: -75px;*/
 }
 
 #uploader .statusBar .btns .webuploader-pick,

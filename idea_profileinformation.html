@@ -16,10 +16,9 @@
     <script src="scripts/jquery.ddslick.min.js"></script>
     <script src="scripts/jquery.popupoverlay.js"></script>
     <script src="scripts/jquery.nicescroll.min.js"></script>
-    <script src="scripts/webuploader.min.js"></script>
-    <script src="scripts/upload.js"></script>
     <script src="scripts/common.js"></script>
     <script src="scripts/idea_profileinformation.js"></script>
+    <script src="scripts/jquery.nicescroll.min.js"></script>
 </head>
 
 <body>
@@ -95,7 +94,7 @@
                                         </div>
                                         <div class="proof_address">
                                             <p class="title">Proof Address</p>
-                                            <input type="text" />
+                                            <a href="javascript:;" class="address_upload"><input type="file" /></a>
                                         </div>
                                         <div class="phone">
                                             <p class="title">Phone</p>
@@ -128,7 +127,7 @@
                                                     </ul>
                                                 </li>
                                                 <li class="application_edit left">
-                                                    <span class="submit_document">Submit Document</span>
+                                                    <span id="item01" class="submit_document" onclick="testUrl(id)">Submit Document</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -416,113 +415,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="submit_update_a">
-                    <div class="clearfix">
-                        <p class="document left visible-lg">SUBMIT DOCUMENT</p>
-                        <p class="no right visible-lg">Application No.543210</p>
-                        <!-- <p class="document">SUBMIT DOCUMENT</p>
-                        <p class="no">Application No.543210</p> -->
-                    </div>
-                    <p class="title1">please submit the following documents is order to support you application.</p>
-                    <p class="title1">If there is any enquiry,please contact:2111 0998.</p>
-                    <div class="submit_update_a_content">
-                        <div class="file_content">
-                            <div id="wrapper">
-                                <div id="container">
-                                    <div id="uploader" class="uploader1" ref="HKIDCardCopy">
-                                        <div class="upload_title">
-                                            <h3>Hong Kong Identity Card Copy</h3>
-                                            <!-- <span id="upload_icon" class="upload_icon"></span> -->
-                                            <span class="upload_icon"></span>
-                                        </div>
-                                        <div class="queueList">
-                                            <div id="dndArea" class="placeholder">
-                                                <div id="filePicker"></div>
-                                            </div>
-                                        </div>
-                                        <div class="statusBar" style="display:none;">
-                                            <div class="btns">
-                                                <div id="filePicker2">+</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="file_content">
-                            <div id="wrapper">
-                                <div id="container">
-                                    <div id="uploader" class="uploader2" ref="proofOfAddress">
-                                        <div class="upload_title">
-                                            <h3>Proof Of Address</h3>
-                                            <span class="upload_icon"></span>
-                                        </div>
-                                        <div class="queueList">
-                                            <div id="dndArea" class="placeholder">
-                                                <div id="filePicker"></div>
-                                            </div>
-                                        </div>
-                                        <div class="statusBar" style="display:none;">
-                                            <div class="btns">
-                                                <div id="filePicker2">+</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="file_content">
-                            <div id="wrapper">
-                                <div id="container">
-                                    <div id="uploader" class="uploader3" ref="proofOfAccount">
-                                        <div class="upload_title">
-                                            <h3>Proof Of Bank Account</h3>
-                                            <span class="upload_icon"></span>
-                                        </div>
-                                        <div class="queueList">
-                                            <div id="dndArea" class="placeholder">
-                                                <div id="filePicker"></div>
-                                            </div>
-                                        </div>
-                                        <div class="statusBar" style="display:none;">
-                                            <div class="btns">
-                                                <div id="filePicker2">+</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="file_content">
-                            <div id="wrapper">
-                                <div id="container">
-                                    <div id="uploader" class="uploader4" ref="proofOfIncome">
-                                        <div class="upload_title">
-                                            <h3>Proof Of Income Issued During The Past Months</h3>
-                                            <span class="upload_icon"></span>
-                                        </div>
-                                        <div class="queueList">
-                                            <div id="dndArea" class="placeholder">
-                                                <div id="filePicker"></div>
-                                            </div>
-                                        </div>
-                                        <div class="statusBar" style="display:none;">
-                                            <div class="btns">
-                                                <div id="filePicker2">+</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <div class="btns submit inactive">
-                                <div class="uploadBtn">Start Upload</div>
-                            </div>
-                            <div class="cancel">CANCEL</div>
-                        </div>
-                    </div>
-                </div>
                 <div id="sign_contract">
                     <div class="section tutorial">
                         <div>
@@ -600,7 +492,7 @@
                             </div>
                             <div class="button clearfix">
                                 <div class="btn_back left">BACK</div>
-                                <div class="btn_next right">NEXT</div>
+                                <div class="btn_next right" onclick="btn_next(sec_1)">NEXT</div>
                             </div>
                         </div>
                     </div>
@@ -701,23 +593,6 @@
                         <div class="divider"></div>
                         <div class="to_main">BACK TO MAIN</div>
                     </div>
-                    <!-- <div class="section section4">
-                        <div class="clearfix">
-                            <p class="sign_contract left">SIGN CONTRACT</p>
-                            <p class="no right">Application No.543210</p>
-                        </div>
-                        <div class="icon_succeed"><img src="images/icon_succeed_1.png"></div>
-                        <p class="succeed">CONGRATULATIONS,YOUR APPLICATION IS ACCEPTED</p>
-                        <div class="divider"></div>
-                        <p class="succeed_p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in nisl vel tellus egestas blandit vel fermentum quam. Cras ac nisi non tellus dictum suscipit.</p>
-                        <p class="succeed_p2">You may upload your document here. We will verify your document immediately and notify you once the verification is done.</p> 
-                        <p class="succeed_p3">Or you can skip this step and submit the document later</p>
-                        <div class="divider"></div>
-                        <div class="button clearfix">
-                            <div class="download_contract left">DOWNLOAD CONTRACT</div>
-                            <div class="complete right">COMPLETE</div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -797,6 +672,19 @@
             $("#btnSendCode").val(+curCount + " " + "RESEND SMS");
         }
     }
+
+    var testUrl = function(lid) {
+        $('.nav_tabs').css('display', 'none');
+        $('#submit_update_a').css('display', 'block');
+        var oldUrl = window.location.href;
+        $.ajax({
+            url: "idea_profileinformation_submit.html",
+            success: function(result) {
+                $("#sign_contract").before(result);
+            }
+        });
+        history.pushState({},"",oldUrl + "?lid=" + lid);
+    };
     </script>
 </body>
 

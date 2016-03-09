@@ -38,5 +38,15 @@ $(function(){
 		selectText: '3 years',
 	});
 
+	$(".contentContainer").scroll(function() {
+        var viewH = $(this).height(), //可见高度  
+            contentH = $(this).get(0).scrollHeight, //内容高度  
+            scrollTop = $(this).scrollTop(); //滚动高度  
+        if (contentH - viewH - scrollTop <= 0) {
+            $('.scroll').hide();
+        } else {
+            $('.scroll').show();
+        }
+    });
 	
 })
