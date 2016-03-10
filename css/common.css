@@ -385,10 +385,12 @@ a:hover {
     .mainContentContainer .main_content .section2 .titleContainer .title1 {
         text-align: center;
         font-size: 36px;
+        text-shadow: 2px 2px 5px #c1c1c1;
     }
     .mainContentContainer .main_content .section2 .titleContainer .title2 {
         text-align: center;
         font-size: 72px;
+        text-shadow: 2px 2px 5px #c1c1c1;
     }
     .mainContentContainer .main_content .section2 .boxContainer {
         width: 530px;
@@ -511,11 +513,13 @@ a:hover {
     .mainContentContainer .main_content .section3 .titleContainer .title1 {
         text-align: center;
         font-size: 36px;
+        text-shadow: 2px 2px 5px #c1c1c1;
     }
     .mainContentContainer .main_content .section3 .titleContainer .title2 {
         text-align: center;
         font-size: 72px;
         line-height: 66px;
+        text-shadow: 2px 2px 5px #c1c1c1;
     }
     .mainContentContainer .main_content .section3 .boxContainer {
         width: 780px;
@@ -694,6 +698,7 @@ a:hover {
     .mainContentContainer .main_content p {
         text-align: center;
         color: white;
+        text-shadow: 2px 2px 5px #c1c1c1;
     }
     .mainContentContainer .main_content p.msg1 {
         font-size: 72px;
@@ -1896,7 +1901,7 @@ a:hover {
         height: 350px !important;
     }
     #tenor .dd-selected-text {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: normal;
     }
     #tenor ul.dd-options {
@@ -1973,6 +1978,9 @@ a:hover {
     .dd-options {
         width: 105px !important;
     }
+    #tenor .dd-selected-text {
+        font-size: 19px;
+    }
     .mainContentContainer .main_content .loan .loan_content .loan_tenor #tenor .dd-option label {
         font-size: 18px;
         font-weight: normal;
@@ -2003,6 +2011,9 @@ a:hover {
     .dd-select,
     .dd-options {
         width: 115px !important;
+    }
+    #tenor .dd-selected-text {
+        font-size: 19px;
     }
     .mainContentContainer .main_content .section4 .boxContainer .box1 .desc_video .video_content .video_container {
         width: 385px;
