@@ -57,7 +57,6 @@
         color: #85b429;
         height: 42px;
         line-height: 42px;
-        padding-right: 20px;
     }
     .nav_tabs .tab-content .about_frofile {
         font-size: 30px;
@@ -233,8 +232,8 @@
         cursor: pointer;
     }
     #status .status_content .submit_document:hover {
-        /*background: url(../images/icon_form.png) left center no-repeat;
-        color: #85b428;*/
+        background: url(../images/icon_form.png) left center no-repeat;
+        color: #85b428;
     }
     #status .status_content .sign_contract {
         background: url(../images/icon_note_1.png) left center no-repeat;
@@ -712,8 +711,7 @@
     }
     #uploader .placeholder {
         border: 0;
-        width: 277px;
-        margin: 0px 195px;
+        width: 668px;
     }
     #uploader .placeholder .webuploader-pick {
         line-height: 80px;
@@ -741,10 +739,6 @@
         display: inline-block;
         float: left;
         margin: 5px 5px 5px 0;
-    }
-    .uploader4 .statusBar+div {
-        width: 130px !important;
-        left: 340px !important;
     }
 }
 
@@ -871,13 +865,16 @@
         color: #fff;
     }
     #status .status_content .submit_document {
-        background: #2995b1 url(../images/mobile_icon_form.png) 20% center no-repeat;
+        background: #2995b1 url(../images/mobile_icon_form.png) 29% center no-repeat;
+        background-size: 7%;
     }
     #status .status_content .sign_contract {
-        background: #2995b1 url(../images/mobile_icon_note.png) 20% center no-repeat;
+        background: #2995b1 url(../images/mobile_icon_note.png) 32% center no-repeat;
+        background-size: 9%;
     }
     #status .status_content .download_contract {
-        background: #2995b1 url(../images/mobile_icon_download.png) 20% center no-repeat;
+        background: #2995b1 url(../images/mobile_icon_download.png) 29% center no-repeat;
+        background-size: 7%;
     }
     #status .scroll {
         bottom: 0;
@@ -999,15 +996,6 @@
     }
 }
 
-@media screen and (min-width: 770px) and (max-width: 1130px) {
-    .idea_profileinformation {
-        margin-top: 170px;
-    }
-    .idea_profileinformation .wrap .img {
-        display: none !important;
-    }
-}
-
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */
     #submit_update_a .submit_update_a_content .upload_title h3 {
@@ -1021,18 +1009,6 @@
     }
     .nav_tabs .nav-tabs li.active a {
         font-size: 18px;
-    }
-    #status .status_content .submit_document{
-        -webkit-background-size: 10%;
-        background-size: 10%;
-    }
-    #status .status_content .sign_contract{
-        -webkit-background-size: 14%;
-        background-size: 14%;
-    }
-    #status .status_content .download_contract{
-        -webkit-background-size: 10%;
-        background-size: 10%;
     }
 }
 
@@ -1060,18 +1036,6 @@
         line-height: 80px;
         margin: 0 16px;
     }
-    #status .status_content .submit_document{
-        -webkit-background-size: 9%;
-        background-size: 9%;
-    }
-    #status .status_content .sign_contract{
-        -webkit-background-size: 12%;
-        background-size: 12%;
-    }
-    #status .status_content .download_contract{
-        -webkit-background-size: 10%;
-        background-size: 10%;
-    }
 }
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1092,22 +1056,10 @@
         line-height: 90px;
         margin: 0 21px;
     }
-    #status .status_content .submit_document{
-        -webkit-background-size: 8%;
-        background-size: 8%;
-    }
-    #status .status_content .sign_contract{
-        -webkit-background-size: 11%;
-        background-size: 11%;
-    }
-    #status .status_content .download_contract{
-        -webkit-background-size: 9%;
-        background-size: 9%;
-    }
 }
 
 @media (device-height: 320px) and (orientation: landscape) {
-    /* 兼容iphone5 landscape*/
+    /* 兼容iphone5 */
     #submit_update_a .submit_update_a_content .upload_title h3 {
         font-size: 12px;
     }
@@ -1123,7 +1075,7 @@
 }
 
 @media (device-height: 375px) and (orientation: landscape) {
-    /* 兼容iphone6 landscape*/
+    /* 兼容iphone6 */
     #payment .status_content ul li:nth-child(2) {
         left: 32%;
     }
@@ -1149,7 +1101,7 @@
 }
 
 @media (device-height: 414px) and (orientation: landscape) {
-    /* 兼容iphone6 Plus landscape*/
+    /* 兼容iphone6 Plus */
     #sign_contract .sign_contract_step ul li {
         width: 43%;
     }
@@ -1165,15 +1117,5 @@
         height: 90px;
         line-height: 90px;
         margin: 0 72px;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 1130px) {
-    .idea_profileinformation .wrap .top_banner{
-        display: block !important;
-    }
-    .idea_profileinformation .main_content{
-        overflow: visible !important;
-        height: auto;
     }
 }

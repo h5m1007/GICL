@@ -12,7 +12,7 @@
     height: 599px;
     background: url('../images/banner_imng_f.jpg') no-repeat;
     -webkit-background-size: 100%;
-    background-size: cover;
+    background-size: 100%;
 }
 
 .idea_inner_cont.faq_page .cont_right {
@@ -63,7 +63,7 @@ a:hover {
 }
 
 .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
-    width: 597px;
+    width: 605px;
     font-family: 'Calibri';
     font-size: 18px;
     font-weight: bold;
@@ -173,49 +173,24 @@ a:hover {
         display: none;
     }
 }
-
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
+    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2){
         width: 232px;
     }
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
+    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2){
         font-size: 16px;
     }
 }
-
 @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 */
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
+    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2){
         width: 275px;
     }
 }
-
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 Plus */
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
+    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2){
         width: 320px;
-    }
-}
-
-@media screen and (min-width: 770px) and (max-width: 1130px) {
-    .idea_inner_cont.faq_page {
-        margin-top: 170px;
-    }
-    .idea_inner_cont.faq_page .cont_right {
-        width: 100%;
-    }
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
-        width: 440px;
-    }
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel h4,
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel-collapse {
-        width: 510px;
-    }
-}
-
-@media screen and (min-width: 450px) and (max-width: 770px) {
-    .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
-        width: 440px;
     }
 }

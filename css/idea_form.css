@@ -1,4 +1,4 @@
-    /*-------idea_form css------*/
+/*-------idea_form css------*/
 
 @media screen and (min-width: 320px) {
     /*****content_right******/
@@ -26,11 +26,11 @@
     #idea_form .content_left {
         position: relative;
         z-index: 2;
-        padding: 30px 20px 9px 185px;
+        padding: 30px 20px 9px 372px;
         opacity: 0;
         background: url("../images/banner_imng_g.jpg") no-repeat;
         -webkit-background-size: 100%;
-        background-size: 100%;
+        background-size: cover;
     }
     #idea_form .idea_form_content .content_left.animate {
         transform-origin: 100% 50%;
@@ -249,8 +249,14 @@
         height: 100px;
         cursor: pointer;
     }
-    #idea_form .content_right_1 .bottom img{
-        -webkit-filter:grayscale(1);
+    #idea_form .content_right_1 .bottom .loan_type_bg.grayscale {
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        filter: grayscale(1);
+        filter: gray;
+        /* IE 6-9 */
     }
     #idea_form .content_right_1 .bottom .loan_type ul li p {
         text-align: center;
@@ -1040,6 +1046,9 @@
     #idea_form .content_right_5 .top p.succeed:first-of-type {
         font-size: 35px;
     }
+    #idea_form .content_right_5 .btn-group{
+        padding: 10px;
+    }
     #idea_form .content_right_5 button.submit {
         width: 35%;
         height: 44px;
@@ -1050,14 +1059,14 @@
         font-size: 18px;
     }
     #idea_form .content_right_5 button.submit:first-child {
-        margin: 0 5px 0 85px;
+        margin-bottom: 5px;
     }
     #idea_form .content_right_5 button.submit:last-child {
         background-color: #ccc;
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1721px) {
     #idea_form .img img {
         width: 100%;
         height: auto;
@@ -1065,6 +1074,7 @@
     #idea_form .content_left {
         width: 33%;
         padding: 45px 15px 108px 330px;
+        background-size: 125%;
     }
     #idea_form .content_right {
         width: 40%;
@@ -1074,8 +1084,13 @@
         width: 100%;
     }
 }
-
-
+@media screen and (min-width: 1200px) and (max-width: 1435px) {
+    #idea_form .content_left{
+        padding-left: 255px;
+        -webkit-background-size: 128%;
+        background-size: 133%;
+    }
+}
 /*-------idea_form css for mobile style------*/
 
 @media screen and (min-width: 320px) and (max-width: 1130px) {
@@ -1180,16 +1195,12 @@
         float: left;
         margin: 0 5px;
         position: relative;
+        overflow: hidden;
     }
     #idea_form .content_right_1 .bottom .loan_type ul li p {
         font-size: 18px;
     }
     /*****content_right_1******/
-    #idea_form .content_right_1 .bottom .loan_type_bg {
-        width: 100%;
-        height: 95px;
-        background-size: 100%;
-    }
     #idea_form .cont_bottom {
         height: 193px;
         background: url('../images/mobile_formA_bottom.png') no-repeat;
@@ -1303,58 +1314,110 @@
     #idea_form .content_right_5 button.submit {
         width: 100%;
     }
-    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-        /* 兼容iphone5 */
-        #idea_form .wrap .top_banner {
-            height: 149px;
-        }
-        #idea_form .wrap .top_banner h1 {
-            font-size: 40px;
-        }
-        #idea_form .wrap .idea_form_content .cont_top {
-            height: 175px;
-        }
-        #idea_form .content_right .top ul li {
-            padding-left: 5px;
-        }
-        #idea_form .content_right .bottom .loan_type ul li {
-            width: 29%;
-        }
-        #idea_form .cont_bottom {
-            height: 187px;
-        }
-        #idea_form .cont_bottom .help {
-            padding: 0;
-            margin: 10px 30px;
-        }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1130px) {
+    #idea_form{
+        margin-top: 170px;
     }
-    @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-        /* 兼容iphone6 */
-        #idea_form .wrap .top_banner,
-        #idea_form .wrap .idea_form_content .cont_top {
-            height: 175px;
-        }
-        #idea_form .content_right .top ul li .step .p2 {
-            width: 70px;
-        }
-        #idea_form .cont_bottom {
-            height: 220px;
-        }
-        #idea_form .cont_bottom .help {
-            margin: 10px 30px;
-        }
+    #idea_form .content_left{
+        display: none !important;
     }
-    @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
-        /* 兼容iphone6 Plus*/
-        #idea_form .content_right .top ul li .sequence {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-        }
-        #idea_form .content_right .top ul li .step .p1 {
-            font-size: 15px;
-        }
-        #idea_form .content_right .top ul li .step .p2 {
-            width: 80px;
-        }
+    #idea_form .content_right .top ul li{
+        width: 25%;
+        padding-left: 25px;
     }
+    #idea_form .content_right .top ul li:last-child .step{
+        float: left;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 770px) {
+    #idea_form .content_right .top ul li{
+        width: 25%;
+        padding-left: 40px;
+    }
+    #idea_form .content_right .top ul li:last-child .step{
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1130px) and (max-width: 1200px) {
+    #idea_form .content_left{
+        padding-left: 57px;
+    }
+}
+
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* 兼容iphone5 */
+    #idea_form .wrap .top_banner {
+        height: 149px;
+    }
+    #idea_form .wrap .top_banner h1 {
+        font-size: 40px;
+    }
+    #idea_form .wrap .idea_form_content .cont_top {
+        height: 175px;
+    }
+    #idea_form .content_right .top ul li {
+        padding-left: 5px;
+    }
+    #idea_form .content_right .bottom .loan_type ul li {
+        width: 29%;
+    }
+    #idea_form .cont_bottom {
+        height: 187px;
+    }
+    #idea_form .cont_bottom .help {
+        padding: 0;
+        margin: 10px 30px;
+    }
+    #idea_form .content_right_1 .bottom .loan_type_bg{
+        margin-left: -75px;
+    }
+    #idNum_input{
+        width: 80% !important;
+    }
+    #idNum_input+input{
+        width: 13% !important;
+    }
+}
+
+@media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* 兼容iphone6 */
+    #idea_form .wrap .top_banner,
+    #idea_form .wrap .idea_form_content .cont_top {
+        height: 175px;
+    }
+    #idea_form .content_right .top ul li .step .p2 {
+        width: 70px;
+    }
+    #idea_form .cont_bottom {
+        height: 220px;
+    }
+    #idea_form .cont_bottom .help {
+        margin: 10px 30px;
+    }
+    #idea_form .content_right_1 .bottom .loan_type_bg{
+        margin-left: -50px;
+    }
+}
+
+@media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* 兼容iphone6 Plus*/
+    #idea_form .content_right .top ul li .sequence {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    #idea_form .content_right .top ul li .step .p1 {
+        font-size: 15px;
+    }
+    #idea_form .content_right .top ul li .step .p2 {
+        width: 80px;
+    }
+    #idea_form .content_right_1 .bottom .loan_type_bg{
+        margin-left: -60px;
+    }
+}
+

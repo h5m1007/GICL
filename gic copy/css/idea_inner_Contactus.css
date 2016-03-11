@@ -90,10 +90,3 @@
         background-size: 100%;
     }
 }
-
-@media screen and (min-width: 770px) and (max-width: 1130px) {
-    .idea_inner_cont.contactus_page{
-        margin-top: 170px;
-        padding-bottom: 0;
-    }
-}

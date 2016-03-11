@@ -20,6 +20,7 @@
         height: 100%;
     }
     .productdetail_left {
+        /*width: 53.333333%;*/
         height: 100%;
         background-color: #F4F4F4;
     }
@@ -219,9 +220,6 @@
         display: inline-block;
         height: 36px;
     }
-    .dd-pointer.dd-pointer-down{
-        right: 5px !important;
-    }
     .productdetail_right .loan_content .loan_tenor #tenor .dd-option {
         padding: 5px 10px;
     }
@@ -356,30 +354,8 @@
     .dd-select,
     .dd-options {
         width: 80px !important;
-        padding: 7px;
-    }
-    .dd-option {
-        padding: 7px !important;
-    }
-    .dd-selected {
-        padding: 0 !important;
-    }
-    .dd-selected  label{
-        margin-bottom: 0 !important;
-    }
-    ul.dd-options {
-        height: 115px;
     }
     .productdetail_left .scroll {
         display: none;
-    }
-}
-
-@media screen and (min-width: 770px) and (max-width: 1130px) {
-    #idea_inner_productdetail{
-        margin-top: 170px;
-    }
-    #idea_inner_productdetail .wrap img.visible-lg{
-        display: none !important;
     }
 }

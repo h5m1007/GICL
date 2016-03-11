@@ -1,0 +1,1393 @@
+.grayscale {
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
+    filter: gray; /* IE 6-9 */
+}
+        /*-------idea_form css------*/
+    
+    @media screen and (min-width: 320px) {
+        /*****content_right******/
+        #idea_form {
+            margin-top: 170px;
+            background-color: #F4F4F4;
+        }
+        #idea_form .wrap {
+            max-width: 100%;
+            margin: 0;
+        }
+        #idea_form .img {
+            position: relative;
+            width: 33.636364%;
+        }
+        #idea_form .img img {
+            width: 530px;
+            position: absolute;
+            top: 0;
+        }
+        #idea_form .idea_form_content {
+            perspective: 532px;
+            -webkit-perspective: 532px;
+        }
+        #idea_form .content_left {
+            position: relative;
+            z-index: 2;
+            padding: 30px 20px 9px 185px;
+            opacity: 0;
+            background: url("../images/banner_imng_g.jpg") no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+        }
+        #idea_form .idea_form_content .content_left.animate {
+            transform-origin: 100% 50%;
+            -webkit-transform-origin: 100% 50%;
+            animation: box3Ani .3s ease-in-out 0s 1;
+            /*animation: 动画名 动画时间 动画速度 延迟 次数*/
+            -webkit-animation: box3Ani .3s ease-in-out 0s 1;
+            animation-fill-mode: forwards;
+            /*保留动画执行到100%时的状态*/
+            -webkit-animation-fill-mode: forwards;
+        }
+        #idea_form .idea_form_content .content_right.animate {
+            transform-origin: 0% 50%;
+            -webkit-transform-origin: 0% 50%;
+            animation: box2Ani .3s ease-in-out .3s 1;
+            -webkit-animation: box2Ani .3s ease-in-out .3s 1;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+        }
+        #idea_form .idea_form_content .content_left.start_animate,
+        #idea_form .wrap .img img {
+            animation: box5Ani .5s ease-in-out .3s 1;
+            -webkit-animation: box5Ani .5s ease-in-out .3s 1;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+        }
+        #idea_form .idea_form_content .content_right.start_animate {
+            transform-origin: 0% 50%;
+            -webkit-transform-origin: 0% 50%;
+            animation: box6Ani .5s ease-in-out .3s 1;
+            -webkit-animation: box6Ani .5s ease-in-out .3s 1;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+        }
+        #idea_form .content_left .spacing {
+            margin-bottom: 20px;
+        }
+        #idea_form .content_left .title1 {
+            font-size: 50px;
+            color: #2893b3;
+            line-height: 1;
+        }
+        #idea_form .content_left .title2 {
+            font-size: 30px;
+            color: #065062;
+        }
+        #idea_form .content_left .text_description_content {
+            color: white;
+        }
+        #idea_form .content_left .read_more {
+            font-size: 24px;
+            color: #065062;
+            cursor: pointer;
+        }
+        #idea_form .content_left .help {
+            border: 1px solid #fff;
+            padding: 20px;
+            cursor: pointer;
+            color: white;
+            margin-bottom: 0;
+        }
+        #idea_form .content_left .for_help {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #065062;
+        }
+        #idea_form .content_left .contact {
+            font-size: 24px;
+            font-family: 'Calibri';
+        }
+        #idea_form .content_right {
+            margin-top: 30px;
+            padding-right: 0;
+            height: 605px;
+        }
+        #idea_form .content_right .top ul li {
+            float: left;
+            text-align: center;
+        }
+        #idea_form .content_right .top ul li:last-child .step {
+            float: right;
+            margin-right: 0;
+        }
+        #idea_form .content_right .top ul li .step {
+            text-align: center;
+            margin-right: 20px;
+            color: #010101;
+            font-size: 18px;
+        }
+        #idea_form .content_right .top ul li .step .p1 {
+            font-family: 'Calibri';
+        }
+        #idea_form .content_right .top ul li .step .p2 {
+            width: 120px;
+            font-weight: bold;
+            word-wrap: break-word;
+        }
+        #idea_form .content_right .top ul .active.p2,
+        #idea_form .content_right .top ul .active.p1 {
+            color: #82B518;
+        }
+        #idea_form .content_right .top ul li .sequence {
+            width: 75px;
+            margin: 0 auto;
+            height: 75px;
+            line-height: 75px;
+            color: white;
+            font-size: 18px;
+            border-radius: 50%;
+            background-color: #d7d7d7;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        #idea_form .content_right .top ul li.active .sequence {
+            background-color: #82B518;
+        }
+        #idea_form .content_right .top ul li .arrows {
+            width: 20px;
+            height: 125px;
+            line-height: 125px;
+            background: url(../images/arrows_gray.png) left center no-repeat;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        #idea_form .content_right .top ul .active.arrows {
+            background: url(../images/arrows_green.png) left center no-repeat;
+        }
+        #idea_form .content_right .divider {
+            height: 1px;
+            background: #838383;
+            margin: 20px 0;
+        }
+        #idea_form .content_right .bottom form .form-group {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        #idea_form .content_right .bottom form .form-group .form-control button,
+        #idea_form .content_right .bottom form .form-group input {
+            height: 40px;
+        }
+        #idea_form .content_right .bottom form .form-group select {
+            color: #3c4248;
+            background: #fff url(../images/arrows_blue_down.png) 98% center no-repeat;
+            background-size: 15px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .bootstrap-select.btn-group .dropdown-toggle .caret {
+            width: 20px;
+            height: 16px;
+            top: 40%;
+            border: none;
+            background: url(../images/arrows_blue_down.png) right center no-repeat;
+        }
+        .bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text {
+            margin-left: 34px;
+        }
+        .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+            left: 15px;
+        }
+        #idea_form .content_right .bottom form .form-group .help-block {
+            margin-bottom: 0;
+        }
+        #idea_form .content_right.content_right_1 .bottom .loan_type p:nth-child(1) {
+            font-family: 'Bliss2';
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        #idea_form .content_right .bottom .loan_type ul {
+            margin-top: 10px;
+        }
+        #idea_form .content_right .bottom .loan_type ul li {
+            float: left;
+            margin-right: 18px;
+            position: relative;
+        }
+        #idea_form .content_right .bottom ul li:last-child {
+            margin-right: 0;
+        }
+        #idea_form .content_right .bottom .title {
+            color: #85b518;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        #idea_form .content_right .bottom .title1 {
+            font-family: 'Bliss2';
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        #idea_form .content_right .bottom .btn_group {
+            margin: 10px 0 20px 16px;
+        }
+        #idea_form .content_right .bottom .btn-group .next {
+            width: 244px;
+            text-align: center;
+            background-color: #85b518;
+            border-radius: 2px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+        #idea_form .content_right .bottom .btn-group .previou {
+            width: 244px;
+            text-align: center;
+            background-color: #C0C0C0;
+            border-radius: 2px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+        /*****content_right_1******/
+        #idea_form .content_right_1 .bottom .loan_type_bg {
+            width: 210px;
+            height: 100px;
+            cursor: pointer;
+        }
+        #idea_form .content_right_1 .bottom .loan_type_bg2 {
+            width: 210px;
+            height: 100px;
+            cursor: pointer;
+            background: url(../images/1.10_idea_formA_img_b_1.png) left top no-repeat;
+            -webkit-filter:grayscale(1);
+        }
+        #idea_form .content_right_1 .bottom .loan_type_bg3 {
+            width: 210px;
+            height: 100px;
+            cursor: pointer;
+            background: url(../images/1.10_idea_formA_img_c_1.png) left top no-repeat;
+            -webkit-filter:grayscale(1);
+        }
+        #idea_form .content_right_1 .bottom .loan_type ul li p {
+            text-align: center;
+        }
+        #idea_form .content_right_1 .bottom .loan_type .tips {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 106%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            z-index: 2;
+            background-color: #85b518;
+            width: 235px;
+            height: 130px;
+            padding: 10px;
+            color: white;
+        }
+        #idea_form .content_right_1 .bottom .loan_type .tips p {
+            text-align: left;
+        }
+        #idea_form .content_right_1 .bottom ul li:hover .tips {
+            display: block;
+        }
+        #idea_form .content_right_1 .bottom .loan_type .tips .money {
+            font-size: 20px;
+            font-family:
+        }
+        #idea_form .content_right_1 .bottom .loan_type .tips .symbol {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 10px solid #85b518;
+            top: -10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+        }
+        #idea_form .content_right_1 .bottom .loan {
+            /*margin-top: 30px;*/
+        }
+        #idea_form .content_right_1 .bottom .loan form .form-group:nth-child(2n) {
+            padding-left: 0;
+        }
+        #idea_form .content_right_1 .bottom .loan form .form-group:nth-child(2n+1) {
+            padding-right: 0;
+        }
+        #idea_form .content_right_1 .bottom .loan .title1 {
+            font-family: 'Bliss2';
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        #idea_form #loan_purpose {
+            width: 100%!important;
+        }
+        #loan_purpose .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #loan_purpose .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #loan_purpose .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #loan_purpose .dd-select a {
+            color: #000;
+        }
+        #loan_purpose .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #loan_purpose .dd-options.dd-click-off-close li {
+            width: 100%!important;
+        }
+        #idea_form #tenor {
+            width: 100%!important;
+        }
+        #idea_form #tenor .dd-select {
+            border: solid 1px #ccc;
+        }
+        #idea_form #tenor .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form #tenor .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form #tenor .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form #tenor .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form #tenor .dd-options.dd-click-off-close li {
+            width: 100%!important;
+        }
+        #idea_form .content_right_1 .bottom .loan ul li input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding-left: 8px;
+        }
+        #idea_form .content_right_1 .bottom .loan .loan_amount {
+            margin: 30px 0;
+        }
+        #idea_form .content_right_1 .bottom .loan .sign {
+            display: inline-block;
+        }
+        #idea_form .content_right_1 .bottom .loan .sign input {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            color: white;
+            border: 2px solid #ccc;
+            margin-top: 3px;
+        }
+        #idea_form .content_right_1 .bottom .loan .sign p {
+            margin-left: 30px;
+        }
+        #idea_form .content_right_1 .bottom .button {
+            margin-top: 30px;
+        }
+        /*****content_right_2******/
+        #idea_form .content_right_1{
+            opacity: 0;
+        }
+        #idea_form .content_right_5 {
+            display: none;
+        }
+        #idea_form .content_right_2 .bottom #language {
+            display: inline-block;
+            width: 48%!important;
+        }
+        #language .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #language .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #language .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #language .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom .name {
+            width: 100%;
+        }
+        #idea_form .content_right_2 .bottom .name li {
+            width: 48%;
+        }
+        #idea_form .content_right_2 .bottom .name input {
+            display: block;
+            width: 100%;
+            height: 40px;
+        }
+        #idea_form .content_right_2 .bottom .name .first_name {
+            width: 61%;
+        }
+        #idea_form .content_right_2 .bottom .name .surname {
+            width: 32%;
+        }
+        #idea_form .content_right_2 .bottom #gender {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom .name #gender li {
+            width: 100%;
+        }
+        #gender .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #gender .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #gender .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #gender .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom .half {
+            width: 48%;
+        }
+        #idea_form .content_right_2 .bottom .id_number input {
+            display: inline-block;
+        }
+        #idea_form .content_right_2 .bottom .id_number .id_number_1 {
+            width: 72%;
+            margin-right: 10px;
+        }
+        #idea_form .content_right_2 .bottom .id_number #id_number {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+        #idea_form .content_right_2 .bottom .id_number .id_number_2 {
+            width: 22%;
+        }
+        #idea_form .content_right_2 .bottom .id_number #id_number2 {
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 5px;
+        }
+        #idea_form .content_right_2 .bottom .id_number #birth {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        #idea_form .content_right_2 .bottom .id_number .birth {
+            position: relative;
+        }
+        #idea_form .content_right_2 .bottom .form_datetime {
+            background: url(../images/step/icon_calendar.png) right center no-repeat;
+        }
+        #idea_form .content_right_2 .bottom .email .email_optional {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+        #idea_form .content_right_2 .bottom #education {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom #education li {
+            width: 100%;
+        }
+        #education .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #education .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #education .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #education .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom .home .home_tel {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+        #idea_form .content_right_2 .bottom #dependents {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom #dependents li {
+            width: 100%;
+        }
+        #dependents .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #dependents .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #dependents .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #dependents .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom #residential_address {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        #idea_form .content_right_2 .bottom .residential_address {
+            position: relative;
+            cursor: pointer;
+        }
+        #idea_form .content_right_2 .bottom .residential_address::after {
+            content: '.';
+            position: absolute;
+            width: 30px;
+            height: 26px;
+            top: 37px;
+            right: 7px;
+            background: url(../images/step/icon_location.png) left center no-repeat;
+        }
+        #idea_form .content_right_2 .bottom .residential_address #residential_address2 {
+            margin-top: 8px;
+        }
+        #idea_form .content_right_2 .bottom #residential_address2 {
+            display: inline-block;
+            width: 48%!important;
+        }
+        #idea_form .content_right_2 .bottom #residential_address2 li {
+            width: 100%;
+        }
+        #residential_address2 .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #residential_address2 .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #residential_address2 .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #residential_address2 .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom #ownership {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom #ownership li {
+            width: 100%;
+        }
+        #ownership .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #ownership .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #ownership .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #ownership .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_2 .bottom .ownership .mortgage {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+        }
+        #idea_form .content_right_2 .bottom .button {
+            margin-top: 12px;
+        }
+        /*****content_right_3******/
+        #idea_form .content_right_2 {
+            display: none;
+            opacity: 0;
+        }
+        #idea_form .content_right_3 .half {
+            display: inline-block;
+            width: 48%;
+        }
+        #idea_form .content_right_3 .line {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+        }
+        #idea_form .content_right_3 .bottom #self_employed {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #self_employed .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #self_employed .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #self_employed .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #self_employed .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #company_tel {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #company_tel .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #company_tel .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #company_tel .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #company_tel .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #salary_method {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #salary_method .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #salary_method .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #salary_method .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #salary_method .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom .comepany_address {
+            position: relative;
+        }
+        #idea_form .content_right_3 .bottom .comepany_address::after {
+            content: '.';
+            width: 30px;
+            height: 26px;
+            position: absolute;
+            top: 37px;
+            right: 7px;
+            background: url(../images/step/icon_location.png) left center no-repeat;
+            cursor: pointer;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address {
+            display: inline-block;
+            margin-top: 10px;
+            width: 48%!important;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_3 .bottom .button {
+            margin-top: 30px;
+        }
+        #idea_form .content_right_3 .bottom .title1 {
+            margin-top: 10px;
+        }
+        /*****content_right_4******/
+        #idea_form .content_right_3 {
+            display: none;
+            opacity: 0;
+        }
+        #idea_form .content_right_4 [disabled],
+        #idea_form .content_right_4 .disabled,
+        #idea_form .content_right_4 .disabled .caret {
+            border: 0;
+            background: none !important;
+            box-shadow: none;
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        #idea_form .content_right_4 .edit {
+            background-color: #2995b1;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #idea_form .content_right_4 .personal_information_content_1 ul,
+        #idea_form .content_right_4 .loan_information_content_1 ul {
+            margin-bottom: 10px;
+        }
+        #idea_form .content_right_4 .perferred_language_content ul li,
+        #idea_form .content_right_4 .personal_information_content_1 ul li,
+        #idea_form .content_right_4 .loan_information_content_1 ul li {
+            width: 50%;
+        }
+        #idea_form .content_right_4 .perferred_language_content ul {
+            position: relative;
+        }
+        #idea_form .content_right_4 .perferred_language_content li.perferred_language_english {
+            height: 40px;
+            line-height: 40px;
+        }
+        #idea_form .content_right_4 .perferred_language_content ul .edit_position {
+            position: absolute;
+            right: 0;
+        }
+        #idea_form .content_right_4 .perferred_language_content_1 .btn-group {
+            width: 20%;
+            margin-left: 17px;
+        }
+        #idea_form .content_right_4 .bottom .title1 {
+            font-family: 'Bliss2';
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        #idea_form .content_right_4 .divider {
+            height: 1px;
+            background: #838383;
+            margin: 12px 0;
+        }
+        #idea_form .content_right_4 .bottom {
+            position: relative;
+        }
+        #idea_form .content_right_4 .scroll {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            -o-transform: translate(-50%, 0);
+            bottom: -70px;
+            color: #838383;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            z-index: 2;
+        }
+        #idea_form .content_right_4 .bottom .title {
+            color: #85b518;
+            font-size: 28px;
+            margin-bottom: 0;
+            padding-left: 15px;
+        }
+        #idea_form .content_right_4 .bottom_content {
+            /*height: 655px;
+        overflow-y: auto;*/
+        }
+        #idea_form .content_right_4 .bottom_content_2 {
+            display: none;
+        }
+        #idea_form .content_right_4 .bottom .loan_information_content_2 {
+            display: none;
+        }
+        #idea_form .content_right_4 .bottom .loan_information_content_2 ul {
+            margin-bottom: 20px;
+        }
+        #idea_form .content_right_4 .bottom .loan_information_content_2 form > ul > li {
+            width: 48%;
+        }
+        #idea_form .content_right_4 .bottom .loan_information_content_2 form input {
+            width: 100%;
+            display: inline-block;
+            height: 40px;
+        }
+        #idea_form .content_right_4 .bottom #loan_type {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #loan_type .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #loan_type .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #loan_type .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #loan_type .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_loan_purposer {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_loan_purposer .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_loan_purposer .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_loan_purposer .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_loan_purposer .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_tenor {
+            display: inline-block;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_tenor .dd-select {
+            background: white!important;
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_tenor .dd-pointer-down {
+            border: 0;
+            display: inline-block;
+            background: url(../images/arrows_blue_down.png) left center no-repeat;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_tenor .dd-pointer-up {
+            background: url(../images/arrows_blue_up.png) left center no-repeat;
+            border: 0!important;
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            margin-top: -8px;
+        }
+        #idea_form .content_right_4 .bottom #information_content_2_tenor .dd-options.dd-click-off-close {
+            width: 100%!important;
+        }
+        #idea_form .content_right_4 .bottom .loan_information_content_2 .save {
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+            background-color: #85b518;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            border-radius: 2px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        /*****content_right_5******/
+        #idea_form .content_right_4 {
+            display: none;
+            opacity: 0;
+        }
+        #idea_form .content_right_5 .top .icon_succeed {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #idea_form .content_right_5 .top p {
+            text-align: center;
+            font-size: 16px;
+        }
+        #idea_form .content_right_5 .top .succeed_p2 {
+            margin-top: 20px;
+        }
+        #idea_form .content_right_5 .top .succeed_p3 {
+            color: #000;
+            font-weight: bold;
+        }
+        #idea_form .content_right_5 .top p.succeed {
+            color: #2893b3;
+            font-size: 18px;
+        }
+        #idea_form .content_right_5 .top p.succeed:first-of-type {
+            font-size: 35px;
+        }
+        #idea_form .content_right_5 button.submit {
+            width: 35%;
+            height: 44px;
+            background-color: #2893b3;
+            border-right: 2px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 18px;
+        }
+        #idea_form .content_right_5 button.submit:first-child {
+            margin: 0 5px 0 85px;
+        }
+        #idea_form .content_right_5 button.submit:last-child {
+            background-color: #ccc;
+        }
+    }
+    
+    @media screen and (min-width: 1300px) {
+        #idea_form .img img {
+            width: 100%;
+            height: auto;
+        }
+        #idea_form .content_left {
+            width: 33%;
+            padding: 45px 15px 108px 330px;
+        }
+        #idea_form .content_right {
+            width: 40%;
+            height: 740px;
+        }
+        #idea_form .content_right_5 button.submit {
+            width: 100%;
+        }
+    }
+    /*-------idea_form css for mobile style------*/
+    
+    @media screen and (min-width: 320px) and (max-width: 1130px) {
+        #idea_form {
+            margin-top: 85px;
+        }
+        #idea_form .wrap .top_banner {
+            height: 150px;
+            background: url('../images/mobile_formA_banner.png') no-repeat;
+            background-size: 100%;
+        }
+        #idea_form .wrap .top_banner h1 {
+            font-size: 40px;
+            width: 230px;
+            color: #fff;
+            margin-top: 20px;
+        }
+        #idea_form .wrap .idea_form_content .cont_top {
+            background: #cbcbcb;
+        }
+        #idea_form .wrap .idea_form_content .cont_top .title,
+        #idea_form .wrap .idea_form_content .cont_top p:nth-child(3) {
+            font-size: 20px;
+            color: #005063;
+            padding: 10px 0;
+        }
+        #idea_form .wrap .idea_form_content .cont_top p:nth-child(3) {
+            font-weight: bold;
+        }
+        #idea_form .wrap .idea_form_content .cont_top p:nth-child(2) {
+            color: #1c1f1c;
+        }
+        #idea_form .content_right {
+            width: 100%;
+            height: auto;
+            margin: 30px 0 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #idea_form .content_right .top ul li {
+            padding-left: 7px;
+        }
+        #idea_form .content_right .top ul li:last-child .step {
+            margin-right: 0;
+        }
+        #idea_form .content_right .top ul li .step {
+            margin-right: 0;
+        }
+        #idea_form .content_right .top ul li .step .p1 {
+            font-size: 12px;
+        }
+        #idea_form .content_right .top ul li .step .p2 {
+            width: 60px;
+            font-size: 12px;
+        }
+        #idea_form .content_right .top ul li .sequence {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        #idea_form .content_right .top ul li .arrows {
+            height: 70px;
+            line-height: 70px;
+            margin-right: 0;
+        }
+        #idea_form .content_right .divider {
+            margin: 10px 25px 20px;
+        }
+        #idea_form .content_right .bottom {
+            margin: 0 25px;
+        }
+        #idea_form .content_right .bottom .loan_type p:first-child,
+        #idea_form .content_right .bottom .loan_type .hidden-lg {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        #idea_form .content_right .bottom .loan_type .hidden-lg {
+            color: #82B518;
+        }
+        #idea_form .content_right .bottom .loan_type .popover {
+            width: 100%;
+            max-width: 100%;
+        }
+        #idea_form .content_right .bottom .loan_type .popover ul li {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        #idea_form .content_right .bottom .loan_type .popover ul li div {
+            padding: 5px 0;
+        }
+        #idea_form .content_right .bottom .loan_type .popover ul li .detail_cont,
+        .detail_cont h2 small {
+            color: #2995b1;
+        }
+        #idea_form .content_right .bottom .loan_type ul {
+            margin-top: 10px;
+        }
+        #idea_form .content_right .bottom .loan_type ul li {
+            width: 30%;
+            float: left;
+            margin: 0 5px;
+            position: relative;
+        }
+        #idea_form .content_right_1 .bottom .loan_type ul li p {
+            font-size: 18px;
+        }
+        /*****content_right_1******/
+        #idea_form .content_right_1 .bottom .loan_type_bg {
+            width: 100%;
+            height: 95px;
+            background-size: 100%;
+        }
+        #idea_form .content_right_1 .bottom .loan_type_bg2 {
+            width: 100%;
+            height: 95px;
+            background: url(../images/mobile_form_cont_pic_b.png) left top no-repeat;
+            background-size: 100%;
+        }
+        #idea_form .content_right_1 .bottom .loan_type_bg3 {
+            width: 100%;
+            height: 95px;
+            background: url(../images/mobile_form_cont_pic_c1.png) left top no-repeat;
+            background-size: 100%;
+        }
+        #idea_form .cont_bottom {
+            height: 193px;
+            background: url('../images/mobile_formA_bottom.png') no-repeat;
+            background-size: 100%;
+        }
+        #idea_form .content_right_1 .bottom .loan .loan_amount {
+            margin: 0;
+        }
+        #idea_form .content_right_1 .bottom .loan form .form-group {
+            padding: 0;
+        }
+        #idea_form .content_right_1 .bottom .loan ul li {
+            width: 100%;
+        }
+        #idea_form .content_right_1 .bottom ul li:hover .tips {
+            width: 155px;
+            height: auto;
+        }
+        #idea_form .content_right .bottom .button .next {
+            width: 100%;
+        }
+        #idea_form .content_right_1 .bottom .button {
+            margin-bottom: 30px;
+        }
+        #idea_form .content_right .bottom .btn_group {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+        }
+        #idea_form .content_right .bottom .btn-group .previou {
+            width: 100%;
+            margin-right: 0;
+        }
+        #idea_form .content_right .bottom .btn-group .next {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        #idea_form .cont_bottom .help {
+            border: 1px solid #fff;
+            padding: 5px;
+            margin: 5px 10px;
+            cursor: pointer;
+            color: white;
+        }
+        #idea_form .cont_bottom .for_help {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #065062;
+        }
+        #idea_form .content_right .bottom .title1 {
+            font-weight: bold;
+        }
+        #idea_form .content_right_2 .bottom form div:nth-of-type(2) .form-group,
+        #idea_form .content_right_2 .bottom form div:nth-of-type(4) .form-group {
+            padding-right: 0;
+        }
+        #idea_form .content_right_2 .bottom #language {
+            width: 100% !important;
+        }
+        #idea_form .content_right_2 .bottom .name li {
+            width: 100%;
+        }
+        #idea_form .content_right_2 .bottom .name .first_name {
+            width: 100%;
+        }
+        #idea_form .content_right_2 .bottom .name .surname {
+            width: 100%;
+        }
+        #idea_form .content_right_2 .bottom .half {
+            width: 100%;
+        }
+        #idea_form .content_right_2 .bottom #residential_address {
+            height: 150px;
+        }
+        #idea_form .content_right_2 .bottom #residential_address2 {
+            width: 100% !important;
+        }
+        #idea_form .content_right_2 .bottom .button {
+            margin: 20px 0;
+        }
+        #idea_form .content_right_3 .half {
+            width: 100%;
+        }
+        #idea_form .content_right_3 .comepany_address .line {
+            height: 150px;
+        }
+        #idea_form .content_right_3 .bottom #comepany_address {
+            width: 100% !important;
+        }
+        #idea_form .content_right_3 .bottom .button {
+            margin: 20px 0;
+        }
+        #idea_form .content_right_4 .bottom_content {
+            height: auto;
+            overflow: hidden;
+        }
+        #idea_form .content_right_4 .bottom .title {
+            font-size: 16px;
+        }
+        #idea_form .content_right_4 .edit {
+            width: 65px;
+            height: auto;
+            line-height: 1.3;
+            font-size: 16px;
+        }
+        #idea_form .content_right_4 .perferred_language_content_1 .btn-group {
+            width: 100%;
+            margin: 0;
+            padding: 0 15px;
+        }
+        #idea_form .content_right_5 button.submit {
+            width: 100%;
+        }
+        @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            /* 兼容iphone5 */
+            #idea_form .wrap .top_banner {
+                height: 149px;
+            }
+            #idea_form .wrap .top_banner h1 {
+                font-size: 40px;
+            }
+            #idea_form .wrap .idea_form_content .cont_top {
+                height: 175px;
+            }
+            #idea_form .content_right .top ul li {
+                padding-left: 5px;
+            }
+            #idea_form .content_right .bottom .loan_type ul li {
+                width: 29%;
+            }
+            #idea_form .cont_bottom {
+                height: 187px;
+            }
+            #idea_form .cont_bottom .help {
+                padding: 0;
+                margin: 10px 30px;
+            }
+        }
+        @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+            /* 兼容iphone6 */
+            #idea_form .wrap .top_banner,
+            #idea_form .wrap .idea_form_content .cont_top {
+                height: 175px;
+            }
+            #idea_form .content_right .top ul li .step .p2 {
+                width: 70px;
+            }
+            #idea_form .cont_bottom {
+                height: 220px;
+            }
+            #idea_form .cont_bottom .help {
+                margin: 10px 30px;
+            }
+        }
+        @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+            /* 兼容iphone6 Plus*/
+            #idea_form .content_right .top ul li .sequence {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+            #idea_form .content_right .top ul li .step .p1 {
+                font-size: 15px;
+            }
+            #idea_form .content_right .top ul li .step .p2 {
+                width: 80px;
+            }
+        }

@@ -57,35 +57,35 @@ $(function() {
             var flag = $(this).attr('flag');
             if (name == 'a') {
                 if (flag == 'true') {
-                    $(this).css('-webkit-filter', 'none');
-                    $(".loan_type_bg2").css('-webkit-filter', 'grayscale(1)');
-                    $(".loan_type_bg3").css('-webkit-filter', 'grayscale(1)');
+                    $(this).removeClass("grayscale");
+                    $(".loan_type_bg2").addClass("grayscale");
+                    $(".loan_type_bg3").addClass("grayscale");
                     $(this).attr('flag', 'false');
                 } else {
-                    $(this).css('-webkit-filter', 'grayscale(1)');
+                    $(this).addClass("grayscale");
                     $(this).attr('flag', 'true');
                 }
                 $(".loan form .form-group").slice(3, 5).hide();
             } else if (name == 'b') {
                 if (flag == 'true') {
-                    $(this).css('-webkit-filter', 'none');
-                    $(".loan_type_bg1").css('-webkit-filter', 'grayscale(1)');
-                    $(".loan_type_bg3").css('-webkit-filter', 'grayscale(1)');
+                    $(this).removeClass("grayscale");
+                    $(".loan_type_bg1").addClass("grayscale");
+                    $(".loan_type_bg3").addClass("grayscale");
                     $(this).attr('flag', 'false');
                 } else {
-                    $(this).css('-webkit-filter', 'grayscale(1)');
+                    $(this).addClass("grayscale");
                     $(this).attr('flag', 'true');
                 }
                 $(".loan form .form-group").slice(3, 5).hide();
             } else {
                 if (flag == 'true') {
-                    $(this).css('-webkit-filter', 'none');
-                    $(".loan_type_bg1").css('-webkit-filter', 'grayscale(1)');
-                    $(".loan_type_bg2").css('-webkit-filter', 'grayscale(1)');
+                    $(this).removeClass("grayscale");
+                    $(".loan_type_bg1").addClass("grayscale");
+                    $(".loan_type_bg2").addClass("grayscale");
                     $(".loan form .form-group").slice(3, 5).show();
                     $(this).attr('flag', 'false');
                 } else {
-                    $(this).css('-webkit-filter', 'grayscale(1)');
+                    $(this).addClass("grayscale");
                     $(".loan form .form-group").slice(3, 5).hide();
                     $(this).attr('flag', 'true');
                 }
@@ -94,56 +94,56 @@ $(function() {
     }
     $('.cont_right_1_form').bootstrapValidator({
         message: 'This value is not valid',
-        fields: {
-            purpose_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'purpose value is empty!'
-                    }
-                }
-            },
-            amount_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'amount value is empty!'
-                    }
-                }
-            },
-            tenor_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'tenor value is empty!'
-                    }
-                }
-            },
-            property_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'property value is empty!'
-                    }
-                }
-            },
-            mortgage_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'mortgage value is empty!'
-                    }
-                }
-            },
-            sign_checkout: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'sign must be checkouted!'
-                    }
-                }
-            }
-        }
+        // fields: {
+        //     purpose_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'purpose value is empty!'
+        //             }
+        //         }
+        //     },
+        //     amount_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'amount value is empty!'
+        //             }
+        //         }
+        //     },
+        //     tenor_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'tenor value is empty!'
+        //             }
+        //         }
+        //     },
+        //     property_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'property value is empty!'
+        //             }
+        //         }
+        //     },
+        //     mortgage_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'mortgage value is empty!'
+        //             }
+        //         }
+        //     },
+        //     sign_checkout: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'sign must be checkouted!'
+        //             }
+        //         }
+        //     }
+        // }
     }).on('success.form.bv', function(e) {
         e.preventDefault();        
         var target1 = $(this).find('[name]');
@@ -167,96 +167,96 @@ $(function() {
     });
     $('.cont_right_2_form').bootstrapValidator({
         message: 'This value is not valid',
-        fields: {
-            language_select: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'language value is empty!'
-                    }
-                }
-            },
-            fstName_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'first name is empty!'
-                    }
-                }
-            },
-            gender_select: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'gender is empty!'
-                    }
-                }
-            },
-            idNum_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'ID Number is empty!'
-                    }
-                }
-            },
-            email_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'Email is empty!'
-                    }
-                }
-            },
-            level_select: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'education level is empty!'
-                    }
-                }
-            },
-            tel_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'home tel is empty!'
-                    }
-                }
-            },
-            depend_select: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'NO of Dependents is empty!'
-                    }
-                }
-            },
-            address_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'address must be input complete!'
-                    }
-                }
-            },
-            owner_select: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'ownership is empty!'
-                    }
-                }
-            },
-            mortgage_input: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'mortgage is empty!'
-                    }
-                }
-            }
-        }
+        // fields: {
+        //     language_select: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'language value is empty!'
+        //             }
+        //         }
+        //     },
+        //     fstName_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'first name is empty!'
+        //             }
+        //         }
+        //     },
+        //     gender_select: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'gender is empty!'
+        //             }
+        //         }
+        //     },
+        //     idNum_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'ID Number is empty!'
+        //             }
+        //         }
+        //     },
+        //     email_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'Email is empty!'
+        //             }
+        //         }
+        //     },
+        //     level_select: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'education level is empty!'
+        //             }
+        //         }
+        //     },
+        //     tel_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'home tel is empty!'
+        //             }
+        //         }
+        //     },
+        //     depend_select: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'NO of Dependents is empty!'
+        //             }
+        //         }
+        //     },
+        //     address_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'address must be input complete!'
+        //             }
+        //         }
+        //     },
+        //     owner_select: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'ownership is empty!'
+        //             }
+        //         }
+        //     },
+        //     mortgage_input: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'mortgage is empty!'
+        //             }
+        //         }
+        //     }
+        // }
     }).on('success.form.bv', function(e) {
         e.preventDefault();
         var target1 = $(this).find('[name]');
@@ -282,80 +282,80 @@ $(function() {
     });
     $('.cont_right_3_form').bootstrapValidator({
         message: 'This value is not valid',
-        fields: {
-            cpy_name: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'company name is empty!'
-                    }
-                }
-            },
-            self_employ: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'answer is empty!'
-                    }
-                }
-            },
-            year_service: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'years is empty!'
-                    }
-                }
-            },
-            cpy_tel: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'company tel is empty!'
-                    }
-                }
-            },
-            industry: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'Industry is empty!'
-                    }
-                }
-            },
-            position: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'position is empty!'
-                    }
-                }
-            },
-            month_income: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'month income is empty!'
-                    }
-                }
-            },
-            salary_way: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'salary method is empty!'
-                    }
-                }
-            },
-            cpy_address: {
-                message: '用户名验证失败',
-                validators: {
-                    notEmpty: {
-                        message: 'comepany address is empty!'
-                    }
-                }
-            }
-        }
+        // fields: {
+        //     cpy_name: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'company name is empty!'
+        //             }
+        //         }
+        //     },
+        //     self_employ: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'answer is empty!'
+        //             }
+        //         }
+        //     },
+        //     year_service: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'years is empty!'
+        //             }
+        //         }
+        //     },
+        //     cpy_tel: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'company tel is empty!'
+        //             }
+        //         }
+        //     },
+        //     industry: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'Industry is empty!'
+        //             }
+        //         }
+        //     },
+        //     position: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'position is empty!'
+        //             }
+        //         }
+        //     },
+        //     month_income: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'month income is empty!'
+        //             }
+        //         }
+        //     },
+        //     salary_way: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'salary method is empty!'
+        //             }
+        //         }
+        //     },
+        //     cpy_address: {
+        //         message: '用户名验证失败',
+        //         validators: {
+        //             notEmpty: {
+        //                 message: 'comepany address is empty!'
+        //             }
+        //         }
+        //     }
+        // }
     }).on('success.form.bv', function(e) {
         e.preventDefault();
         
