@@ -129,7 +129,7 @@
         height: 40px;
         width: 100%;
         -webkit-appearance: none;
-        background: #fff url("../images/arrows_blue_down.png") right 11px no-repeat;
+        background: #fff url("../images/arrows_blue_down.png") 99% 11px no-repeat;
     }
     #information .edit_content2 .proof_address {
         position: relative;
@@ -233,8 +233,8 @@
         cursor: pointer;
     }
     #status .status_content .submit_document:hover {
-        /*background: url(../images/icon_form.png) left center no-repeat;
-        color: #85b428;*/
+        background: url(../images/icon_form.png) 20% center no-repeat;
+        color: #85b428;
     }
     #status .status_content .sign_contract {
         background: url(../images/icon_note_1.png) left center no-repeat;
@@ -246,7 +246,7 @@
         cursor: pointer;
     }
     #status .status_content .sign_contract:hover {
-        background: url(../images/icon_note.png) left center no-repeat;
+        background: url(../images/icon_note.png) 20% center no-repeat;
         color: #85b428;
     }
     #status .status_content .download_contract {
@@ -259,7 +259,7 @@
         cursor: pointer;
     }
     #status .status_content .download_contract:hover {
-        background: url(../images/icon_download.png) left center no-repeat;
+        background: url(../images/icon_download.png) 20% center no-repeat;
         color: #85b428;
     }
     #status .application_third .application_record,
@@ -1101,8 +1101,8 @@
         background-size: 11%;
     }
     #status .status_content .download_contract{
-        -webkit-background-size: 9%;
-        background-size: 9%;
+        -webkit-background-size: 10%;
+        background-size: 10%;
     }
 }
 

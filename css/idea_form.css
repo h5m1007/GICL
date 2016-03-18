@@ -1050,7 +1050,7 @@
         padding: 10px;
     }
     #idea_form .content_right_5 button.submit {
-        width: 35%;
+        width: 100%;
         height: 44px;
         background-color: #2893b3;
         border-right: 2px;
@@ -1079,9 +1079,6 @@
     #idea_form .content_right {
         width: 40%;
         height: 740px;
-    }
-    #idea_form .content_right_5 button.submit {
-        width: 100%;
     }
 }
 @media screen and (min-width: 1200px) and (max-width: 1435px) {
@@ -1199,6 +1196,7 @@
     }
     #idea_form .content_right_1 .bottom .loan_type ul li p {
         font-size: 18px;
+        height: 50px;
     }
     /*****content_right_1******/
     #idea_form .cont_bottom {
@@ -1310,9 +1308,6 @@
         width: 100%;
         margin: 0;
         padding: 0 15px;
-    }
-    #idea_form .content_right_5 button.submit {
-        width: 100%;
     }
 }
 

@@ -17,7 +17,7 @@ $(document).ready(function() {
         var log_reg_info = [{
             text: "Profile Information",
             value: 1,
-        },{
+        }, {
             text: "Approval Status",
             value: 2,
         }, {
@@ -46,7 +46,7 @@ $(document).ready(function() {
             width: 176,
             selectText: "Mr Chan",
             onSelected: function(data) {
-                if(data.selectedData.value == 4){
+                if (data.selectedData.value == 4) {
                     $('#log_reg').hide();
                     $('.log_on').show();
                 }
@@ -95,7 +95,23 @@ $(document).ready(function() {
             $('.message_drop_down').toggle();
 
         });
-
+        var flag = true;
+        $(".header_bottom .main_nav_bar li.a2 a").click(function() {
+            if (flag) {
+                $(this).nextAll('ul').show();
+                flag = false;
+            } else {
+                $(this).nextAll('ul').hide();
+                flag = true;
+            }
+        });
+        $(".header_bottom .main_nav_bar li.a2 ul li").hover(function() {
+            $(this).css('background-color', '#85b428');
+            $(".header_bottom .main_nav_bar li.a2 .tooltip-arrow").css('border-bottom-color', '#85b428');
+        }, function() {
+            $(this).css('background-color', '#fff');
+            $(".header_bottom .main_nav_bar li.a2 .tooltip-arrow").css('border-bottom-color', '#fff');
+        });
     });
 
     $('#footer').load('common/footer.html', function() {

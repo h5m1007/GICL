@@ -206,7 +206,7 @@ a:hover {
         position: absolute;
         left: -10px;
         top: 35px;
-        width: 400px;
+        width: 350px;
         border: 1px solid #ccc;
         background-color: #edeff5;
         z-index: 1;
@@ -234,12 +234,13 @@ a:hover {
     }
     .nav_bar li .message_drop_down .message_content .title1 {
         color: #2995b1;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
     }
     .nav_bar li .message_drop_down .message_content li {
-        padding: 10px 0 10px 50px;
+        padding: 10px 10px 10px 50px;
         border-top: 1px solid #ddd;
+        word-break: break-all;
     }
     .nav_bar li .message_drop_down .message_content li.minu {
         background: url(../images/icon_form_1.png) 10px center no-repeat;
@@ -322,30 +323,42 @@ a:hover {
         border: 0;
         border-radius: 0;
     }
-    .drop_down .caret {
+    .main_nav_bar li.a2 .caret {
         background: url(../images/arrows_down_1.png) no-repeat;
         width: 12px;
         height: 12px;
         border: 0;
     }
-    .drop_down:hover .caret {
+    .main_nav_bar li.a2:hover .caret {
         background: url(../images/arrows_down_1.png) no-repeat;
         transform: rotate(180deg);
     }
-    .drop_down .dropdown-menu {
-        min-width: 86px;
-        margin: 0;
-        border: 0;
+    .header_bottom .main_nav_bar li.a2 {
+        position: relative;
     }
-    .drop_down .dropdown-menu li {
+    .header_bottom .main_nav_bar li.a2 ul {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 33px;
+        right: -15px;
+        border: 1px solid #ccc;
+    }
+    .header_bottom .main_nav_bar li.a2 .tooltip-arrow {
+        top: 28px;
+        left: 50%;
+        margin-left: -5px;
+        border-bottom-color: #fff;
+        border-width: 0 5px 5px;
+    }
+    .header_bottom .main_nav_bar li.a2 ul li {
+        width: 120px;
         margin: 0;
+        padding: 10px;
         float: none;
     }
-    .header_bottom .main_nav_bar .dropdown-menu li a {
-        color: #838383;
-    }
-    .header_bottom .main_nav_bar .dropdown-menu li:hover a {
-        color: #85b428;
+    .header_bottom .main_nav_bar li.a2 ul li:hover a {
+        color: #fff;
     }
     .dropdown-menu>li>a {
         padding: 5px;
@@ -1068,6 +1081,43 @@ a:hover {
         left: 33%;
         z-index: 9999;
     }
+    .header_bottom .drop_down ul {
+        display: none;
+    }
+    .header_bottom .drop_down ul li {
+        float: none;
+        margin: 0px;
+    }
+    .header_bottom .drop_down ul li:hover {
+        background-color: #85b428;
+    }
+    /*#addr_area .dd-selected {
+        color: #000;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    #addr_area .dd-selected+span.dd-pointer {
+        width: 20px;
+        height: 40px;
+        border: none;
+        background: url("../images/arrows_blue_down.png") right 12px no-repeat;
+        top: 7px;
+        right: 7px;
+    }
+    #addr_area .dd-selected+span.dd-pointer-up {
+        width: 20px;
+        height: 40px;
+        border: none;
+        margin: 0;
+        background: url("../images/arrows_blue_down.png") right 12px no-repeat;
+        top: 7px;
+        right: 7px;
+        transform:rotate(180deg);
+
+    }
+    #addr_area .dd-select+ul.dd-options {
+        width: 100% ! important;
+    }*/
 }
 
 @media screen and (min-width: 1200px) {}
@@ -1781,6 +1831,9 @@ a:hover {
         left: initial;
         right: 12px;
     }
+    .nav_bar li .message_drop_down .message_content .title1 {
+        font-size: 13px;
+    }
     body.out .mobile_navbar .navbar-toggle .icon-bar:nth-of-type(2) {
         transform: translate3d(0, 6px, 0) rotate(45deg);
     }
@@ -1907,6 +1960,57 @@ a:hover {
     #tenor ul.dd-options {
         height: 170px;
     }
+    #loan_calculator .wrap {
+        margin: 15px;
+    }
+    .loan_calculator_content .top img {
+        width: 90%;
+    }
+    .loan_calculator_content .top h2 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .loan_calculator_content .top_right {
+        position: relative;
+    }
+    .loan_calculator_content .middle .schedule > li {
+        width: 100%;
+    }
+    .loan_calculator_content .middle .schedule > li:last-child {
+        margin-left: 0;
+    }
+    .loan_calculator_content .table-responsive {
+        width: auto;
+    }
+    .loan_calculator_content table thead {
+        display: none;
+    }
+    .loan_calculator_content table tr {
+        display: block;
+        margin-bottom: 10px;
+        border-bottom: 2px dotted #ddd;
+    }
+    .loan_calculator_content table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px dotted #ccc;
+    }
+    .loan_calculator_content table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    /*.loan_calculator_content .middle .schedule li:first-child li:last-child p:nth-child(2n+1) {
+        height: 40px;
+    }*/
+    .table-striped>tbody>tr:nth-of-type(odd) td {
+        height: 45px;
+        line-height: 45px;
+    }
+    .table-striped>tbody>tr {
+        background-color: #f9f9f9;
+    }
 }
 
 @media screen and (min-width: 550px) and (max-width: 769px) {
@@ -1988,7 +2092,6 @@ a:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 415px) {
-
     .mainContentContainer .main_content .loan .loan_content .loan_tenor #tenor .dd-option {
         padding: 5px;
     }
@@ -2034,14 +2137,14 @@ a:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 770px) {
-    .mainContentContainer{
+    .mainContentContainer {
         height: 845px;
     }
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iphone5 */
-    .mainContentContainer{
+    .mainContentContainer {
         height: 424px;
         -webkit-background-size: 100%;
         background-size: 100%;
@@ -2063,26 +2166,27 @@ a:hover {
     #tenor .dd-option label {
         font-size: 16px;
     }
-    .mainContentContainer .main_content .section3 .boxContainer .box .desc{
+    .mainContentContainer .main_content .section3 .boxContainer .box .desc {
         font-size: 14px;
     }
     .mainContentContainer .main_content .section4 .boxContainer .box1 .desc_video .video_content .video_container {
         width: 290px;
     }
-    .mainContentContainer .main_content .section2 .boxContainer .box4 .details{
+    .mainContentContainer .main_content .section2 .boxContainer .box4 .details {
         font-size: 12px;
     }
 }
 
 @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iphone6 */
-    .mainContentContainer{
+    .mainContentContainer {
         height: 424px;
         -webkit-background-size: 100%;
         background-size: 100%;
     }
     .mobile_navbar .nav_bar li .message_drop_down {
         width: 340px;
+        margin-right: 25px;
     }
     .mobile_navbar .navbar-header .header_logo {
         width: 60%;
@@ -2106,7 +2210,7 @@ a:hover {
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
     /* iphone6 Plus */
-    .mainContentContainer{
+    .mainContentContainer {
         height: 424px;
         -webkit-background-size: 100%;
         background-size: 100%;
@@ -2136,6 +2240,15 @@ a:hover {
     }
     .mainContentContainer .main_content .section4 .boxContainer .box1 .desc_video .video_content .video_container {
         width: 385px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 384px) {
+    .mobile_navbar .navbar-header .header_logo {
+        margin: 25px 30px;
+    }
+    .mainContentContainer {
+        height: 424px;
     }
 }
 
@@ -2204,5 +2317,6 @@ a:hover {
         margin: 0;
     }
 }
+
 
 /*Edit By Leo End*/

@@ -13,6 +13,7 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/webuploader.m
 Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/upload.js', CClientScript::POS_BEGIN);
 Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/jquery.form.min.js', CClientScript::POS_BEGIN);
 Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profileinformation.js', CClientScript::POS_BEGIN);
+Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/jquery.ddslick.min.js', CClientScript::POS_BEGIN);
 ?>
 <div class="idea_profileinformation">
     <div class="wrap">
@@ -52,7 +53,10 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
                                 </div>
                                 <div class="pw">
                                     <p class="title">Password</p>
-                                    <p class="password"><?= $member->password; ?></p>
+                                    <p class="password"><?php
+                                    for ($i=0 ;$i<$member->pw_length;$i++)
+									 	echo '*';
+                                     ?></p>
                                 </div>
                                 <div class="last padding">
                                     <p class="title">Residential Address</p>
@@ -79,7 +83,7 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
                                     <div class="residential_address">
                                         <p class="title">Residential Address</p>
                                         <input name="addr_floor" value="<?= $member->addr_floor ?>"/>
-                                        <input name="addr_area" value="<?= $member->addr_area ?>">
+                                        <div id="addr_area"></div>
                                     </div>
                                     <div id="addr_proof_box" class="proof_address">
                                         <p class="title">Proof Address</p>
@@ -105,7 +109,7 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
                                 <div class="container">
                                     <?php if ($member->loans): ?>
                                         <?php foreach ($member->loans as $loan): ?>
-                                            <?php if ($loan->status != '' && $loan->status != 'filling'): ?>
+                                            <?php if ($loan->status != '' && $loan->status != 'filling' && $loan->status !='repaying'): ?>
                                                 <div class="application application_first">
                                                     <div class="application_record clearfix">
                                                         <span class="left">Application:<?= $loan->apply_no; ?></span>
@@ -164,6 +168,7 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
                         <div role="tabpanel" class="tab-pane" id="payment">
                             <div class="payment_content">
                                 <?php foreach ($member->loans as $loan): ?>
+                                <?php if($loan->status == 'repaying'):?>
                                     <div>
                                         <div class="payment payment_first" data-id="<?= $loan->id ?>">
                                             <div class="payment_record clearfix">
@@ -187,6 +192,7 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
                                             </ul>
                                         </div>
                                     </div>
+                                <?php endif;?>
                                 <?php endforeach ?>
                             </div>
                             <div class="payment_show"></div>
@@ -215,82 +221,6 @@ Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/idea_profilei
             $('input[name=addr_proof_filename]').val($(this).val());
         });
     });
-    //     var InterValObj; //timer变量，控制时间
-    //     var count = 60; //间隔函数，1秒执行
-    //     var curCount; //当前剩余秒数
-    //     var code = ""; //验证码
-    //     var codeLength = 6; //验证码长度
-    //     function sendMessage() {
-    //         curCount = count;
-    //         var dealType; //验证方式
-    //         var uid = $("#uid").val(); //用户uid
-    //         if ($("#phone").attr("checked") == true) {
-    //             dealType = "phone";
-    //         } else {
-    //             dealType = "email";
-    //         }
-    //         //产生验证码
-    //         for (var i = 0; i < codeLength; i++) {
-    //             code += parseInt(Math.random() * 9).toString();
-    //         }
-    //         //设置button效果，开始计时
-    //         $(".btnSendCode").attr("disabled", "true");
-    //         $(".btnSendCode").val(+curCount + " " + "RESEND SMS");
-    //         InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
-    //         //向后台发送处理数据
-    //         $.ajax({
-    //             type: "POST", //用POST方式传输
-    //             dataType: "text", //数据格式:JSON
-    //             url: 'Login.ashx', //目标地址
-    //             data: "dealType=" + dealType + "&uid=" + uid + "&code=" + code,
-    //             error: function (XMLHttpRequest, textStatus, errorThrown) {
-    //             },
-    //             success: function (msg) {
-    //             }
-    //         });
-    //     }
-
-    //     function sendMessage2() {
-    //         curCount = count;
-    //         var dealType; //验证方式
-    //         var uid = $("#uid").val(); //用户uid
-    //         if ($("#phone").attr("checked") == true) {
-    //             dealType = "phone";
-    //         } else {
-    //             dealType = "email";
-    //         }
-    //         //产生验证码
-    //         for (var i = 0; i < codeLength; i++) {
-    //             code += parseInt(Math.random() * 9).toString();
-    //         }
-    //         //设置button效果，开始计时
-    //         $(".btnSendCode").attr("disabled", "true");
-    //         $(".btnSendCode").val(+curCount + " " + "RESEND SMS");
-    //         InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
-    //         //向后台发送处理数据
-    //         $.ajax({
-    //             type: "POST", //用POST方式传输
-    //             dataType: "text", //数据格式:JSON
-    //             url: 'Login.ashx', //目标地址
-    //             data: "dealType=" + dealType + "&uid=" + uid + "&code=" + code,
-    //             error: function (XMLHttpRequest, textStatus, errorThrown) {
-    //             },
-    //             success: function (msg) {
-    //             }
-    //         });
-    //     }
-    //     //timer处理函数
-    //     function SetRemainTime() {
-    //         if (curCount == 0) {
-    //             window.clearInterval(InterValObj); //停止计时器
-    //             $("#btnSendCode").removeAttr("disabled"); //启用按钮
-    //             $("#btnSendCode").val("RESEND SMS");
-    //             code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
-    //         } else {
-    //             curCount--;
-    //             $("#btnSendCode").val(+curCount + " " + "RESEND SMS");
-    //         }
-    //     }
 
     function updateProfile() {
         var url = '<?= Yii::app()->createUrl('/website/member/ajaxUpdateProfile') ?>';

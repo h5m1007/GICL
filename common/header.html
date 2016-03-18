@@ -53,18 +53,13 @@
         <div class="header_bottom">
             <ul class="main_nav_bar">
                 <li class="a1"><a href="index.html?a=1">Home</a></li>
-                <li class="dropdown a2">
-                    <div class="drop_down btn-group">
-                        <button type="button" class="btn"><a href="idea_inner_AboutGICL.html?a=2">About GICL</a></button>
-                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="a21"><a href="idea_inner_AboutGICL.html?a=21">About Us</a></li>
-                            <li class="a22"><a href="idea_inner_Service.html?a=22">Service</a></li>
-                        </ul>
-                    </div>
+                <li class="a2">
+                    <a href="###">About GICL<span class="caret"></span></a>
+                    <div class="tooltip-arrow"></div>
+                    <ul class="">
+                        <li class="a21"><a href="idea_inner_AboutGICL.html?a=21">About Us</a></li>
+                        <li class="a22"><a href="idea_inner_Service.html?a=22">Service</a></li>
+                    </ul>
                 </li>
                 <li class="a3"><a href="idea_inner_productdetail.html?a=3">Loan Services</a></li>
                 <li class="a4"><a href="idea_inner_Contactus.html?a=4">Contact Us</a></li>
@@ -116,10 +111,10 @@
                     </div>
                 </li>
                 <script>
-                    $(".nav_bar li:first-child").click(function(){
-                        // 模拟登陆后显示message
-                        $(this).hide().next().removeClass('hide');
-                    });
+                $(".nav_bar li:first-child").click(function() {
+                    // 模拟登陆后显示message
+                    $(this).hide().next().removeClass('hide');
+                });
                 </script>
             </ul>
         </div>
