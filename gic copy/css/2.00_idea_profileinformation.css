@@ -21,27 +21,29 @@
     }
     .idea_profileinformation .main_content {
         margin-left: 37.5%;
-        padding-top: 80px;
-        height: 952px;
+        padding-top: 50px;
     }
     .idea_profileinformation .main_content .padding {
         padding-left: 20px;
     }
+    .idea_profileinformation .main_content .tab-content #information{
+        height: 640px;
+    }
     .idea_profileinformation .main_content .welcome {
         color: #2095b3;
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 3px;
     }
     .idea_profileinformation .main_content .user {
         color: #065062;
         font-size: 30px;
-        font-family: 'Calibri';
+        font-family: 'Calibri', 'Microsoft YaHei', sans-serif;
         margin-top: 15px;
         margin-bottom: 5px;
     }
     .nav_tabs .nav-tabs li a {
         font-size: 20px;
-        font-family: 'Calibri';
+        font-family: 'Calibri', 'Microsoft YaHei', sans-serif;
     }
     .nav_tabs .nav-tabs li a {
         color: #010101;
@@ -72,7 +74,7 @@
     }
     #information .title {
         font-size: 20px;
-        font-family: 'Calibri';
+        font-family: 'Calibri', 'Microsoft YaHei', sans-serif;
         font-weight: bold;
         margin-bottom: 5px;
     }
@@ -94,7 +96,7 @@
     #information p {
         font-size: 20px;
         color: #010101;
-        font-family: 'Calibri';
+        font-family: 'Calibri', 'Microsoft YaHei', sans-serif;
     }
     .nav-tabs {
         position: relative;
@@ -127,6 +129,7 @@
     #information .edit_content2 .residential_address select.choose_country {
         height: 40px;
         width: 100%;
+        padding-left: 10px;
         -webkit-appearance: none;
         background: #fff url("../images/arrows_blue_down.png") right 11px no-repeat;
     }
@@ -174,14 +177,11 @@
         position: relative;
     }
     #status .status_contentContainer {
-        overflow-x: hidden;
-        margin-left: -17px;
+        height: 550px;
     }
     #status .status_contentContainer .container {
         width: 100%;
         height: 560px;
-        overflow-y: auto;
-        margin-left: 17px;
     }
     .nav-tabs>li.active>a,
     .nav-tabs>li.active>a:focus,
@@ -232,8 +232,8 @@
         cursor: pointer;
     }
     #status .status_content .submit_document:hover {
-        background: url(../images/icon_form.png) left center no-repeat;
-        color: #85b428;
+        /*background: url(../images/icon_form.png) left center no-repeat;
+        color: #85b428;*/
     }
     #status .status_content .sign_contract {
         background: url(../images/icon_note_1.png) left center no-repeat;
@@ -245,8 +245,8 @@
         cursor: pointer;
     }
     #status .status_content .sign_contract:hover {
-        background: url(../images/icon_note.png) left center no-repeat;
-        color: #85b428;
+        /*background: url(../images/icon_note.png) left center no-repeat;
+        color: #85b428;*/
     }
     #status .status_content .download_contract {
         background: url(../images/icon_download_1.png) left center no-repeat;
@@ -258,8 +258,8 @@
         cursor: pointer;
     }
     #status .status_content .download_contract:hover {
-        background: url(../images/icon_download.png) left center no-repeat;
-        color: #85b428;
+        /*background: url(../images/icon_download.png) left center no-repeat;
+        color: #85b428;*/
     }
     #status .application_third .application_record,
     #status .application_fourth .application_record {
@@ -371,6 +371,7 @@
         font-size: 16px;
     }
     #submit_update_a .submit_update_a_content {
+        height: 700px;
         margin-top: 20px;
     }
     #submit_update_a .submit_update_a_content h3 {
@@ -382,12 +383,14 @@
         text-align: left;
     }
     #submit_update_a .submit_update_a_content .file_content {
-        height: 140px;
+        width: 100%;
+        height: auto;
         text-align: center;
         background-color: #ECECEC;
         font-size: 18px;
         margin-bottom: 10px;
         position: relative;
+        display: inline-block;
     }
     #submit_update_a .button .submit,
     #submit_update_a .button .cancel {
@@ -402,7 +405,7 @@
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         -o-border-radius: 2px;
-        margin: 20px 20px 0 0;
+        margin: 20px 20px 20px 0;
         cursor: pointer;
     }
     #submit_update_a .button .submit {
@@ -476,7 +479,7 @@
         color: #2995b1;
         font-size: 30px;
         letter-spacing: 1px;
-        font-family: 'Bliss2';
+        font-family: 'Bliss2', 'Microsoft YaHei', sans-serif;
     }
     #sign_contract .no {
         color: #065062;
@@ -566,10 +569,10 @@
         margin-bottom: 20px;
     }
     #sign_contract .verification {
-        width: 45%;
+        width: 100%;
         height: 44px;
         line-height: 44px;
-        background-color: rgb(198, 218, 158);
+        background-color: #85b429;
         color: white;
         text-align: center;
         border-radius: 2px;
@@ -650,7 +653,7 @@
         color: #2995b1;
         font-size: 50px;
         text-align: center;
-        font-family: 'Bliss2';
+        font-family: 'Bliss2', 'Microsoft YaHei', sans-serif;
     }
     #sign_contract .section3 .succeed2 {
         color: #2995b1;
@@ -689,6 +692,7 @@
         background: none;
     }
     #uploader .queueList {
+        /*width: 100%;*/
         margin: 0;
         display: inline-block;
         float: left;
@@ -772,7 +776,7 @@
     }
     .idea_profileinformation .main_content {
         margin-left: 0;
-        padding-top: 0;
+        padding-top: 50px;
         overflow: visible;
     }
     .nav-tabs > li {
@@ -838,8 +842,9 @@
         width: auto;
     }
     #status .status_contentContainer,
+    .submit_update_a_content,
     #status .status_contentContainer .container {
-        overflow: hidden;
+        height: 590px;
         margin: 0;
     }
     #status .status_contentContainer .container {
@@ -866,15 +871,15 @@
     }
     #status .status_content .submit_document {
         background: #2995b1 url(../images/mobile_icon_form.png) 29% center no-repeat;
-        background-size: 7%;
+        /*background-size: 7%;*/
     }
     #status .status_content .sign_contract {
         background: #2995b1 url(../images/mobile_icon_note.png) 32% center no-repeat;
-        background-size: 9%;
+        /*background-size: 9%;*/
     }
     #status .status_content .download_contract {
         background: #2995b1 url(../images/mobile_icon_download.png) 29% center no-repeat;
-        background-size: 7%;
+        /*background-size: 7%;*/
     }
     #status .scroll {
         bottom: 0;
@@ -898,14 +903,22 @@
     }
     #submit_update_a {
         margin: 0 20px;
-        height: 100%;
+        height: auto;
         min-height: 930px;
+    }
+    #uploader .placeholder{
+        width: 100%;
+        padding: 0 35px;
+    }
+    #submit_update_a .submit_update_a_content{
+        margin-bottom: 10px;
+        overflow: visible!important;
     }
     #submit_update_a .submit_update_a_content .upload_title {
         height: 65px;
         text-align: left;
         background-color: #85b429;
-        padding: 15px 5px;
+        padding: 7px 5px;
         clear: both;
     }
     #submit_update_a .submit_update_a_content .upload_title h3 {
@@ -918,8 +931,8 @@
     }
     #submit_update_a .submit_update_a_content .upload_title .upload_icon {
         width: 36px;
-        height: 35px;
-        background: url('../images/mobile_submit_icon.png') no-repeat;
+        height: 50px;
+        background: url('../images/mobile_submit_icon.png') center no-repeat;
         background-size: 100%;
         display: inline-block;
         float: right;
@@ -935,6 +948,7 @@
     #submit_update_a .button .submit,
     #submit_update_a .button .cancel {
         width: 100%;
+        margin-bottom: 0;
     }
     #sign_contract .sign_contract_step ul {
         width: 100%;
@@ -994,10 +1008,51 @@
         line-height: 50px;
         margin: 25px 0;
     }
+    #submit_update_a .submit_update_a_content .upload_title h3 {
+        height: 35px !important;
+        line-height: 18px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1130px) {
+    .idea_profileinformation {
+        margin-top: 168px;
+    }
+    .idea_profileinformation .wrap .img {
+        display: none !important;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    /* android portrait */
+    #submit_update_a .submit_update_a_content .file_content{
+        width: 100%;
+    }
+    #uploader .placeholder{
+        padding: 15px 35px;
+    }
+    #uploader .placeholder .webuploader-pick{
+        padding: 0 30px;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    /* android landscape */
+    
 }
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */
+    #submit_update_a{
+        margin: 0 7px;
+    }
+    #submit_update_a .submit_update_a_content .file_content{
+        width: 100%;
+    }
+    #uploader .placeholder .webuploader-pick{
+        padding: 0 30px;
+    }
     #submit_update_a .submit_update_a_content .upload_title h3 {
         font-size: 12px;
     }
@@ -1010,10 +1065,29 @@
     .nav_tabs .nav-tabs li.active a {
         font-size: 18px;
     }
+    #uploader .placeholder {
+        width: 100%;
+        padding: 10px 35px;
+    }
+    #status .status_content .submit_document {
+        background-size: 7%;
+    }
+    #status .status_content .sign_contract {
+        background-size: 9%;
+    }
+    #status .status_content .download_contract {
+        background-size: 7%;
+    }
 }
 
 @media (device-height: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 */
+    #submit_update_a .submit_update_a_content .file_content{
+        width: 100%;
+    }
+    #uploader .placeholder .webuploader-pick{
+        padding: 12px 30px;
+    }
     #payment .status_content ul li:nth-child(2) {
         left: 32%;
     }
@@ -1036,10 +1110,35 @@
         line-height: 80px;
         margin: 0 16px;
     }
+    #uploader .placeholder {
+        width: 100%;
+        padding: 0 65px;
+    }
+    #status .status_content .submit_document {
+        background-size: 9%;
+        background-position: 25% center;
+    }
+    #status .status_content .sign_contract {
+        background-size: 12%;
+        background-position: 25% center;
+    }
+    #status .status_content .download_contract {
+        background-size: 7%;
+        background-position: 25% center;
+    }
 }
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 Plus */
+    #submit_update_a{
+        margin: 0 17px;
+    }
+    #submit_update_a .submit_update_a_content .file_content{
+        width: 100%;
+    }
+    #uploader .placeholder .webuploader-pick{
+        padding: 13px 30px;
+    }
     #sign_contract .sign_contract_step ul li {
         width: 38%;
     }
@@ -1056,10 +1155,23 @@
         line-height: 90px;
         margin: 0 21px;
     }
+    #uploader .placeholder {
+        width: 100%;
+        padding: 0 85px;
+    }
+    #status .status_content .submit_document {
+        background-size: 7%;
+    }
+    #status .status_content .sign_contract {
+        background-size: 9%;
+    }
+    #status .status_content .download_contract {
+        background-size: 7%;
+    }
 }
 
 @media (device-height: 320px) and (orientation: landscape) {
-    /* 兼容iphone5 */
+    /* 兼容iphone5 landscape */
     #submit_update_a .submit_update_a_content .upload_title h3 {
         font-size: 12px;
     }
@@ -1075,7 +1187,7 @@
 }
 
 @media (device-height: 375px) and (orientation: landscape) {
-    /* 兼容iphone6 */
+    /* 兼容iphone6 landscape */
     #payment .status_content ul li:nth-child(2) {
         left: 32%;
     }
@@ -1101,7 +1213,7 @@
 }
 
 @media (device-height: 414px) and (orientation: landscape) {
-    /* 兼容iphone6 Plus */
+    /* 兼容iphone6 Plus landscape */
     #sign_contract .sign_contract_step ul li {
         width: 43%;
     }
@@ -1117,5 +1229,75 @@
         height: 90px;
         line-height: 90px;
         margin: 0 72px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    /* iPad1/2 portrait */
+    #status .status_content .submit_document {
+        background-position: 35% center;
+        background-size: 4%;
+    }
+    #status .status_content .sign_contract {
+        background-position: 36% center;
+        background-size: 5%;
+    }
+    #status .status_content .download_contract {
+        background-size: 7%;
+        background-position: 25% center;
+    }
+    #uploader .placeholder{
+        width: 728px;
+        padding: 0 35px;
+    }
+    #uploader .placeholder .webuploader-pick{
+        margin: 0 auto;
+    }
+    #submit_update_a .submit_update_a_content{
+        margin-bottom: 20px;
+    }
+    #submit_update_a .submit_update_a_content .file_content{
+        width: auto;
+        height: auto;
+    }
+    #sign_contract .sign_contract_step ul li{
+        width: 33%;
+        padding: 0 63px;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    /* ipad1/2 landscape */
+    .idea_profileinformation .main_content .tab-content #information{
+        height: 770px;
+    }
+    #status .status_content .submit_document {
+        background-position: 39% center;
+        background-size: 3%;
+    }
+    #status .status_content .sign_contract {
+        background-position: 40% center;
+        background-size: 4%;
+    }
+    #status .status_content .download_contract {
+        background-size: 7%;
+        background-position: 25% center;
+    }
+    #uploader .placeholder{
+        width: 954px;
+        padding: 0 35px;
+    }
+    #uploader .placeholder .webuploader-pick{
+        margin: 0 auto;
+    }
+    #submit_update_a .submit_update_a_content .file_content{
+        width: 954px;
+        height: auto;
+    }
+    #status .status_contentContainer, .submit_update_a_content, #status .status_contentContainer .container{
+        height: 760px;
+    }
+    #sign_contract .sign_contract_step ul li{
+        width: 33%;
+        padding: 0 90px;
     }
 }

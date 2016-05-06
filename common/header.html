@@ -172,7 +172,20 @@ $(function() {
             $(this).blur();
         }
     });
-
+    var flag = true;
+    $(".header_bottom .main_nav_bar li.a2 a").click(function() {
+        if (flag) {
+            $(".caret").css('transform','rotate(180deg)');
+            console.log("test");
+            $(this).nextAll('ul').show();
+            flag = false;
+        } else {
+            $(".caret").css('transform','rotate(0)');
+            console.log("test");
+            $(this).nextAll('ul').hide();
+            flag = true;
+        }
+    });
 
 });
 

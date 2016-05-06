@@ -4,8 +4,7 @@
 /*-------idea_loginregister css for pc style------*/
 
 .idea_inner_cont .cont_right {
-    overflow: auto;
-    height: 637px;
+    height: 620px;
 }
 
 .idea_inner_cont.log_reg_page {
@@ -131,7 +130,7 @@
 }
 
 .forget_pw .title1 {
-    font-family: 'Bliss2';
+    font-family: 'Bliss2', 'Microsoft YaHei', sans-serif;
     font-size: 50px;
     font-weight: bold;
     color: #2995b1;
@@ -139,7 +138,7 @@
 }
 
 .forget_pw .title2 {
-    font-family: 'Bliss2';
+    font-family: 'Bliss2', 'Microsoft YaHei', sans-serif;
     font-size: 32px;
     color: #065062;
     margin: 35px 0 25px;
@@ -228,5 +227,21 @@
     .forget_pw .title4 {
         font-weight: bold;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .idea_inner_cont.log_reg_page {
+        margin-top: 170px;
+    }
+    .idea_inner_cont.log_reg_page .cont_left {
+        height: 637px;
+        background-size: cover;
+        background: url('../images/log_reg_banner.png') no-repeat;
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 1130px) {
+    .idea_inner_cont.log_reg_page{
+        margin-top: 170px;
     }
 }

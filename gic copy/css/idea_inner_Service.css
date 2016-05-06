@@ -3,7 +3,6 @@
 .idea_inner_cont.service_page {
     max-width: 100%;
     width: 1900px;
-    /*height: 826px;*/
     margin: 172px auto 0;
     background: url('../images/banner_img_e.jpg') no-repeat;
     background-size: 100%;
@@ -17,6 +16,7 @@
 .idea_inner_cont.service_page .cont_left p {
     color: #000;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .idea_inner_cont.service_page .cont_left p a {
@@ -67,12 +67,11 @@
 
 
 /*-------idea_inner_Service css for mobile style------*/
-
 @media screen and (min-width: 320px) and (max-width: 1130px) {
     .idea_inner_cont.service_page {
         height: 100%;
         background: transparent;
-        margin: 85px auto 20px;
+        margin: 167px auto 20px;
     }
     .mobile_poster {
         width: 100%;
@@ -100,28 +99,74 @@
 
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone5 */
-    .idea_inner_cont.service_page .cont_right ul li a img{
+    .idea_inner_cont.service_page .cont_right ul li a img {
         width: 60px;
     }
 }
 
 @media (device-height: 627px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 */
-    .idea_inner_cont.service_page .cont_right ul li a img{
+    .idea_inner_cont.service_page .cont_right ul li a img {
         width: 76px;
     }
 }
 
 @media (device-height: 736px) and (-webkit-min-device-pixel-ratio: 2) {
     /* 兼容iphone6 Plus*/
-    .idea_inner_cont.service_page .cont_right ul li a img{
+    .idea_inner_cont.service_page .cont_right ul li a img {
         width: 86px;
     }
 }
 
 @media screen and (max-width: 736px) and (orientation: landscape) {
     /* 兼容iphone5,6,6Plus 横屏 */
-    .idea_inner_cont.service_page .cont_right ul li a img{
+    .idea_inner_cont.service_page .cont_right ul li a img {
         width: 124px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    /* iPad1/2 portrait */
+    .idea_inner_cont.service_page .container {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    /* ipad1/2 landscape */
+    .idea_inner_cont.service_page .cont_right{
+        margin-left: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 770px) {
+    .idea_inner_cont.service_page {
+        margin: 85px auto 20px;
+    }
+}
+
+
+
+@media screen and (min-width: 971px){
+   .mobile_poster{
+        height: 450px;
+    }
+}
+@media screen and (max-width: 970px){
+    .mobile_poster{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .mobile_poster{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .mobile_poster{
+        height: 150px;
     }
 }

@@ -60,10 +60,10 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->getBaseUrl() . '
                             </div>
                             <p class="title3">Documents require for loan applications:</p>
                             <div class="title3_text">
-                                <p class="title3_text1"><span></span>A copy of Hong Kong Idetity Card</p>
-                                <p class="title3_text2"><span></span>Proof of income issued during the part 3 months</p>
-                                <p class="title3_text3"><span></span>Proof of address</p>
-                                <p class="title3_text4"><span></span>Proof of bank account</p>
+                                <span></span><p class="title3_text1">A copy of Hong Kong Idetity Card</p>
+                                <span></span><p class="title3_text2">Proof of income issued during the part 3 months</p>
+                                <span></span><p class="title3_text3">Proof of address</p>
+                                <span></span><p class="title3_text4">Proof of bank account</p>
                             </div>
                             <div class="hotline">
                                 <p class="">Application Hotline: 3575 1018</p>

@@ -1,4 +1,4 @@
-function startDragNDrop(className,ref) {
+function startDragNDrop(className,ref,langs) {
     var $wrap = $('.'+className+'[ref="'+ref+'"]'),
 
         // 图片容器
@@ -140,7 +140,7 @@ function startDragNDrop(className,ref) {
     uploader = WebUploader.create({
         pick: {
             id: '.'+className+'[ref="'+ref+'"] #filePicker',
-            label: 'Drag your files here <span>or click to browse</span>'
+            label: langs.upload_label
         },
         //post data
         formData: {
@@ -155,17 +155,17 @@ function startDragNDrop(className,ref) {
         server: '/gic/member/uploadFile',
         // runtimeOrder: 'flash',
 
-        // accept: {
-        //     title: 'Images',
-        //     extensions: 'gif,jpg,jpeg,bmp,png',
-        //     mimeTypes: 'image/*'
-        // },
+         accept: {
+             title: 'Images',
+             extensions: 'gif,jpg,jpeg,bmp,png,psd,tga,wmf,tiff,swf,svg',
+             mimeTypes: 'image/*'
+         },
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
         disableGlobalDnd: true,
-        fileNumLimit: 300,
-        fileSizeLimit: 200 * 1024 * 1024, // 200 M
-        fileSingleSizeLimit: 50 * 1024 * 1024 // 50 M
+        fileNumLimit: 10,
+        fileSizeLimit: 100 * 1024 * 1024, // 100 M
+        fileSingleSizeLimit: 10 * 1024 * 1024 // 10 M
     });
 
     // 拖拽时不接受 js, txt 文件。
@@ -496,16 +496,10 @@ function startDragNDrop(className,ref) {
                 $statusBar.removeClass('element-invisible');
                 uploader.refresh();
                 break;
-/*
-            case 'uploading':
-                $('.'+className+'[ref="'+ref+'"] #filePicker2').addClass('element-invisible');
-                $progress.show();
-                $upload.text('暂停上传');
-                break;
-*/
+
             case 'paused':
                 $progress.show();
-                $upload.text('继续上传');
+                $upload.text('Upload Again');
                 break;
 
             case 'confirm':
@@ -528,6 +522,7 @@ function startDragNDrop(className,ref) {
                     state = 'done';
                     location.reload();
                 }
+                $upload.text('Upload Again');
                 break;
         }
 

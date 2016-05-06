@@ -13,6 +13,21 @@ $(document).ready(function() {
             text: "Global Club",
             value: 4,
         }];
+
+        var log_reg_info = [{
+            text: "Profile Information",
+            value: 1,
+        }, {
+            text: "Approval Status",
+            value: 2,
+        }, {
+            text: "Payment Schedule",
+            value: 3,
+        }, {
+            text: "Logout",
+            value: 4,
+        }];
+
         $('#global_club').ddslick({
             data: ddBasic,
             background: "#84B616",
@@ -23,6 +38,21 @@ $(document).ready(function() {
                 console.log(data);
             }
         });
+
+        $('#log_reg').ddslick({
+            data: log_reg_info,
+            background: "#84B616",
+            color: '#fff',
+            width: 176,
+            selectText: "Mr Chan",
+            onSelected: function(data) {
+                if (data.selectedData.value == 4) {
+                    $('#log_reg').hide();
+                    $('.log_on').show();
+                }
+            }
+        });
+        $('.log_on').hide();
 
         var dddrop_down = [{
             text: "Service",
@@ -41,13 +71,13 @@ $(document).ready(function() {
 
 
         $(window).scroll(function() {
-            if (!navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
-                if ($(document).scrollTop() > 180) {
-                    $('.headerContent').addClass('mini');
-                } else {
-                    $('.headerContent').removeClass('mini');
-                }
-            }
+            // if (!navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+            //     if ($('#content').scrollTop() > 180) {
+            //         $('.headerContent').addClass('mini');
+            //     } else {
+            //         $('.headerContent').removeClass('mini');
+            //     }
+            // }
         });
 
         $('.nav_menu').click(function() {
@@ -65,7 +95,27 @@ $(document).ready(function() {
             $('.message_drop_down').toggle();
 
         });
-
+        var flag = true;
+        $(".header_bottom .main_nav_bar li.a2 a").click(function() {
+            if (flag) {
+                $(".caret").css('transform','rotate(180deg)');
+                console.log("test");
+                $(this).nextAll('ul').show();
+                flag = false;
+            } else {
+                $(".caret").css('transform','rotate(0)');
+                console.log("test");
+                $(this).nextAll('ul').hide();
+                flag = true;
+            }
+        });
+        $(".header_bottom .main_nav_bar li.a2 ul li").hover(function() {
+            $(this).css('background-color', '#85b428');
+            $(".header_bottom .main_nav_bar li.a2 .tooltip-arrow").css('border-bottom-color', '#85b428');
+        }, function() {
+            $(this).css('background-color', '#fff');
+            $(".header_bottom .main_nav_bar li.a2 .tooltip-arrow").css('border-bottom-color', '#fff');
+        });
     });
 
     $('#footer').load('common/footer.html', function() {

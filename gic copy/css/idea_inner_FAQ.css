@@ -2,17 +2,23 @@
 
 
 /*-------idea_inner_FAQ css for pc style------*/
-
+.idea_inner_cont.faq_page .cont_right .panel-group .panel-collapse .panel-body ul li{
+    list-style: initial;
+}
+.idea_inner_cont.faq_page .cont_right .panel-group .panel-collapse .panel-body ol li{
+    list-style: inherit;
+}
 .idea_inner_cont.faq_page {
     max-width: 100%;
     margin: 167px 0 0;
 }
 
 .idea_inner_cont.faq_page .cont_left {
-    height: 599px;
+    height: 738px;
     background: url('../images/banner_imng_f.jpg') no-repeat;
-    -webkit-background-size: 100%;
     background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
 }
 
 .idea_inner_cont.faq_page .cont_right {
@@ -28,7 +34,7 @@
 
 .idea_inner_cont.faq_page .cont_right .panel-group {
     width: 100%;
-    height: 370px;
+    height: 500px;
     margin-top: 90px;
 }
 
@@ -55,7 +61,7 @@ a:hover {
 
 .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(1) {
     width: 30px;
-    font-family: 'Bliss2';
+    font-family: 'Bliss2', 'Microsoft YaHei', sans-serif;
     font-style: normal;
     font-size: 22px;
     color: #838383;
@@ -64,7 +70,7 @@ a:hover {
 
 .idea_inner_cont.faq_page .cont_right .panel-group .panel a p:nth-child(2) {
     width: 605px;
-    font-family: 'Calibri';
+    font-family: 'Calibri', 'Microsoft YaHei', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #838383;
@@ -111,10 +117,9 @@ a:hover {
 
 @media screen and (min-width: 1300px) {
     .idea_inner_cont.faq_page .cont_left {
-        height: 750px;
+        height: 735px;
     }
     .idea_inner_cont.faq_page .cont_right .panel-group {
-        height: auto;
         overflow: hidden;
     }
     .cont_right .scroll {

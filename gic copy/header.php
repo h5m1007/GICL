@@ -24,6 +24,8 @@ function getRelativeTime($date) {
  * @var Menu[] $menus
  * @var Menu[] $links
  */
+$themeUrl = Yii::app()->theme->baseUrl;
+Yii::app()->clientScript->registerScriptFile($themeUrl . '/scripts/jquery.nicescroll.min.js', CClientScript::POS_BEGIN);
 $title_field = $lang == 'tc' ? 'title_tc' : 'title_en';
 $member_messages = array();
 if(!Yii::app()->user->isGuest){
@@ -31,7 +33,7 @@ if(!Yii::app()->user->isGuest){
 	//get member
 	
 	//get member message
-	$sql = "select * from member_message_ref where is_delete=0 and status=1 and is_read=0 and member_id=$uid;";
+	$sql = "select * from member_message_ref where is_delete=0 and status=1 and is_read=0 and member_id=$uid and category='inbox';";
 	$member_messages = Yii::app()->db->createCommand($sql)->queryAll();
 }
 $others = Menu::model()->with(array('childMenus' => array(
@@ -48,11 +50,14 @@ $others = Menu::model()->with(array('childMenus' => array(
         <div class="header_top clearfix">
             <div class="headerContent_left left">
                 <ul class="nav_bar clearfix">
-                    <li>
-                        <div class="nav_menu"><?= Yii::t('web', 'MENU') ?></div>
-                    </li>
-                    <li><span onclick="changeLang('<?= $lang == 'tc' ? 'sc' : 'tc' ?>')"
-                              class="nav_bar_language_bg"><?= strtoupper($lang) ?></span>
+                    <li class="changeLang">
+                        <?php if($lang == 'en'): ?>
+                            <a class="<?php echo "active"?>" href="javascript:changeLang('en');">EN</a>
+                            <a href="javascript:changeLang('tc');" style="font-size:12px;">繁</a>
+                        <?php else: ?>
+                            <a href="javascript:changeLang('en');">EN</a>
+                            <a class="<?php echo "active"?>" href="javascript:changeLang('tc');" style="font-size:12px;">繁</a>
+                        <?php endif ?>
                     </li>
                     <?php if (!Yii::app()->user->isGuest): ?>
                         <li class="message">
@@ -62,11 +67,12 @@ $others = Menu::model()->with(array('childMenus' => array(
                             <div class="message_drop_down">
                                 <div class="arrow"></div>
                                 <p class="title"><?= Yii::t('web', 'Notifications') ?></p>
-                                <ul class="message_content">
+                                <ul class="message_content" style="height:400px;">
                                 <?php foreach ($member_messages as $message):?>
-                                    <li class="minu">
+                                	<?php $type = $message['type'];?>
+                                    <li class="<?php echo $type == 'upload'?'minu':($type == 'complete'?'success':($type=='repaying'?'year':'mon'));?>">
                                         <p class="title1"><?php echo $message['message'];?></p>
-                                        <p><?php echo getRelativeTime($message['send_datetime']);?></p>
+                                        <p><?php echo getRelativeTime($message['create_time']);?></p>
                                     </li>
                                 <?php endforeach;?>
                                 </ul>
@@ -75,14 +81,13 @@ $others = Menu::model()->with(array('childMenus' => array(
                     <?php endif ?>
                 </ul>
             </div>
-            <div class="right clearfix">
+            <div class="right clearfix" style="width: 70%;">
                 <div class="headerContent_middle left">
                     <a href="<?= Yii::app()->homeUrl ?>">
-                        <img src="<?= $themeUrl ?>/images/Logo.png">
+                        <img src="<?= $themeUrl ?>/images/Logo.png" width="90%">
                     </a>
                 </div>
                 <div class="headerContent_right right clearfix visible-lg">
-                    <div id="global_club" class="global_club left"></div>
                     <?php if (Yii::app()->user->isGuest): ?>
                         <div class="log_on right">
                             <a href="<?= Yii::app()->createUrl('/website/member/login', array('#' => 'reg')) ?>"><span><?= Yii::t('web', 'Register') ?></span></a>
@@ -145,9 +150,10 @@ $others = Menu::model()->with(array('childMenus' => array(
                             <p class="title"><?= Yii::t('web', 'Notifications') ?></p>
                             <ul class="message_content">
                                 <?php foreach ($member_messages as $message):?>
-                                    <li class="minu">
+                                	<?php $type = $message['type'];?>
+                                    <li class="<?php echo $type == 'upload'?'minu':($type == 'complete'?'success':($type=='repaying'?'year':'mon'));?>">
                                         <p class="title1"><?php echo $message['message'];?></p>
-                                        <p><?php echo getRelativeTime($message['send_datetime']);?></p>
+                                        <p><?php echo getRelativeTime($message['create_time']);?></p>
                                     </li>
                                 <?php endforeach;?>
                             </ul>
@@ -174,10 +180,10 @@ $others = Menu::model()->with(array('childMenus' => array(
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 	                       aria-expanded="false"><?= Yii::app()->user->name;?> <span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
-	                    	<li><a href="<?= Yii::app()->createUrl('/website/member/profile'); ?>"><span>Personal Profile</span></a></li>
-	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'status')); ?>"><span>Approval Status</span></a></li>
-	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'payment')); ?>"><span>Payment Schedule</span></a></li>
-	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/logout'); ?>"><span>Logout</span></a></li>
+	                    	<li><a href="<?= Yii::app()->createUrl('/website/member/profile'); ?>"><span><?= Yii::t('web', 'Personal Profile') ?></span></a></li>
+	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'status')); ?>"><span><?= Yii::t('web', 'Approval Status') ?></span></a></li>
+	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'payment')); ?>"><span><?= Yii::t('web', 'Payment Schedule') ?></span></a></li>
+	                    	<li><a href="<?= Yii::app()->createAbsoluteUrl('/website/member/logout'); ?>"><span><?= Yii::t('web', 'Logout') ?></span></a></li>
 	                    </ul>
 	                </li>
                 <?php endif;?>
@@ -203,7 +209,9 @@ $others = Menu::model()->with(array('childMenus' => array(
                 <?php endforeach ?>
                 
                 <li class="dropdown">
-                    <a href="###" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+                    <a href="###" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?= Yii::t('web', 'Language') ?><span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a href="javascript:changeLang('tc');">中文</a></li>
                         <li><a href="javascript:changeLang('en');">English</a></li>
@@ -221,7 +229,11 @@ $others = Menu::model()->with(array('childMenus' => array(
                 
                 <?php if (Yii::app()->user->isGuest): ?>
                     <li>
-                        <a href="<?= Yii::app()->createUrl('/website/member/login') ?>"><span>Login/Register</span></a>
+                        <a href="<?= Yii::app()->createUrl('/website/member/login') ?>">
+                            <span>
+                                <?= Yii::t('web', 'Login') ?>/<?= Yii::t('web', 'Register') ?>
+                            </span>
+                        </a>
                     </li>
                 <?php endif ?>
                 
@@ -231,16 +243,16 @@ $others = Menu::model()->with(array('childMenus' => array(
 </div>
 <script>
     var log_reg_info = [{
-        text: "Personal Profile",
+        text: "<?= Yii::t('web', 'Personal Profile') ?>",
         value: '<?= Yii::app()->createAbsoluteUrl('/website/member/profile') ?>'
     }, {
-        text: "Approval Status",
+        text: "<?= Yii::t('web', 'Approval Status') ?>",
         value: '<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'status')) ?>'
     }, {
-        text: "Payment Schedule",
+        text: "<?= Yii::t('web', 'Payment Schedule') ?>",
         value: '<?= Yii::app()->createAbsoluteUrl('/website/member/profile', array('tab' => 'payment')) ?>'
     }, {
-        text: "Logout",
+        text: "<?= Yii::t('web', 'Logout') ?>",
         value: '<?= Yii::app()->createAbsoluteUrl('/website/member/logout') ?>'
     }];
     $('#log_reg').ddslick({
@@ -252,6 +264,12 @@ $others = Menu::model()->with(array('childMenus' => array(
         onSelected: function (data) {
             location.href = data.selectedData.value;
         }
+    });
+    $('.message_content').niceScroll({
+        cursorcolor: 'transparent',
+        background: 'transparent',
+        cursorwidth: '8px',
+        cursorborder: '0'
     });
     $(function () {
         $('button.navbar-toggle').click(function () {
@@ -266,9 +284,11 @@ $others = Menu::model()->with(array('childMenus' => array(
         var flag = true;
         $(".header_bottom .main_nav_bar li.a2 a").click(function() {
             if (flag) {
+                $(this).find("span.caret").css('transform','rotate(180deg)');
                 $(this).nextAll('ul').show();
                 flag = false;
             } else {
+                $(this).find("span.caret").css('transform','rotate(0)');
                 $(this).nextAll('ul').hide();
                 flag = true;
             }
@@ -301,16 +321,16 @@ $others = Menu::model()->with(array('childMenus' => array(
 
 	//update inbox message status
 	function updateInboxStatus(){
-		 	var url = '<?= Yii::app()->createUrl('/website/home/ajaxUpateInboxStatus') ?>';
-	        var data = {
-	        };
-	        $.post(url, data, function (data) {
-	            if (data.code == 1) {
-		            //
-	            }else{
-	            	alert(data.message);
-	            }
-	        }, 'json');
+     	var url = '<?= Yii::app()->createUrl('/website/home/ajaxUpateInboxStatus') ?>';
+        var data = {
+        };
+        $.post(url, data, function (data) {
+            if (data.code == 1) {
+                //
+            }else{
+            	alert(data.message);
+            }
+        }, 'json');
 	}
     
 </script>

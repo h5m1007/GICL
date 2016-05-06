@@ -48,10 +48,10 @@ $themeUrl = Yii::app()->theme->baseUrl;
 								</li>
 							 -->
 								<li>
-									<p data-label="Name of Borrower 借款人姓名 : "> <?php echo $member_model->firstname.' '.$member_model->lastname;?></p>
+									<p data-label="Name of Borrower 借款人姓名 : "> <?php echo $customer_name;?></p>
 									<p data-label="Loan No. 貸款編號 : "> <?php echo $loan_model->apply_no;?></p>
-									<p data-label="Loan Amount 貸款金額 : "> <?php echo $loan_model->amount;?></p>
-									<p data-label="Total Tenors 供款期數 : "> <?php echo $loan_model->tenor;?></p>
+									<p data-label="Loan Amount 貸款金額 : "> <?php echo $approve_amount;?></p>
+									<p data-label="Total Tenors 供款期數 : "> <?php echo $approve_tenor;?></p>
 								</li>
 							</ul>
 						</li>
@@ -67,7 +67,7 @@ $themeUrl = Yii::app()->theme->baseUrl;
 							  -->
 								<li>
 									<p>&nbsp;</p>
-									<p data-label="Loan Date 起息日期 : "> <?php echo date('Ymd',time()+24*3600);?></p>
+									<p data-label="Loan Date 起息日期 : "> <?php echo $sign_date;?></p>
 									<p data-label="Interest Method 計息方法 : "> Amortization 息隨本減</p>
 									<p data-label="Repay. Cycle 還款週期 : "> Monthly 每月</p>
 								</li>
@@ -92,25 +92,26 @@ $themeUrl = Yii::app()->theme->baseUrl;
 						   <tbody>
 						   <?php 
 						   	$interest_rate = $interest_rate==0?26:$interest_rate;
-						   	$balance = $loan_model->amount;
+						   	$balance = $approve_amount;
 						   	$interest_total = 0;
-							//$du_date = $first_due_date;
-						   	$due_date= '2016-03-31';
+							$due_date = $first_due_date;
+						   	//$due_date= '2016-03-31';
 						   	$due_date_ary = explode( '-',$due_date);
 						   	$year = $due_date_ary['0'];
 						   	$month = $due_date_ary['1'];
 						   	$day = $due_date_ary['2']; 
-						   for ($i=1;$i<=$loan_model->tenor;$i++){
-						   	$repay_amount = round($loan_model->amount*$flat_rate/100+$loan_model->amount/$loan_model->tenor);
+						   for ($i=1;$i<=$approve_tenor;$i++){
+						   	$repay_amount = round($approve_amount*$flat_rate/100+$approve_amount/$approve_tenor);
 						   	$interest = round($balance*$interest_rate/100/12);
 						   	if($i==1){
-								$day_num = round((strtotime($due_date)-time())/(24*3600));
+								$day_num = round((strtotime($due_date)-strtotime($sign_date))/(24*3600))-1;
+								//$day_num = $day_num<0 ?0:($day_num>30?30:$day_num);
 								$interest = round($balance*$interest_rate/100/360*$day_num);
-								$repay_amount = $repay_amount-round($balance*$interest_rate/100/360*(30-$day_num));
+								$repay_amount = $repay_amount + round($balance*$interest_rate/100/360*$day_num) - round($balance*$interest_rate/100/12);
 							}
 						   	
 						   	$principal = $repay_amount-$interest;
-						   	if($i == $loan_model->tenor){
+						   	if($i == $approve_tenor){
 								$principal = $balance;
 								$repay_amount = $balance+$interest;
 							}
@@ -118,7 +119,7 @@ $themeUrl = Yii::app()->theme->baseUrl;
 						   	//due date
 						   	if($month==12)
 						   		$year ++;
-						   	$month++;
+						   	
 						   	$month = $month%12 ==0 ?12:$month%12; 
 						   	$due_date = $year.'-'.$month.'-'.$day;
 						   	if(($day==31 || $day==30) && $month ==2){
@@ -140,22 +141,26 @@ $themeUrl = Yii::app()->theme->baseUrl;
 							    </tr>
 						   <?php
 						       $interest_total +=$interest; 
+						       $month++;
                            }?>
+                           		<tr>
+						        	<td colspan="7" class="divider_td">
+						        		<div class="divider"></div>
+						        		<div class="divider"></div>
+						        	</td>
+						        </tr>
+						        <tr>
+						            <td></td>
+						            <td></td>
+						            <td>Total 總額:</td>
+						            <td data-label="Principal 本金"><?php echo $approve_amount;?></td>
+						            <td data-label="Interest 利息"><?php echo $interest_total;?></td>
+						            <td data-label="Repay.Amount 供款金额"><?php echo $approve_amount+$interest_total;?></td>
+						            <td></td>
+						        </tr>
 						   </tbody>
 					</table>
-					<div class="divider"></div>
-		        	<div class="divider"></div>
-					<table class="table table-striped">
-						<tr>
-				            <td></td>
-				            <td></td>
-				            <td>Total 總額:</td>
-				            <td data-label="Principal 本金"><?php echo $loan_model->amount;?></td>
-				            <td data-label="Interest 利息"><?php echo $interest_total;?></td>
-				            <td data-label="Repay.Amount 供款金额"><?php echo $loan_model->amount+$interest_total;?></td>
-				            <td></td>
-				        </tr>
-					</table> 
+				
 				</div>
 			</div>
 		</div>

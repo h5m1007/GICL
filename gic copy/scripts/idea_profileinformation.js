@@ -50,8 +50,10 @@ $(function() {
     });
 
 
-    $('.tutorial_content').scroll(function() {
-        if ($('.tutorial_content').scrollTop() > 150) {
+
+    console.log(navigator.userAgent.match(/(iPhone|iPad|Android|ios)/i));
+    switch ((navigator.userAgent.match(/(iPhone|iPad|Android|ios)/i)) instanceof Array) {
+        case true:
             $('.start_now').css({
                 'background-color': '#84B616'
             });
@@ -60,12 +62,41 @@ $(function() {
                     $(this).next('.section').fadeIn();
                 });
             });
-        } else {
+            break;
+        case false:
+            $('.tutorial_content').scroll(function() {
+                if ($('.tutorial_content').scrollTop() > 160) {
+                    $('.start_now').css({
+                        'background-color': '#84B616'
+                    });
+                    $('.start_now').click(function() {
+                        $(this).parents('.section').fadeOut(function() {
+                            $(this).next('.section').fadeIn();
+                        });
+                    });
+                }
+            });
+            break;
+        default:
             $('.start_now').css({
                 'background-color': '#C6DA9E'
             });
-        }
-    });
+    }
+
+    // if ($('.tutorial_content').scrollTop() > 150 || $('.tutorial_content').scrollTop() > 10) {
+    //     $('.start_now').css({
+    //         'background-color': '#84B616'
+    //     });
+    //     $('.start_now').click(function() {
+    //         $(this).parents('.section').fadeOut(function() {
+    //             $(this).next('.section').fadeIn();
+    //         });
+    //     });
+    // } else {
+    //     $('.start_now').css({
+    //         'background-color': '#C6DA9E'
+    //     });
+    // }
 
     $('.to_back').click(function() {
         $('#sign_contract').fadeOut(function() {
@@ -74,46 +105,46 @@ $(function() {
     });
 
 
-    $('.agreement1 .protocol input[type=checkbox]').click(function() {
-        if ($(this).prop('checked')) {
-            $('.agreement1 .verification').css({
-                'background-color': '#85b429'
-            });
+    // $('.agreement1 .protocol input[type=checkbox]').click(function() {
+    //     if ($(this).prop('checked')) {
+    //         $('.agreement1 .verification').css({
+    //             'background-color': '#85b429'
+    //         });
 
-        } else {
-            $('.agreement1 .verification').css({
-                'background-color': 'rgb(198, 218, 158)'
-            });
-        }
-    });
+    //     } else {
+    //         $('.agreement1 .verification').css({
+    //             'background-color': 'rgb(198, 218, 158)'
+    //         });
+    //     }
+    // });
 
 
     $('.agreement1 .verification').click(function() {
-        if ($('.agreement1 .protocol input[type=checkbox]').prop('checked')) {
-            $('.agreement1 .agreement').fadeOut();
-            $('.agreement1 .send_code').fadeIn();
-        }
+        // if ($('.agreement1 .protocol input[type=checkbox]').prop('checked')) {
+        $('.agreement1 .agreement').fadeOut();
+        $('.agreement1 .send_code').fadeIn();
+        //}
     });
 
-    $('.agreement2 .protocol input[type=checkbox]').click(function() {
-        if ($(this).prop('checked')) {
-            $('.agreement2 .verification').css({
-                'background-color': '#85b429'
-            });
-
-        } else {
-            $('.agreement2 .verification').css({
-                'background-color': 'rgb(198, 218, 158)'
-            });
-        }
-    });
+    //    $('.agreement2 .protocol input[type=checkbox]').click(function() {
+    //        if ($(this).prop('checked')) {
+    //            $('.agreement2 .verification').css({
+    //                'background-color': '#85b429'
+    //            });
+    //
+    //        } else {
+    //            $('.agreement2 .verification').css({
+    //                'background-color': 'rgb(198, 218, 158)'
+    //            });
+    //        }
+    //    });
 
 
     $('.agreement2 .verification').click(function() {
-        if ($('.agreement2 .protocol input[type=checkbox]').prop('checked')) {
-            $('.agreement2 .agreement').fadeOut();
-            $('.agreement2 .send_code').fadeIn();
-        }
+        // if ($('.agreement2 .protocol input[type=checkbox]').prop('checked')) {
+        $('.agreement2 .agreement').fadeOut();
+        $('.agreement2 .send_code').fadeIn();
+        //}
     });
 
 
